@@ -8,10 +8,13 @@ import javafx.fxml.FXML;
 
 import com.languagefluent.App;
 
+import com.narration.*;
+
 public class PrimaryController {
 
     @FXML
     private void switchToSecondary() throws IOException {
-        App.setRoot("secondary");
+        Narriator.playSound("Bonjour, nous sommes les quatre mousquetaires!");
+        //App.setRoot("secondary");
     }
 }
