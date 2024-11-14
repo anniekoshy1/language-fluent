@@ -1,7 +1,12 @@
-package com.languagefluent;
+package com.controllers;
 
 import java.io.IOException;
+
+import com.languagefluent.App;
+
 import javafx.fxml.FXML;
+
+import com.languagefluent.App;
 
 public class SecondaryController {
 

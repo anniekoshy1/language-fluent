@@ -22,4 +22,7 @@ module com.languagefluent {
 
     opens com.narration to javafx.fxml;
     exports com.narration;
+
+    opens com.controllers to javafx.fxml;
+    exports com.controllers;
 }
