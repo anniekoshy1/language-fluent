@@ -1,0 +1,140 @@
+[
+    {
+        "courseID": "ddc69c4d-0aa2-4649-8d46-589786fbe0a4",
+        "name": "Starting Out",
+        "description": "A rudimentary course for beginners to begin their Spanish learning journey",
+        "userAccess": true,
+        "courseProgress": 0.0,
+        "completed": false,
+        
+        "lessons": [
+            {
+                "lessonName": "Storytelling",
+                "lessonID": "7479de25-c6c0-4701-abaf-a25f75f98f3f",
+                "lessonProgress": 0.0,
+                "description": "Greetings and opening phrases, Introducing yourself and Others, Days of the Week and Seasons, Family Members",
+                "spanishContent": "Title: Family Morning Routine - Una mañana, la familia Méndez se estaba preparando para ir a la escuela. Mía, la hija, tenía que cepillarse los dientes, cepillarse el pelo, desayunar y vestirse. El hijo, Juan, tenía que cepillarse los dientes, desayunar y preparar su mochila. La mamá preparaba la comida y el papá los acompañaba a la escuela.",
+                "englishContent": "Title: Family Morning Routine - One morning, the Mendez family was getting ready for school. Mia, the daughter, had to brush her teeth, brush her hair, eat breakfast, and get dressed. Juan, the son, had to brush his teeth, eat breakfast, and pack his backpack. Mom made the food, and Dad walked them to school."
+            },
+            {
+                "lessonName": "2",
+                "lessonID": "7479de25-c6c0-4701-abaf-a25f75f98f3f",
+                "lessonProgress": 0.0,
+                "description": "Greetings and opening phrases, Introducing yourself and Others, Days of the Week and Seasons, Family Members",
+                "spanishContent": "Title: Family Morning Routine - Una mañana, la familia Méndez se estaba preparando para ir a la escuela. Mía, la hija, tenía que cepillarse los dientes, cepillarse el pelo, desayunar y vestirse. El hijo, Juan, tenía que cepillarse los dientes, desayunar y preparar su mochila. La mamá preparaba la comida y el papá los acompañaba a la escuela.",
+                "englishContent": "Title: Family Morning Routine - One morning, the Mendez family was getting ready for school. Mia, the daughter, had to brush her teeth, brush her hair, eat breakfast, and get dressed. Juan, the son, had to brush his teeth, eat breakfast, and pack his backpack. Mom made the food, and Dad walked them to school."
+            }
+
+        ],
+        "assessments": [
+            {
+                "assessmentID": "969eb3fa-fabc-4957-9604-d0929de9c207",
+                "type": "Quiz",
+                "userScore": 85,
+                "attempts": 1,
+                "questions": [
+                    {
+                        "questionID": "56ba4e8d-abd6-4e96-a22f-0d6ec1fb5d43",
+                        "content": "How do you say 'Goodbye' in Spanish?",
+                        "correctAnswer": "Adiós",
+                        "userAnswer": "",
+                        "difficulty": "Rudimentary"
+                    },
+                    {
+                        "questionID": "2a8d5c78-7d5f-4c37-9d1c-63502f7c4773",
+                        "content": "Match the word 'Hello' to its Spanish equivalent.",
+                        "correctAnswer": "Hola",
+                        "userAnswer": "",
+                        "difficulty": "Rudimentary",
+                        "type": "MatchingQuestion"
+                    },
+                    {
+                        "questionID": "b8e2cd48-1d9f-4f2f-8d9e-78b3e9a20b5a",
+                        "content": "Is 'Gracias' the correct word for 'Thank you'?",
+                        "correctAnswer": "True",
+                        "userAnswer": "",
+                        "difficulty": "Rudimentary",
+                        "type": "TrueFalseQuestion"
+                    },
+                    {
+                        "questionID": "cd9a5c88-1234-4b45-8d59-6e7bafbd5ad2",
+                        "content": "What is the Spanish word for 'Please'?",
+                        "choices": ["Por favor", "Gracias", "De nada"],
+                        "correctAnswer": "Por favor",
+                        "userAnswer": "",
+                        "difficulty": "Rudimentary",
+                        "type": "MultipleChoiceQuestion"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "courseID": "1c9d7241-30d0-4f50-91c1-f4c6e3c98eb2",
+        "name": "Advanced Spanish Learning",
+        "description": "A comprehensive course designed for advanced learners to enhance their Spanish skills.",
+        "userAccess": true,
+        "courseProgress": 0.0,
+        "completed": false,
+        "lessons": [
+            {
+                "lessonName": "Complex Conversations",
+                "lessonID": "f473fe60-b30b-4c8b-967b-bf563f104504",
+                "lessonProgress": 0,
+                "description": "In-depth discussions on various topics, cultural nuances, and advanced vocabulary.",
+                "spanishContent": "Título: La Aventura de Clara - Clara era una joven apasionada por la fotografía. Un día, decidió emprender un viaje a través de los paisajes de Andalucía, donde las colinas se encontraban con el mar y la historia respiraba en cada rincón. Mientras paseaba por las calles empedradas de Granada, se encontró con un anciano que le habló sobre las leyendas de la Alhambra. Fascinada, Clara escuchó atentamente, sintiendo cómo cada palabra pintaba imágenes vívidas en su mente. Continuó su viaje, capturando momentos y reflexionando sobre la belleza efímera de la vida. Al caer la noche, se sentó en una terraza, viendo el atardecer y agradeciendo por las experiencias que cada día le ofrecía.",
+                "englishContent": "Title: Clara's Adventure - Clara was a young woman passionate about photography. One day, she decided to embark on a journey through the landscapes of Andalusia, where the hills met the sea and history breathed in every corner. While wandering through the cobbled streets of Granada, she met an elderly man who told her about the legends of the Alhambra. Fascinated, Clara listened intently, feeling how each word painted vivid images in her mind. She continued her journey, capturing moments and reflecting on the fleeting beauty of life. As night fell, she sat on a terrace, watching the sunset and feeling grateful for the experiences that each day offered her."
+            },
+            {
+                "lessonName": "2",
+                "lessonID": "7479de25-c6c0-4701-abaf-a25f75f98f3f",
+                "lessonProgress": 0.0,
+                "description": "Greetings and opening phrases, Introducing yourself and Others, Days of the Week and Seasons, Family Members",
+                "spanishContent": "Title: Family Morning Routine - Una mañana, la familia Méndez se estaba preparando para ir a la escuela. Mía, la hija, tenía que cepillarse los dientes, cepillarse el pelo, desayunar y vestirse. El hijo, Juan, tenía que cepillarse los dientes, desayunar y preparar su mochila. La mamá preparaba la comida y el papá los acompañaba a la escuela.",
+                "englishContent": "Title: Family Morning Routine - One morning, the Mendez family was getting ready for school. Mia, the daughter, had to brush her teeth, brush her hair, eat breakfast, and get dressed. Juan, the son, had to brush his teeth, eat breakfast, and pack his backpack. Mom made the food, and Dad walked them to school."
+            }
+        ],
+        "assessments": [
+            {
+                "assessmentID": "6f2b3791-f5c2-4c65-a6ee-72014f28791a",
+                "type": "Quiz",
+                "userScore": 0,
+                "attempts": 0,
+                "questions": [
+                    {
+                        "questionID": "d783a7c2-08b6-4b8a-b3b7-0083eb5140bc",
+                        "content": "How do you say 'Goodbye' in Spanish?",
+                        "correctAnswer": "Adiós",
+                        "userAnswer": "",
+                        "difficulty": "Advanced"
+                    },
+                    {
+                        "questionID": "bb930b1f-39d1-40f8-b3d1-b6e4507447f4",
+                        "content": "Match the word 'Hello' to its Spanish equivalent.",
+                        "correctAnswer": "Hola",
+                        "userAnswer": "",
+                        "difficulty": "Advanced",
+                        "type": "MatchingQuestion"
+                    },
+                    {
+                        "questionID": "98e2a6cb-c12a-4b8d-a58e-78b3e9a20b5a",  
+                        "content": "Is 'Gracias' the correct word for 'Thank you'?",
+                        "correctAnswer": "True",
+                        "userAnswer": "",
+                        "difficulty": "Advanced",
+                        "type": "TrueFalseQuestion"
+                    },
+                    {
+                        "questionID": "5480e2d4-fdd8-4ed4-94c5-1804b64d6b98", 
+                        "content": "What is the Spanish word for 'Please'?",
+                        "choices": ["Por favor", "Gracias", "De nada"],
+                        "correctAnswer": "Por favor",
+                        "userAnswer": "",
+                        "difficulty": "Advanced",
+                        "type": "MultipleChoiceQuestion"
+                    }
+                ]
+            }
+        ]
+    }
+]

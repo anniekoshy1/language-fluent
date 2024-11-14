@@ -1,0 +1,23 @@
+[
+    {
+        "languageId": "b9f633c0-a50b-42f6-96c6-ec9fa64db970",
+        "name": "Spanish",
+        "user": "Shawnchau34",
+        "coursePercentage": "80%",
+        "totalPercentage": "70%",
+        "languageProgress": "75%",
+        "keywords": ["grammar, vocabulary, conversation"],
+        "completedCourses":[
+            "ee851fb0-5d94-49ad-93a0-9c1ee3520c4b"
+        ],
+        "completedAssessments": [
+            {
+                "assessmentID": "eaa3d6f1-2ed2-4c0c-aea5-82d776497ff1",
+                "score": "90%"
+            }
+        ],
+        "courseAccess":{
+            "ee851fb0-5d94-49ad-93a0-9c1ee3520c4b": "true"
+        }
+    }
+]

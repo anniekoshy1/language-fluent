@@ -1,0 +1,344 @@
+[
+    {
+        "id": "1",
+        "word": "Hola",
+        "translation": "Hello",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "2",
+        "word": "Adiós",
+        "translation": "Goodbye",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "3",
+        "word": "Gracias",
+        "translation": "Thank you",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "4",
+        "word": "Por favor",
+        "translation": "Please",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "5",
+        "word": "De nada",
+        "translation": "You're welcome",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "6",
+        "word": "Perdón",
+        "translation": "Excuse me",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "7",
+        "word": "Lo siento",
+        "translation": "I'm sorry",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "8",
+        "word": "Buenos días",
+        "translation": "Good morning",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "9",
+        "word": "Buenas tardes",
+        "translation": "Good afternoon",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "10",
+        "word": "Buenas noches",
+        "translation": "Good night",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "11",
+        "word": "Amigo",
+        "translation": "Friend (male)",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "12",
+        "word": "Amiga",
+        "translation": "Friend (female)",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "13",
+        "word": "Hermano",
+        "translation": "Brother",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "14",
+        "word": "Hermana",
+        "translation": "Sister",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "15",
+        "word": "Madre",
+        "translation": "Mother",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "16",
+        "word": "Padre",
+        "translation": "Father",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "17",
+        "word": "Niño",
+        "translation": "Boy",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "18",
+        "word": "Niña",
+        "translation": "Girl",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "19",
+        "word": "Familia",
+        "translation": "Family",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "20",
+        "word": "Persona",
+        "translation": "Person",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "21",
+        "word": "Hombre",
+        "translation": "Man",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "22",
+        "word": "Mujer",
+        "translation": "Woman",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "23",
+        "word": "Casa",
+        "translation": "House",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "24",
+        "word": "Escuela",
+        "translation": "School",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "25",
+        "word": "Calle",
+        "translation": "Street",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "26",
+        "word": "Ciudad",
+        "translation": "City",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "27",
+        "word": "País",
+        "translation": "Country",
+        "difficulty": "INTERMEDIATE"
+    },
+    {
+        "id": "28",
+        "word": "Trabajo",
+        "translation": "Work",
+        "difficulty": "INTERMEDIATE"
+    },
+    {
+        "id": "29",
+        "word": "Tarea",
+        "translation": "Task",
+        "difficulty": "INTERMEDIATE"
+    },
+    {
+        "id": "30",
+        "word": "Estudiante",
+        "translation": "Student",
+        "difficulty": "INTERMEDIATE"
+    },
+    {
+        "id": "31",
+        "word": "Profesor",
+        "translation": "Teacher",
+        "difficulty": "INTERMEDIATE"
+    },
+    {
+        "id": "32",
+        "word": "Ropa",
+        "translation": "Clothing",
+        "difficulty": "INTERMEDIATE"
+    },
+    {
+        "id": "33",
+        "word": "Zapato",
+        "translation": "Shoe",
+        "difficulty": "INTERMEDIATE"
+    },
+    {
+        "id": "34",
+        "word": "Comida",
+        "translation": "Food",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "35",
+        "word": "Agua",
+        "translation": "Water",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "36",
+        "word": "Coche",
+        "translation": "Car",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "37",
+        "word": "Perro",
+        "translation": "Dog",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "38",
+        "word": "Gato",
+        "translation": "Cat",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "39",
+        "word": "Libro",
+        "translation": "Book",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "40",
+        "word": "Playa",
+        "translation": "Beach",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "41",
+        "word": "Amor",
+        "translation": "Love",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "42",
+        "word": "Tiempo",
+        "translation": "Time",
+        "difficulty": "INTERMEDIATE"
+    },
+    {
+        "id": "43",
+        "word": "Vida",
+        "translation": "Life",
+        "difficulty": "INTERMEDIATE"
+    },
+    {
+        "id": "44",
+        "word": "Esperanza",
+        "translation": "Hope",
+        "difficulty": "INTERMEDIATE"
+    },
+    {
+        "id": "45",
+        "word": "Sueño",
+        "translation": "Dream",
+        "difficulty": "INTERMEDIATE"
+    },
+    {
+        "id": "46",
+        "word": "Corazón",
+        "translation": "Heart",
+        "difficulty": "INTERMEDIATE"
+    },
+    {
+        "id": "47",
+        "word": "Felicidad",
+        "translation": "Happiness",
+        "difficulty": "INTERMEDIATE"
+    },
+    {
+        "id": "48",
+        "word": "Suerte",
+        "translation": "Luck",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "49",
+        "word": "Felicidades",
+        "translation": "Congratulations",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "50",
+        "word": "Adelante",
+        "translation": "Go ahead",
+        "difficulty": "INTERMEDIATE"
+    },
+    {
+        "id": "51",
+        "word": "Hija",
+        "translation": "Daughter",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "52",
+        "word": "Hijo",
+        "translation": "Son",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "53",
+        "word": "Hija",
+        "translation": "Daughter",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "54",
+        "word": "Cabello",
+        "translation": "Hair",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "55",
+        "word": "Desayuno",
+        "translation": "Breakfast",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "56",
+        "word": "Ropa",
+        "translation": "Clothes",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "57",
+        "word": "Mochila",
+        "translation": "Backpack",
+        "difficulty": "INTERMEDIATE"
+    }
+]
