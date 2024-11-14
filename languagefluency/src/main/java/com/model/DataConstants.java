@@ -9,11 +9,11 @@ import java.util.List;
 public class DataConstants {
 
     // File paths for storing data
-    public static final String USERS_FILE = "speek/docs/JSON/User.json";
-    public static final String COURSES_FILE = "speek/docs/JSON/Courses.json";
-    public static final String LANGUAGES_FILE = "speek/docs/JSON/Languages.json";
-    public static final String WORDS_FILE = "speek/docs/JSON/words.json";
-    public static final String PHRASES_FILE = "speek/docs/JSON/phrases.json";
+    public static final String USERS_FILE = "src/main/java/com/data/User.json";
+    public static final String COURSES_FILE = "src/main/java/com/data/Courses.json";
+    public static final String LANGUAGES_FILE = "src/main/java/com/data/Languages.json";
+    public static final String WORDS_FILE = "src/main/java/com/data/words.json";
+    public static final String PHRASES_FILE = "src/main/java/com/data/phrases.json";
     
     // Constants for user information
     public static final int MIN_PASSWORD_LENGTH = 5;
