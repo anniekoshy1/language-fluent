@@ -1,7 +1,7 @@
 /**
  * Provides functionality to list available voices from the Amazon Polly service for a specified AWS region
  */
-package com.model;
+package com.narration;
 
 import java.util.Iterator;
 import java.util.stream.Stream;

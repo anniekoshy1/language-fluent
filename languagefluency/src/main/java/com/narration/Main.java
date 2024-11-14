@@ -1,7 +1,7 @@
 /**
  * Entry point for the application, demonstrating the use of the Narriator class to play an audio message
  */
-package com.model;
+package com.narration;
 
 public class Main {
 

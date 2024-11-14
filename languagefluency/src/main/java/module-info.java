@@ -19,4 +19,7 @@ module com.languagefluent {
 
     opens com.model to javafx.fxml;
     exports com.model;
+
+    opens com.narration to javafx.fxml;
+    exports com.narration;
 }

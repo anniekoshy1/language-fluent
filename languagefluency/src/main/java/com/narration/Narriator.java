@@ -2,7 +2,7 @@
  * Provides text-to-speech narration functionality using Amazon Polly.
  * Supports narrating text, feedback messages, and questions with a Spanish accent.
  */
-package com.model;
+package com.narration;
 
 import java.io.IOException;
 import java.io.InputStream;
