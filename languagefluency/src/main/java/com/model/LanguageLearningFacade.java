@@ -3,6 +3,7 @@ package com.model;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Scanner;
 import java.util.UUID;
 
 public class LanguageLearningFacade {
@@ -13,6 +14,8 @@ public class LanguageLearningFacade {
     private User user;
     private ArrayList<Language> currentLanguage;
     private final WordsList wordsList;
+    private Assessment assessments;
+    private Questions question;
 
     /**
      * Initializes the facade, setting up user, course, and language lists,
@@ -75,17 +78,6 @@ public class LanguageLearningFacade {
     }
 
     /**
-     * Starts an assessment by resetting attempts for the current user.
-     *
-     * @param assessment the assessment to start
-     */
-    public void startAssessment(Assessment assessment) {
-        if (user != null) {
-            assessment.retakeAssessment();
-        }
-    }
-
-    /**
      * Retrieves all available languages in the system.
      *
      * @return a list of available languages
@@ -104,18 +96,6 @@ public class LanguageLearningFacade {
         if (language != null) {
             this.currentLanguage = language;
         }
-    }
-
-    /**
-     * Tracks the learning progress in the currently selected language.
-     *
-     * @return the language progress percentage, or 0 if no language is selected
-     */
-    public double trackLanguageProgress() {
-        if (currentLanguage != null) {
-            return currentLanguage.getLanguageProgress();
-        }
-        return 0.0;
     }
 
     /**
@@ -214,12 +194,44 @@ public class LanguageLearningFacade {
         return false;
     }
 
-    /**
-     * Loads assessment questions for a given assessment ID.
-     *
-     * @param assessmentId the UUID of the assessment
+     /**
+     * Generates a random question from the available words.
      */
-    public void loadAssessmentQuestions(UUID assessmentId) {
-        DataLoader.loadAssessmentById(assessmentId.toString());
+    public void getaQuestion() {
+        // Generate a random question using the words from the loaded WordsList
+         question = assessments.generateRandomQuestion(wordsList);
+
+        // Check if the question is null before calling toString()
+        if (question != null) {
+            System.out.println("Generated Question: " + question.toString());
+        } else {
+            System.out.println("Error: Failed to generate a question.");
+        }
     }
+
+    public void answeraQuestion(Scanner k){
+        System.out.println("Please enter your answer:");
+        String userAnswer = k.nextLine().toLowerCase().trim();
+        question.setUserAnswer(userAnswer);
+
+        if(question.isCorrect()){
+            System.out.println("Correct");
+        }
+        else{
+            System.out.println("Incorrect");
+        }
+
+        assessments.addQuestion(question);
+    }
+
+    public void startAssessment1(Scanner k){
+
+        for(int i =0; i < 5; i++){
+            getaQuestion();
+            answeraQuestion(k);
+        }
+
+        assessments.evaluatePerformance();
+    }
+
 }
