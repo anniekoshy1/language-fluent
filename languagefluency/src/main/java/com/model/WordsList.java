@@ -3,21 +3,14 @@ package com.model;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * A collection of Word objects, providing methods to add, filter, and access words by different criteria.
- */
 public class WordsList {
-    private final List<Word> words;
+    private final ArrayList<Word> words; // List of words in the system
     private static WordsList wordsList;
-    private boolean isLoaded = false;
 
-    /**
-     * Private constructor initializes an empty words list.
-     */
     private WordsList() {
         words = new ArrayList<>();
     }
-    
+
     /**
      * Returns the singleton instance of WordsList and loads words if not yet loaded.
      *
@@ -26,15 +19,17 @@ public class WordsList {
     public static WordsList getInstance() {
         if (wordsList == null) {
             wordsList = new WordsList();
+            System.out.println("WordsList instance created, now loading words...");
+            wordsList.loadWords();
         }
         return wordsList;
     }
 
-        /**
-     * Loads words data if it has not been loaded already.
+    /**
+     * Loads words data using DataLoader if not loaded already.
      */
     public void loadWords() {
-        DataLoader.loadWords(); // Populates this WordsList instance after instantiation
+        DataLoader.loadWords();
     }
 
     /**
@@ -43,33 +38,41 @@ public class WordsList {
      * @param word The word to be added.
      */
     public void addWord(Word word) {
-        this.words.add(word);
+        words.add(word);
+        saveWords(); // Save after adding to maintain persistence
     }
 
     /**
-     * Retrieves a random word from the list.
+     * Adds multiple words to the list without triggering save.
      *
-     * @return A randomly selected word, or null if the list is empty.
+     * @param newWords The words to be added.
      */
-    public Word getRandomWord() {
-        if (words.isEmpty()) return null;
-        int randomIndex = (int) (Math.random() * words.size());
-        return words.get(randomIndex);
+    public void addWords(List<Word> newWords) {
+        words.addAll(newWords);
     }
 
     /**
-     * Provides access to the full list of words.
+     * Retrieves all the words in the list.
      *
      * @return The complete list of words.
      */
-    public List<Word> getAllWords() {
+    public ArrayList<Word> getAllWords() {
         return words;
     }
 
     /**
-     * Saves the list of words to the JSON file.
+     * Saves the list of words to the JSON file using DataWriter.
      */
     public void saveWords() {
         DataWriter.saveWords();
+    }
+
+    /**
+     * Adds a word to the list without saving (used during initial load).
+     *
+     * @param word The word to be added.
+     */
+    public void addWordWithoutSaving(Word word) {
+        words.add(word);
     }
 }

@@ -115,16 +115,17 @@ public class DataWriter extends DataConstants {
      */
     @SuppressWarnings("unchecked")
     public static void saveWords() {
-        WordsList wordsList = WordsList.getInstance();
+        WordsList wordsList = WordsList.getInstance(); // Get the singleton instance
         JSONArray jsonWords = new JSONArray();
 
         for (Word word : wordsList.getAllWords()) {
-            jsonWords.add(getWordJSON(word));
+            jsonWords.add(getWordJSON(word)); // Convert each word to JSON
         }
 
         try (FileWriter file = new FileWriter(WORDS_FILE)) {
-            file.write(jsonWords.toJSONString());
+            file.write(jsonWords.toJSONString()); // Write the full list of words to the file
             file.flush();
+            System.out.println("Words saved successfully.");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -133,9 +134,10 @@ public class DataWriter extends DataConstants {
     @SuppressWarnings("unchecked")
     private static JSONObject getWordJSON(Word word) {
         JSONObject wordDetails = new JSONObject();
-        wordDetails.put(WORD_TEXT, word.getWordText());
-        wordDetails.put(WORD_TRANSLATION, word.getTranslation());
-        wordDetails.put(WORD_DIFFICULTY, word.getDifficulty());
+        wordDetails.put("id", word.getId().toString());
+        wordDetails.put("word", word.getWordText());
+        wordDetails.put("difficulty", word.getDifficulty());
+        wordDetails.put("translation", word.getTranslation());
         return wordDetails;
     }
 

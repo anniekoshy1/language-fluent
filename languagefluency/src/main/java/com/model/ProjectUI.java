@@ -2,9 +2,7 @@ package com.model;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 import java.util.Scanner;
-import java.util.UUID;
 
 import com.narration.Narriator;
 
@@ -227,7 +225,7 @@ public class ProjectUI {
     private void startFlashcards() {
         System.out.println("Starting Flashcard Practice...");
         
-        List<FlashcardQuestion> flashcards = dataLoader.loadFlashcardsFromJson("speek/docs/JSON/Words.json");
+        List<FlashcardQuestion> flashcards = DataLoader.loadFlashcardsFromJson("languagefluency/src/main/java/com/data/Words.json");
 
         if (flashcards.isEmpty()) {
             System.out.println("No flashcards available.");

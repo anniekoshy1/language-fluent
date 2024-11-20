@@ -3,342 +3,357 @@
         "id": "1",
         "word": "Hola",
         "translation": "Hello",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "A common greeting used in Spanish-speaking countries to say hello."
     },
     {
         "id": "2",
         "word": "Adiós",
         "translation": "Goodbye",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "A word used to say farewell or goodbye."
     },
     {
         "id": "3",
         "word": "Gracias",
         "translation": "Thank you",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "A polite expression used when receiving something or being thankful."
     },
     {
         "id": "4",
         "word": "Por favor",
         "translation": "Please",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "A polite expression used to make a request."
     },
     {
         "id": "5",
         "word": "De nada",
         "translation": "You're welcome",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "An expression used in response to 'thank you', indicating that no thanks is necessary."
     },
     {
         "id": "6",
         "word": "Perdón",
         "translation": "Excuse me",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "A polite expression used to apologize or to get someone's attention."
     },
     {
         "id": "7",
         "word": "Lo siento",
         "translation": "I'm sorry",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "An expression of apology or regret."
     },
     {
         "id": "8",
         "word": "Buenos días",
         "translation": "Good morning",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "A greeting used during the morning hours."
     },
     {
         "id": "9",
         "word": "Buenas tardes",
         "translation": "Good afternoon",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "A greeting used during the afternoon hours."
     },
     {
         "id": "10",
         "word": "Buenas noches",
         "translation": "Good night",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "A greeting or farewell used during the evening or night."
     },
     {
         "id": "11",
         "word": "Amigo",
         "translation": "Friend (male)",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "A male friend or companion."
     },
     {
         "id": "12",
         "word": "Amiga",
         "translation": "Friend (female)",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "A female friend or companion."
     },
     {
         "id": "13",
         "word": "Hermano",
         "translation": "Brother",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "A male sibling."
     },
     {
         "id": "14",
         "word": "Hermana",
         "translation": "Sister",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "A female sibling."
     },
     {
         "id": "15",
         "word": "Madre",
         "translation": "Mother",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "A female parent."
     },
     {
         "id": "16",
         "word": "Padre",
         "translation": "Father",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "A male parent."
     },
     {
         "id": "17",
         "word": "Niño",
         "translation": "Boy",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "A male child."
     },
     {
         "id": "18",
         "word": "Niña",
         "translation": "Girl",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "A female child."
     },
     {
         "id": "19",
         "word": "Familia",
         "translation": "Family",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "A group of people related by blood or marriage."
     },
     {
         "id": "20",
         "word": "Persona",
         "translation": "Person",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "An individual human being."
     },
     {
         "id": "21",
         "word": "Hombre",
         "translation": "Man",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "An adult male human."
     },
     {
         "id": "22",
         "word": "Mujer",
         "translation": "Woman",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "An adult female human."
     },
     {
         "id": "23",
         "word": "Casa",
         "translation": "House",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "A building for human habitation, typically where a family lives."
     },
     {
         "id": "24",
         "word": "Escuela",
         "translation": "School",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "An institution for educating children."
     },
     {
         "id": "25",
         "word": "Calle",
         "translation": "Street",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "A public road in a city or town."
     },
     {
         "id": "26",
         "word": "Ciudad",
         "translation": "City",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "A large town or urban area."
     },
     {
         "id": "27",
         "word": "País",
         "translation": "Country",
-        "difficulty": "INTERMEDIATE"
+        "difficulty": "INTERMEDIATE",
+        "definition": "A nation with its own government and borders."
     },
     {
         "id": "28",
         "word": "Trabajo",
         "translation": "Work",
-        "difficulty": "INTERMEDIATE"
+        "difficulty": "INTERMEDIATE",
+        "definition": "An activity involving mental or physical effort to achieve a result."
     },
     {
         "id": "29",
         "word": "Tarea",
         "translation": "Task",
-        "difficulty": "INTERMEDIATE"
+        "difficulty": "INTERMEDIATE",
+        "definition": "A piece of work to be done or undertaken."
     },
     {
         "id": "30",
         "word": "Estudiante",
         "translation": "Student",
-        "difficulty": "INTERMEDIATE"
+        "difficulty": "INTERMEDIATE",
+        "definition": "A person who is studying at a school or other educational institution."
     },
     {
         "id": "31",
         "word": "Profesor",
         "translation": "Teacher",
-        "difficulty": "INTERMEDIATE"
+        "difficulty": "INTERMEDIATE",
+        "definition": "A person who teaches, especially in a school."
     },
     {
         "id": "32",
         "word": "Ropa",
         "translation": "Clothing",
-        "difficulty": "INTERMEDIATE"
+        "difficulty": "INTERMEDIATE",
+        "definition": "Items worn on the body."
     },
     {
         "id": "33",
         "word": "Zapato",
         "translation": "Shoe",
-        "difficulty": "INTERMEDIATE"
+        "difficulty": "INTERMEDIATE",
+        "definition": "A covering for the foot, typically made of leather, having a sturdy sole and not reaching above the ankle."
     },
     {
         "id": "34",
         "word": "Comida",
         "translation": "Food",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "Any nutritious substance that people eat or drink to maintain life and growth."
     },
     {
         "id": "35",
         "word": "Agua",
         "translation": "Water",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "A transparent, tasteless, odorless, and nearly colorless chemical substance, essential for most forms of life."
     },
     {
         "id": "36",
         "word": "Coche",
         "translation": "Car",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "A road vehicle, typically with four wheels, powered by an internal combustion engine."
     },
     {
         "id": "37",
         "word": "Perro",
         "translation": "Dog",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "A domesticated carnivorous mammal that typically has a long snout and a barking or howling voice."
     },
     {
         "id": "38",
         "word": "Gato",
         "translation": "Cat",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "A small domesticated carnivorous mammal with soft fur, a short snout, and retractile claws."
     },
     {
         "id": "39",
         "word": "Libro",
         "translation": "Book",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "A set of written or printed pages, usually bound with a protective cover."
     },
     {
         "id": "40",
         "word": "Playa",
         "translation": "Beach",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "A pebbly or sandy shore, especially by the ocean."
     },
     {
         "id": "41",
         "word": "Amor",
         "translation": "Love",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "An intense feeling of deep affection."
     },
     {
         "id": "42",
         "word": "Tiempo",
         "translation": "Time",
-        "difficulty": "INTERMEDIATE"
+        "difficulty": "INTERMEDIATE",
+        "definition": "The indefinite continued progress of existence and events in the past, present, and future."
     },
     {
         "id": "43",
         "word": "Vida",
         "translation": "Life",
-        "difficulty": "INTERMEDIATE"
+        "difficulty": "INTERMEDIATE",
+        "definition": "The condition that distinguishes living organisms from inorganic matter."
     },
     {
         "id": "44",
         "word": "Esperanza",
         "translation": "Hope",
-        "difficulty": "INTERMEDIATE"
+        "difficulty": "INTERMEDIATE",
+        "definition": "A feeling of expectation and desire for a certain thing to happen."
     },
     {
         "id": "45",
         "word": "Sueño",
         "translation": "Dream",
-        "difficulty": "INTERMEDIATE"
+        "difficulty": "INTERMEDIATE",
+        "definition": "A series of thoughts, images, and sensations occurring in a person's mind during sleep."
     },
     {
         "id": "46",
         "word": "Corazón",
         "translation": "Heart",
-        "difficulty": "INTERMEDIATE"
+        "difficulty": "INTERMEDIATE",
+        "definition": "The organ in your chest that sends the blood around your body."
     },
     {
         "id": "47",
         "word": "Felicidad",
         "translation": "Happiness",
-        "difficulty": "INTERMEDIATE"
+        "difficulty": "INTERMEDIATE",
+        "definition": "The state of being happy."
     },
     {
         "id": "48",
         "word": "Suerte",
         "translation": "Luck",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "Success or failure apparently brought by chance rather than through one's own actions."
     },
     {
         "id": "49",
         "word": "Felicidades",
         "translation": "Congratulations",
-        "difficulty": "RUDIMENTARY"
+        "difficulty": "RUDIMENTARY",
+        "definition": "An expression of praise for an achievement or good wishes on a special occasion."
     },
     {
         "id": "50",
         "word": "Adelante",
         "translation": "Go ahead",
-        "difficulty": "INTERMEDIATE"
+        "difficulty": "INTERMEDIATE",
+        "definition": "A term used to tell someone to proceed or to continue forward."
     },
     {
         "id": "51",
         "word": "Hija",
         "translation": "Daughter",
-        "difficulty": "RUDIMENTARY"
-    },
-    {
-        "id": "52",
-        "word": "Hijo",
-        "translation": "Son",
-        "difficulty": "RUDIMENTARY"
-    },
-    {
-        "id": "53",
-        "word": "Hija",
-        "translation": "Daughter",
-        "difficulty": "RUDIMENTARY"
-    },
-    {
-        "id": "54",
-        "word": "Cabello",
-        "translation": "Hair",
-        "difficulty": "RUDIMENTARY"
-    },
-    {
-        "id": "55",
-        "word": "Desayuno",
-        "translation": "Breakfast",
-        "difficulty": "RUDIMENTARY"
-    },
-    {
-        "id": "56",
-        "word": "Ropa",
-        "translation": "Clothes",
-        "difficulty": "RUDIMENTARY"
-    },
-    {
-        "id": "57",
-        "word": "Mochila",
-        "translation": "Backpack",
-        "difficulty": "INTERMEDIATE"
+        "difficulty": "RUDIMENTARY",
+        "definition": "A female child."
     }
 ]

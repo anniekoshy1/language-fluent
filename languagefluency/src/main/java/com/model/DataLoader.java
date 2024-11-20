@@ -142,7 +142,7 @@ public class DataLoader extends DataConstants {
      * @return 
      */
     public static void loadWords() {
-        WordsList wordsList = WordsList.getInstance();
+        WordsList wordsList = WordsList.getInstance(); // Get the singleton instance
         JSONParser parser = new JSONParser();
 
         try (FileReader reader = new FileReader(WORDS_FILE)) {
@@ -150,19 +150,20 @@ public class DataLoader extends DataConstants {
             for (Object obj : wordsArray) {
                 JSONObject wordObject = (JSONObject) obj;
                 String wordText = (String) wordObject.get("word");
-                String definition = (String) wordObject.get("definition");
                 String difficulty = (String) wordObject.get("difficulty");
                 String translation = (String) wordObject.get("translation");
 
                 Word word = new Word(wordText, definition, difficulty, translation);
-                wordsList.addWord(word);
+                wordsList.addWordWithoutSaving(word); // Add without saving during the load phase
             }
-            System.out.println("Words loaded successfully.");
+            System.out.println("Total words loaded: " + wordsList.getAllWords().size());
 
         } catch (IOException | ParseException e) {
             e.printStackTrace();
+            System.err.println("Error in DataLoader.loadWords(): " + e.getMessage());
         }
     }
+
 
     /**
      * Helper method to parse progress from a JSON object.

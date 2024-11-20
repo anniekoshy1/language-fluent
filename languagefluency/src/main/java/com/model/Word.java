@@ -24,8 +24,8 @@ public class Word {
      * @param difficulty  the difficulty level of the word
      * @param translation the primary translation of the word
      */
-    public Word(String wordText, String definition, String difficulty, String translation) {
-        this.id = UUID.randomUUID();
+    public Word(UUID id, String wordText, String definition, String difficulty, String translation) {
+        this.id = id != null ? id : UUID.randomUUID();
         this.wordText = wordText;
         this.definition = definition;
         this.difficulty = difficulty;
