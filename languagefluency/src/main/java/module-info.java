@@ -17,11 +17,8 @@ module com.languagefluent {
     opens com.languagefluent to javafx.fxml;
     exports com.languagefluent;
 
-    opens com.model to javafx.fxml;
-    exports com.model;
-
-    opens com.narration to javafx.fxml;
-    exports com.narration;
+    opens com.model to javafx.fxml;  // Keep only one 'opens' declaration
+    exports com.model;  // Keep only one 'exports' declaration
 
     opens com.controllers to javafx.fxml;
     exports com.controllers;
