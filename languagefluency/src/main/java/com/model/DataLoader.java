@@ -152,8 +152,17 @@ public class DataLoader extends DataConstants {
                 String wordText = (String) wordObject.get("word");
                 String difficulty = (String) wordObject.get("difficulty");
                 String translation = (String) wordObject.get("translation");
+                String definition = wordObject.containsKey("definition") ? (String) wordObject.get("definition") : "";
+                UUID id;
+                try {
+                    // Attempt to parse the UUID
+                    id = UUID.fromString((String) wordObject.get("id"));
+                } catch (IllegalArgumentException e) {
+                    // If the "id" is not a valid UUID, generate a new one
+                    id = UUID.randomUUID();
+                }
 
-                Word word = new Word(wordText, definition, difficulty, translation);
+                Word word = new Word(id, wordText, definition, difficulty, translation);
                 wordsList.addWordWithoutSaving(word); // Add without saving during the load phase
             }
             System.out.println("Total words loaded: " + wordsList.getAllWords().size());
