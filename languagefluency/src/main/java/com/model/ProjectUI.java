@@ -1,10 +1,12 @@
-package com.narration;
+package com.model;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.UUID;
+
+import com.narration.Narriator;
 
 public class ProjectUI {
 
