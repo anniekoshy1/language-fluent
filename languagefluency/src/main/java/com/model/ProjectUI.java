@@ -1,12 +1,21 @@
 package com.model;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 import com.narration.Narriator;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
 public class ProjectUI {
+
+    private static ProjectUI instance;
+
 
     private LanguageLearningFacade facade;
     private Scanner scanner;
@@ -15,6 +24,7 @@ public class ProjectUI {
     private Course course;
     private static Difficulty difficulty;
     private Assessment assessment;
+    private Scene scene;
 
 
     public ProjectUI() {
@@ -22,6 +32,20 @@ public class ProjectUI {
         scanner = new Scanner(System.in);
         dataLoader = new DataLoader();
     }
+
+    public static ProjectUI getInstance() {
+        if (instance == null) {
+            instance = new ProjectUI();
+        }
+        return instance;
+    }
+
+    public void setRoot(String fxml) throws IOException {
+    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/com/languagefluent/" + fxml + ".fxml"));
+    Parent root = fxmlLoader.load();
+    Stage stage = (Stage) scene.getWindow();
+    stage.setScene(new Scene(root));
+}
 
 //MAIN MENU
     public void start() {
@@ -93,18 +117,15 @@ public class ProjectUI {
         }
     }
 //LOGIN
-    private void login() {
-        System.out.print("Enter username: ");
-        String username = scanner.nextLine();
-        System.out.print("Enter password: ");
-        String password = scanner.nextLine();
-
-        if (facade.login(username, password)) {
-            System.out.println("Login successful! Welcome, " + username);
-        } else {
-            System.out.println("Login failed. Please check your credentials.");
-        }
+public boolean login(String username, String password) {
+    if (facade.login(username, password)) {
+        System.out.println("Login successful! Welcome, " + username);
+        return true;
+    } else {
+        System.out.println("Login failed. Please check your credentials.");
+        return false;
     }
+}
 
     private boolean isLoggedIn() {
         return facade.getCurrentUser() != null;
@@ -325,7 +346,7 @@ public class ProjectUI {
         System.out.println("Your overall progress: " + progress + "%");
     }
 
-    private void logout() {
+    public void logout() {
         facade.saveAndLogout();
         System.out.println("You have been logged out.");
     }
