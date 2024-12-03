@@ -6,7 +6,8 @@
         "userAccess": true,
         "courseProgress": 0.0,
         "completed": false,
-        "lessons": [
+        
+        "lessons": 
             {
                 "lessonName": "Storytelling",
                 "lessonID": "7479de25-c6c0-4701-abaf-a25f75f98f3f",
@@ -15,29 +16,13 @@
                 "spanishContent": "Title: Family Morning Routine - Una mañana, la familia Méndez se estaba preparando para ir a la escuela. Mía, la hija, tenía que cepillarse los dientes, cepillarse el pelo, desayunar y vestirse. El hijo, Juan, tenía que cepillarse los dientes, desayunar y preparar su mochila. La mamá preparaba la comida y el papá los acompañaba a la escuela.",
                 "englishContent": "Title: Family Morning Routine - One morning, the Mendez family was getting ready for school. Mia, the daughter, had to brush her teeth, brush her hair, eat breakfast, and get dressed. Juan, the son, had to brush his teeth, eat breakfast, and pack his backpack. Mom made the food, and Dad walked them to school."
             },
-            {
-                "lessonName": "Greetings",
-                "lessonID": "8479de25-c6c0-4701-abaf-a25f75f98f3f",
-                "lessonProgress": 0.0,
-                "description": "Greetings, Introducing yourself, and Other Basics",
-                "spanishContent": "Hola, ¿cómo estás? - Saludos básicos para empezar una conversación en español.",
-                "englishContent": "Hello, how are you? - Basic greetings to start a conversation in Spanish."
-            }
-        ],
-        "flashcards": [
-            {
-                "front": "Hola",
-                "back": "Hello"
-            },
-            {
-                "front": "Gracias",
-                "back": "Thank you"
-            },
-            {
-                "front": "Por favor",
-                "back": "Please"
-            }
-        ]
+
+    
+            "flashcard": {
+                "flashcardnName": "1",
+                "completed": false,
+                "flashcardProgress":  0.0
+            } 
     },
     {
         "courseID": "1c9d7241-30d0-4f50-91c1-f4c6e3c98eb2",
@@ -46,7 +31,7 @@
         "userAccess": true,
         "courseProgress": 0.0,
         "completed": false,
-        "lessons": [
+        "lessons": 
             {
                 "lessonName": "Complex Conversations",
                 "lessonID": "f473fe60-b30b-4c8b-967b-bf563f104504",
@@ -55,28 +40,10 @@
                 "spanishContent": "Título: La Aventura de Clara - Clara era una joven apasionada por la fotografía. Un día, decidió emprender un viaje a través de los paisajes de Andalucía, donde las colinas se encontraban con el mar y la historia respiraba en cada rincón.",
                 "englishContent": "Title: Clara's Adventure - Clara was a young woman passionate about photography. One day, she decided to embark on a journey through the landscapes of Andalusia, where the hills met the sea and history breathed in every corner."
             },
-            {
-                "lessonName": "Cultural Nuances",
-                "lessonID": "b573fe60-b30b-4c8b-967b-bf563f104504",
-                "lessonProgress": 0.0,
-                "description": "Explore cultural nuances and context in conversational Spanish.",
-                "spanishContent": "Entender las diferencias culturales puede mejorar significativamente la comunicación.",
-                "englishContent": "Understanding cultural differences can greatly enhance communication."
-            }
-        ],
-        "flashcards": [
-            {
-                "front": "Adiós",
-                "back": "Goodbye"
-            },
-            {
-                "front": "Lo siento",
-                "back": "I'm sorry"
-            },
-            {
-                "front": "Te amo",
-                "back": "I love you"
+            "flashcard": {
+                "flashcardnName": "2",
+                "completed": false,
+                "flashcardProgress":  0.0
+            } 
             }
         ]
-    }
-]

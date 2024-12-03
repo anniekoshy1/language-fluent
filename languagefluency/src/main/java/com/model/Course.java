@@ -28,7 +28,7 @@ public class Course {
      * @param flashcards the list of flashcard questions in the course
      */
     public Course(UUID id, String name, String description, boolean userAccess, double courseProgress, boolean completed,
-                ArrayList<Lesson> lessons, ArrayList<FlashcardQuestion> flashcards) {
+        ArrayList<Lesson> lessons, FlashcardQuestion flashcard) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -158,4 +158,15 @@ public class Course {
     public boolean completedCourse() {
         return this.courseProgress == 100.0;
     }
+
+    // In the Course class, add a method to get the current lesson
+public Lesson getCurrentLesson() {
+    for (Lesson lesson : lessons) {
+        if (!lesson.isCompleted()) {  // Find the first incomplete lesson
+            return lesson;
+        }
+    }
+    return null;  // Return null if all lessons are completed
+}
+
 }
