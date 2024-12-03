@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" fx:id="library_pane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label fx:id="reviewlabel" layoutX="28.0" layoutY="122.0" style="-fx-font-size: 24px" text="Review" />
+        <ImageView fx:id="line" fitHeight="1.0" fitWidth="172.0" layoutX="21.0" layoutY="158.0">
+            <image>
+                <Image url="@../../images/line.png" />
+            </image>
+        </ImageView>
+         <ImageView fx:id="statusbar" fitHeight="70.0" fitWidth="522.0">
+            <image>
+                <Image url="@../../images/bar.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="courseicon" fitHeight="70.0" fitWidth="79.0" layoutX="18.0" layoutY="54.0">
+            <image>
+                <Image url="@../../images/courseicon.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="logocorner" fitHeight="108.0" fitWidth="117.0" layoutX="399.0" layoutY="52.0">
+            <image>
+                <Image url="@../../images/logocorner.png" />
+            </image>
+        </ImageView>
+<Pane layoutX="93.0" layoutY="193.0" prefHeight="164.0" prefWidth="337.0" style="-fx-background-color: #F9EFDB; -fx-border-radius: 10px; -fx-border-color: black; -fx-border-width: 2px" />
+<Pane layoutX="95.0" layoutY="591.0" prefHeight="164.0" prefWidth="337.0" style="-fx-background-color: #F9EFDB; -fx-border-radius: 10px; -fx-border-color: black; -fx-border-width: 2px" />
+<Pane layoutX="95.0" layoutY="390.0" prefHeight="164.0" prefWidth="337.0" style="-fx-background-color: #F9EFDB; -fx-border-radius: 10px; -fx-border-color: black; -fx-border-width: 2px" />
+      <Label layoutX="101.0" layoutY="168.0" text="Low Confidence:" />
+      <Label layoutX="101.0" layoutY="366.0" text="Medium Confidence:" />
+      <Label layoutX="101.0" layoutY="566.0" text="High Confidence:" />
+    </children>
+    <stylesheets>
+        <URL value="@styles.css" />
+    </stylesheets>
+</AnchorPane>
