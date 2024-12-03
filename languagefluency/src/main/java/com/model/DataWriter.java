@@ -58,18 +58,50 @@ public class DataWriter extends DataConstants {
     public static void saveCourses() {
         CourseList courseList = CourseList.getInstance();
         JSONArray jsonCourses = new JSONArray();
-
+    
         for (Course course : courseList.getCourses()) {
-            jsonCourses.add(getCourseJSON(course));
+            JSONObject courseJSON = new JSONObject();
+            courseJSON.put("courseID", course.getId().toString());
+            courseJSON.put("name", course.getName());
+            courseJSON.put("description", course.getDescription());
+            courseJSON.put("userAccess", course.getUserAccess());
+            courseJSON.put("courseProgress", course.getCourseProgress());
+            courseJSON.put("completed", course.isCompletedCourse());
+    
+            JSONArray lessonsArray = new JSONArray();
+            for (Lesson lesson : course.getAllLessons()) {
+                JSONObject lessonJSON = new JSONObject();
+                lessonJSON.put("lessonName", lesson.getLessonName());
+                lessonJSON.put("lessonID", lesson.getId().toString());
+                lessonJSON.put("lessonProgress", lesson.getLessonProgress());
+                lessonJSON.put("description", lesson.getDescription());
+                lessonsArray.add(lessonJSON);
+            }
+            courseJSON.put("lessons", lessonsArray);
+    
+            JSONArray flashcardsArray = new JSONArray();
+            for (FlashcardQuestion flashcard : course.getFlashcards()) {
+                JSONObject flashcardJSON = new JSONObject();
+                flashcardJSON.put("front", flashcard.getFrontInfo());
+                flashcardJSON.put("back", flashcard.getBackAnswer());
+                flashcardsArray.add(flashcardJSON);
+            }
+            courseJSON.put("flashcards", flashcardsArray);
+    
+            jsonCourses.add(courseJSON);
         }
-
+    
         try (FileWriter file = new FileWriter(COURSES_FILE)) {
             file.write(jsonCourses.toJSONString());
             file.flush();
+            System.out.println("Courses saved successfully.");
         } catch (IOException e) {
             e.printStackTrace();
+            System.err.println("Error saving courses: " + e.getMessage());
         }
     }
+    
+    
 
     @SuppressWarnings("unchecked")
     private static JSONObject getCourseJSON(Course course) {

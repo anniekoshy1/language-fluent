@@ -3,8 +3,7 @@ package com.model;
 import java.util.ArrayList;
 
 public class CourseList {
-
-    private final ArrayList<Course> courses;  
+    private final ArrayList<Course> courses;
     private static CourseList courseList;
 
     private CourseList() {
@@ -14,16 +13,18 @@ public class CourseList {
     public static CourseList getInstance() {
         if (courseList == null) {
             courseList = new CourseList();
+            courseList.loadCourses();
         }
         return courseList;
     }
 
-    public void loadCourses(){
+    public void loadCourses() {
         DataLoader.loadCourses();
     }
 
     public void addCourse(Course course) {
         courses.add(course);
+        saveCourses(); // Save after adding a course
     }
 
     public ArrayList<Course> getCourses() {
@@ -32,5 +33,9 @@ public class CourseList {
 
     public void saveCourses() {
         DataWriter.saveCourses();
+    }
+
+    public void addCourseWithoutSaving(Course course) {
+        courses.add(course);
     }
 }

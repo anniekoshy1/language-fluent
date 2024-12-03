@@ -16,7 +16,7 @@ public class DataLoader extends DataConstants {
 
 
     public static final String USERS_FILE = "languagefluency/src/main/java/com/data/User.json";
-    public static final String COURSES_FILE = "language/fluency/src/main/java/com/data/Courses.json";
+    public static final String COURSES_FILE = "languagefluency/src/main/java/com/data/Courses.json";
     public static final String LANGUAGES_FILE = "languagefluency/src/main/java/com/data/Languages.json";
     public static final String WORDS_FILE = "languagefluency/src/main/java/com/data/words.json";
     public static final String PHRASES_FILE = "languagefluency/src/main/java/com/data/phrases.json";
@@ -31,7 +31,6 @@ public class DataLoader extends DataConstants {
      * Loads users from the JSON file and adds them to the UserList singleton.
      */
     public static void getUsers() {
-        System.out.println("Datatloader.getUsers() called");
         UserList userListInstance = UserList.getInstance();
     
         try (FileReader reader = new FileReader(USERS_FILE)) {
@@ -80,39 +79,53 @@ public class DataLoader extends DataConstants {
      */
     public static void loadCourses() {
         CourseList courseListInstance = CourseList.getInstance();
+        System.out.println("Dataloader.loadCourses is called");
     
         try (FileReader reader = new FileReader(COURSES_FILE)) {
-            System.out.println("Opening file: " + COURSES_FILE); // Debugging
             JSONParser jsonParser = new JSONParser();
             JSONArray courseList = (JSONArray) jsonParser.parse(reader);
     
             for (Object obj : courseList) {
-                System.out.println("Parsing course object."); // Debugging
                 JSONObject courseJSON = (JSONObject) obj;
+    
                 UUID id = UUID.fromString((String) courseJSON.get("courseID"));
                 String name = (String) courseJSON.get("name");
                 String description = (String) courseJSON.get("description");
-                boolean userAccess = courseJSON.get("userAccess") != null ? (Boolean) courseJSON.get("userAccess") : false;
+                boolean userAccess = (Boolean) courseJSON.get("userAccess");
                 boolean completed = (Boolean) courseJSON.get("completed");
                 double courseProgress = ((Number) courseJSON.get("courseProgress")).doubleValue();
     
                 ArrayList<Lesson> lessons = parseLessons((JSONArray) courseJSON.get("lessons"));
-                ArrayList<Assessment> assessments = new ArrayList<>();
-                ArrayList<String> completedAssessments = new ArrayList<>();
-                FlashcardQuestion flashcard = new FlashcardQuestion("Default Question", "Default Answer");
+                ArrayList<FlashcardQuestion> flashcards = parseFlashcards((JSONArray) courseJSON.get("flashcards"));
     
-                Course course = new Course(id, name, description, userAccess, courseProgress, completed, lessons,
-                        assessments, completedAssessments, flashcard);
-                courseListInstance.addCourse(course);
-                System.out.println("Loaded course: " + course.getName()); // Debugging
+                Course course = new Course(id, name, description, userAccess, courseProgress, completed, lessons, flashcards);
+                courseListInstance.addCourseWithoutSaving(course);
+    
+                // Debug/test lines:
+                System.out.println("Course Loaded: " + name);
             }
-    
-            System.out.println("Total courses loaded: " + courseListInstance.getCourses().size());
+            System.out.println("Total Courses Loaded: " + courseListInstance.getCourses().size());
         } catch (Exception e) {
             e.printStackTrace();
             System.err.println("Error loading courses: " + e.getMessage());
         }
     }
+    
+    
+    private static ArrayList<FlashcardQuestion> parseFlashcards(JSONArray flashcardsArray) {
+        ArrayList<FlashcardQuestion> flashcards = new ArrayList<>();
+            for (Object obj : flashcardsArray) {
+                JSONObject flashcardJSON = (JSONObject) obj;
+                String front = (String) flashcardJSON.get("front");
+                String back = (String) flashcardJSON.get("back");
+    
+                FlashcardQuestion flashcard = new FlashcardQuestion(front, back);
+                flashcards.add(flashcard);
+            }
+        
+        return flashcards;
+    }
+    
     
 
     /**
@@ -210,19 +223,17 @@ public class DataLoader extends DataConstants {
      */
     private static ArrayList<Lesson> parseLessons(JSONArray lessonsArray) {
         ArrayList<Lesson> lessons = new ArrayList<>();
-        if (lessonsArray != null) {
-            for (Object lessonObj : lessonsArray) {
-                JSONObject lessonJSON = (JSONObject) lessonObj;
-                String lessonName = (String) lessonJSON.get("lessonName");
-                UUID lessonId = UUID.fromString((String) lessonJSON.get("lessonID"));
-                String lessonDescription = (String) lessonJSON.get("description");
-                double lessonProgress = ((Number) lessonJSON.get("lessonProgress")).doubleValue();
-                String englishContent = (String) lessonJSON.get("englishContent");
-                String spanishContent = (String) lessonJSON.get("spanishContent");
+        for (Object obj : lessonsArray) {
+            JSONObject lessonJSON = (JSONObject) obj;
+            String lessonName = (String) lessonJSON.get("lessonName");
+            UUID lessonId = UUID.fromString((String) lessonJSON.get("lessonID"));
+            String lessonDescription = (String) lessonJSON.get("description");
+            double lessonProgress = ((Number) lessonJSON.get("lessonProgress")).doubleValue();
+            String englishContent = (String) lessonJSON.get("englishContent");
+            String spanishContent = (String) lessonJSON.get("spanishContent");
 
-                Lesson lesson = new Lesson(lessonName, lessonId, lessonDescription, lessonProgress, englishContent, spanishContent);
-                lessons.add(lesson);
-            }
+            Lesson lesson = new Lesson(lessonName, lessonId, lessonDescription, lessonProgress, englishContent, spanishContent);
+            lessons.add(lesson);
         }
         return lessons;
     }

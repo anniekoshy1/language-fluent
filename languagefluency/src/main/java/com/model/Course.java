@@ -1,6 +1,3 @@
-/**
- * Represents a course in the language learning system, containing lessons, assessments, and progress tracking.
- */
 package com.model;
 
 import java.util.ArrayList;
@@ -15,7 +12,7 @@ public class Course {
     private ArrayList<Lesson> lessons;
     private UUID id;
     private boolean completed;
-    private FlashcardQuestion flashcard;
+    private ArrayList<FlashcardQuestion> flashcards; // Updated to correct field name
     private Lesson lesson;
 
     /**
@@ -28,13 +25,10 @@ public class Course {
      * @param courseProgress the progress of the course
      * @param completed indicates whether the course is completed
      * @param lessons the list of lessons in the course
-     * @param assessments the list of assessments in the course
-     * @param completedAssessments the list of completed assessments
-     * @param flashcard the flashcard question in the course
+     * @param flashcards the list of flashcard questions in the course
      */
     public Course(UUID id, String name, String description, boolean userAccess, double courseProgress, boolean completed,
-        ArrayList<Lesson> lessons, ArrayList<Assessment> assessments, ArrayList<String> completedAssessments,
-        FlashcardQuestion flashcard) {
+                ArrayList<Lesson> lessons, ArrayList<FlashcardQuestion> flashcards) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -42,7 +36,7 @@ public class Course {
         this.courseProgress = courseProgress;
         this.completed = completed;
         this.lessons = lessons;
-        this.flashcard = flashcard;
+        this.flashcards = flashcards;
     }
 
     /**
@@ -56,7 +50,7 @@ public class Course {
         this.courseProgress = courseProgress;
     }
 
-    public void setCurrentLesson(Lesson lesson){
+    public void setCurrentLesson(Lesson lesson) {
         this.lesson = lesson;
     }
 
@@ -80,34 +74,10 @@ public class Course {
         this.description = description;
     }
 
-    /**
-     * Calculates and updates the course progress based on the completion status of lessons and flashcards
-     */
-    public void calculateProgress() {
-        if (lesson.isCompleted() && flashcard.isCompleted()) {
-            courseProgress = 100.0;
-        } else if (lesson.isCompleted() || flashcard.isCompleted()) {
-            courseProgress = 50.0;
-        } else {
-            courseProgress = 0.0;
-        }
-    
-        if (courseProgress == 100.0) {
-            setCompletedCourse();  // Automatically mark as completed
-        }
-    }
-    
-
-    public void setCourseProgress(double courseProgress) {
-        if (courseProgress >= 0.0 && courseProgress <= 100.0) {
-            this.courseProgress = courseProgress;
-        }
-    }
-
     public boolean getUserAccess() {
         return userAccess;
     }
-    
+
     public void setUserAccess(boolean userAccess) {
         this.userAccess = userAccess;
     }
@@ -131,9 +101,12 @@ public class Course {
         lessons.add(lesson);
     }
 
+    public ArrayList<FlashcardQuestion> getFlashcards() {
+        return flashcards;
+    }
 
-    public UUID generateUUID() {
-        return UUID.randomUUID();
+    public void addFlashcard(FlashcardQuestion flashcard) {
+        this.flashcards.add(flashcard);
     }
 
     public UUID getId() {
@@ -145,7 +118,32 @@ public class Course {
     }
 
     /**
-     * Marks the course as completed and sets the progress to 100%
+     * Calculates and updates the course progress based on the completion status of lessons and flashcards.
+     */
+    public void calculateProgress() {
+        int completedItems = 0;
+        int totalItems = lessons.size() + flashcards.size();
+
+        for (Lesson lesson : lessons) {
+            if (lesson.isCompleted()) {
+                completedItems++;
+            }
+        }
+        for (FlashcardQuestion flashcard : flashcards) {
+            if (flashcard.isCompleted()) {
+                completedItems++;
+            }
+        }
+
+        this.courseProgress = (completedItems / (double) totalItems) * 100;
+
+        if (this.courseProgress == 100.0) {
+            setCompleted(true);
+        }
+    }
+
+    /**
+     * Marks the course as completed and sets the progress to 100%.
      */
     public void setCompletedCourse() {
         this.completed = true;
@@ -153,7 +151,7 @@ public class Course {
     }
 
     /**
-     * Checks if the course is fully completed based on progress
+     * Checks if the course is fully completed based on progress.
      *
      * @return true if the course progress is 100%, false otherwise
      */
