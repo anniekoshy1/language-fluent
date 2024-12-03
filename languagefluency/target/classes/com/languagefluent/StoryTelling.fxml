@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="library_pane" prefHeight="656.0" prefWidth="457.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
+    <children>
+        <Label fx:id="storytellingLabel" layoutX="25.0" layoutY="108.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Story Telling" />
+
+        <ImageView fx:id="bookimage" fitHeight="93.0" fitWidth="86.0" layoutX="14.0" layoutY="20.0">
+            <image>
+                <Image url="@../../../../../../../Classes/courseicon.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="bookimage" fitHeight="93.0" fitWidth="86.0" layoutX="357.0" layoutY="14.0">
+            <image>
+                <Image url="@../../../../../../../Classes/logo.png" />
+            </image>
+        </ImageView>
+        
+        <Button fx:id="playButton" layoutX="50" layoutY="150" onAction="#onPlayButtonClicked" text="Play" />
+        <Button fx:id="pauseButton" layoutX="120" layoutY="150" onAction="#onPauseButtonClicked" text="Pause" />
+
+        <Slider fx:id="progressSlider" layoutX="50" layoutY="200" prefWidth="500" />
+    </children>
+    <stylesheets>
+        <URL value="@styles.css" />
+    </stylesheets>
+</AnchorPane>
