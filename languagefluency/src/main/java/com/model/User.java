@@ -1,6 +1,3 @@
-/**
- * Represents a user in the language learning system, including their profile information, enrolled courses, language preferences, and progress tracking
- */
 package com.model;
 
 import java.util.ArrayList;
@@ -233,6 +230,29 @@ public class User {
      */
     public void setCurrentLanguageName(String languageName) {
         this.currentLanguageName = languageName;
+    }
+
+    /**
+     * Calculates the user's overall progress by checking completed courses
+     * @return the percentage of completed courses
+     */
+    public double getCurrentUserProgress() {
+        double totalCourses = courses.size();
+        double completedCoursesCount = 0.0;
+
+        for (Course course : courses) {
+            // Check if the course is marked as completed
+            if (completedCourses.contains(course.getId()) || course.isCompleted()) {
+                completedCoursesCount++;
+            }
+        }
+
+        // Calculate the progress as a percentage
+        if (totalCourses > 0) {
+            return (completedCoursesCount / totalCourses) * 100;
+        } else {
+            return 0.0;  // In case there are no courses
+        }
     }
 
     /**

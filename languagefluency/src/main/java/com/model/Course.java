@@ -13,11 +13,8 @@ public class Course {
     private boolean userAccess;
     private double courseProgress;
     private ArrayList<Lesson> lessons;
-    private ArrayList<Assessment> assessments;
-    private ArrayList<String> keyWords;
     private UUID id;
     private boolean completed;
-    private ArrayList<String> completedAssessments;
     private FlashcardQuestion flashcard;
     private Lesson lesson;
 
@@ -45,8 +42,6 @@ public class Course {
         this.courseProgress = courseProgress;
         this.completed = completed;
         this.lessons = lessons;
-        this.assessments = assessments;
-        this.completedAssessments = new ArrayList<>();
         this.flashcard = flashcard;
     }
 
@@ -91,14 +86,17 @@ public class Course {
     public void calculateProgress() {
         if (lesson.isCompleted() && flashcard.isCompleted()) {
             courseProgress = 100.0;
-            System.out.println(courseProgress);
         } else if (lesson.isCompleted() || flashcard.isCompleted()) {
             courseProgress = 50.0;
-            System.out.println("Course Progress: "+courseProgress);
         } else {
             courseProgress = 0.0;
         }
+    
+        if (courseProgress == 100.0) {
+            setCompletedCourse();  // Automatically mark as completed
+        }
     }
+    
 
     public void setCourseProgress(double courseProgress) {
         if (courseProgress >= 0.0 && courseProgress <= 100.0) {
@@ -133,40 +131,6 @@ public class Course {
         lessons.add(lesson);
     }
 
-    public ArrayList<Assessment> getAllAssessments() {
-        return assessments;
-    }
-
-    public void addAssessment(Assessment assessment) {
-        assessments.add(assessment);
-    }
-
-    /**
-     * Retrieves the list of completed assessments for the course.
-     *
-     * @return a list of completed assessments
-     */
-    public ArrayList<String> getCompletedAssessments() {
-        ArrayList<String> completed = new ArrayList<>();
-        for (Assessment assessment : assessments) {
-            if (assessment.getResults() >= 70) {  
-                completed.add(assessment.toString());  
-            }
-        }
-        return this.completedAssessments;
-    }
-
-    public void setCompletedAssessments(ArrayList<String> completedAssessments) {
-        this.completedAssessments = completedAssessments;
-    }
-    
-    public void addKeyWord(String keyWord) {
-        keyWords.add(keyWord);
-    }
-
-    public ArrayList<String> getKeyWords() {
-        return keyWords;
-    }
 
     public UUID generateUUID() {
         return UUID.randomUUID();
