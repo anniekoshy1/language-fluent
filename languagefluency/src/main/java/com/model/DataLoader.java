@@ -80,12 +80,14 @@ public class DataLoader extends DataConstants {
      */
     public static void loadCourses() {
         CourseList courseListInstance = CourseList.getInstance();
-
+    
         try (FileReader reader = new FileReader(COURSES_FILE)) {
+            System.out.println("Opening file: " + COURSES_FILE); // Debugging
             JSONParser jsonParser = new JSONParser();
             JSONArray courseList = (JSONArray) jsonParser.parse(reader);
-
+    
             for (Object obj : courseList) {
+                System.out.println("Parsing course object."); // Debugging
                 JSONObject courseJSON = (JSONObject) obj;
                 UUID id = UUID.fromString((String) courseJSON.get("courseID"));
                 String name = (String) courseJSON.get("name");
@@ -93,24 +95,25 @@ public class DataLoader extends DataConstants {
                 boolean userAccess = courseJSON.get("userAccess") != null ? (Boolean) courseJSON.get("userAccess") : false;
                 boolean completed = (Boolean) courseJSON.get("completed");
                 double courseProgress = ((Number) courseJSON.get("courseProgress")).doubleValue();
-
-                // Load lessons and assessments for this course
+    
                 ArrayList<Lesson> lessons = parseLessons((JSONArray) courseJSON.get("lessons"));
                 ArrayList<Assessment> assessments = new ArrayList<>();
                 ArrayList<String> completedAssessments = new ArrayList<>();
                 FlashcardQuestion flashcard = new FlashcardQuestion("Default Question", "Default Answer");
-
+    
                 Course course = new Course(id, name, description, userAccess, courseProgress, completed, lessons,
                         assessments, completedAssessments, flashcard);
                 courseListInstance.addCourse(course);
-                System.out.println("Loaded course: " + course.getName());
+                System.out.println("Loaded course: " + course.getName()); // Debugging
             }
-
+    
             System.out.println("Total courses loaded: " + courseListInstance.getCourses().size());
         } catch (Exception e) {
             e.printStackTrace();
+            System.err.println("Error loading courses: " + e.getMessage());
         }
     }
+    
 
     /**
      * Loads languages from the JSON file and adds them to the LanguageList singleton.
