@@ -1,26 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.net.URL?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="login_pane" prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+<AnchorPane id="AnchorPane" fx:id="library_pane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
    <children>
-      <Label layoutX="104.0" layoutY="14.0" text="Login">
+      <Label layoutX="233.0" layoutY="254.0" text="Login">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Label layoutX="84.0" layoutY="71.0" text="Username:" />
-      <Label layoutX="84.0" layoutY="125.0" text="Password:" />
-      <Button layoutX="214.0" layoutY="173.0" mnemonicParsing="false" onMouseClicked="#btnLoginClicked" prefHeight="24.0" prefWidth="173.0" text="Login" />
-      <TextField fx:id="txt_username" layoutX="215.0" layoutY="67.0" />
-      <TextField fx:id="txt_password" layoutX="215.0" layoutY="121.0" />
-      <Label fx:id="lbl_error" layoutX="212.0" layoutY="235.0" prefHeight="16.0" prefWidth="170.0" />
-      <Button layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#back" text="back" />
+
+      <TextField fx:id="txt_username" layoutX="151.0" layoutY="410.0" promptText="Enter Username">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding></TextField>
+
+      <TextField fx:id="txt_password" layoutX="152.0" layoutY="481.0" promptText="Enter Password">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding></TextField>
+
+      <TextField fx:id="txt_email" layoutX="148.0" layoutY="347.0" promptText="Enter Email">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding></TextField>
+
+      <Button layoutX="190.0" layoutY="599.0" mnemonicParsing="false" onMouseClicked="#btnLoginClicked" prefHeight="55.0" prefWidth="173.0" text="Login">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding></Button>
+      <Button layoutX="192.0" layoutY="675.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="173.0" text="Create Account">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding></Button>
+
+      <ImageView fx:id="image2" fitHeight="1.0" fitWidth="220.0" layoutX="159.0" layoutY="297.0">
+         <image>
+            <Image url="@../../images/line.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="image1" fitHeight="187.0" fitWidth="455.0" layoutX="34.0" layoutY="45.0">
+            <image>
+                <Image url="@../../images/logobackground.png" />
+            </image>
+        </ImageView>
+      <ImageView fx:id="image3" fitHeight="66.0" fitWidth="531.0" layoutX="-2.0" layoutY="-4.0">
+            <image>
+                <Image url="@../../images/bar.png" />
+            </image>
+        </ImageView>
+
    </children>
    <stylesheets>
       <URL value="@styles.css" />

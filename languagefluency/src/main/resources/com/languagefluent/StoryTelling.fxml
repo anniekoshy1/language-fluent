@@ -5,24 +5,36 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" fx:id="library_pane" prefHeight="656.0" prefWidth="457.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.HomeController">
+<AnchorPane id="AnchorPane" fx:id="library_pane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <Label fx:id="storytellingLabel" layoutX="25.0" layoutY="108.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Story Telling" />
-
-        <ImageView fx:id="bookimage" fitHeight="93.0" fitWidth="86.0" layoutX="14.0" layoutY="20.0">
+        <Label fx:id="storytellingLabel" layoutX="28.0" layoutY="122.0" style="-fx-font-size: 24px" text="Story Telling" />
+        <ImageView fx:id="line" fitHeight="1.0" fitWidth="172.0" layoutX="21.0" layoutY="158.0">
+            <image>
+                <Image url="@../../../../../../../Classes/line.png" />
+            </image>
+        </ImageView>
+         <ImageView fx:id="statusbar" fitHeight="70.0" fitWidth="522.0">
+            <image>
+                <Image url="@../../../../../../../Classes/Status Bar@1x.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="bookimage" fitHeight="70.0" fitWidth="79.0" layoutX="18.0" layoutY="54.0">
             <image>
                 <Image url="@../../../../../../../Classes/courseicon.png" />
             </image>
         </ImageView>
-        <ImageView fx:id="bookimage" fitHeight="93.0" fitWidth="86.0" layoutX="357.0" layoutY="14.0">
+        <ImageView fx:id="bookimage" fitHeight="108.0" fitWidth="117.0" layoutX="399.0" layoutY="52.0">
             <image>
-                <Image url="@../../../../../../../Classes/logo.png" />
+                <Image url="@../../../../../../../Classes/logocorner.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="audiobar" fitHeight="70.0" fitWidth="333.0" layoutX="108.0" layoutY="186.0">
+            <image>
+                <Image url="@../../../../../../../Classes/audiobar.png" />
             </image>
         </ImageView>
         
         <Button fx:id="playButton" layoutX="50" layoutY="150" onAction="#onPlayButtonClicked" text="Play" />
-        <Button fx:id="pauseButton" layoutX="120" layoutY="150" onAction="#onPauseButtonClicked" text="Pause" />
-
         <Slider fx:id="progressSlider" layoutX="50" layoutY="200" prefWidth="500" />
     </children>
     <stylesheets>

@@ -1,8 +1,7 @@
 .root {
     -fx-font-size: 16pt;
-    -fx-font-family: "Helvetica";
-    -fx-base: #d3d3d3;
-    -fx-backgound: #FFB6C1;
+    -fx-font-family: "Playfair Display";
+    -fx-backgound: #F7F7F7;
 }
 
 .button {

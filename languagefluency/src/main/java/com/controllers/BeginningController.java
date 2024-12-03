@@ -15,7 +15,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.text.Text;
 
-public class HomeController implements Initializable {
+public class BeginningController implements Initializable {
 
     @FXML
     private Text welcomeMessage;
