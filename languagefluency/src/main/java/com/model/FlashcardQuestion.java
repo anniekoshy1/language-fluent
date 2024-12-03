@@ -55,14 +55,11 @@ public class FlashcardQuestion {
     }
 
     /**
-     * Marks the flashcard as completed if the user inputs "done".
-     * @param userInput the user's input indicating completion
+     * Marks the lesson as completed, setting the progress to 100%
      */
-    public void markAsCompleted(String userInput) {
-        if ("done".equalsIgnoreCase(userInput.trim())) {
-            this.flashcardProgress = 100.0;
-            this.completed = true;
-        }
+    public void markAsCompleted() {
+        this.completed = true;
+        this.flashcardProgress = 100.0;
     }
 
     /**
@@ -109,4 +106,11 @@ public class FlashcardQuestion {
     public double getFlashcardProgress() {
         return flashcardProgress;
     }
+
+    public void setflashcardProgress(double flashcardProgress) {
+        this.flashcardProgress = flashcardProgress;
+        this.completed = flashcardProgress >= 100.0;
+    }
+
+
 }
