@@ -19,7 +19,6 @@ public class WordsList {
     public static WordsList getInstance() {
         if (wordsList == null) {
             wordsList = new WordsList();
-            System.out.println("WordsList instance created, now loading words...");
             wordsList.loadWords();
         }
         return wordsList;

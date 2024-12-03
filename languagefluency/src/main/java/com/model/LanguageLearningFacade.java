@@ -12,6 +12,7 @@ public class LanguageLearningFacade {
     private final CourseList courseList;
     private final LanguageList languageList;
     private User user;
+    private Course course;
     private ArrayList<Language> currentLanguage;
     private final WordsList wordsList;
     private Assessment assessments;
@@ -45,7 +46,7 @@ public class LanguageLearningFacade {
     }
 
     /**
-     * Logs out the currently logged-in user and clears the current language.
+     * Logs out the currently logaged-in user and clears the current language.
      */
     public void logout() {
         this.user = null;
@@ -63,6 +64,21 @@ public class LanguageLearningFacade {
             course.setUserAccess(true);
         }
     }
+
+    public void displayCourses(User user) {
+        ArrayList<Course> courses = CourseList.getInstance().getAvailableCourses(user.getCurrentCourse());
+        System.out.println("Courses:");
+        for (Course course : courses) {
+            if (course.getId().equals(user.getCurrentCourse())) {
+                System.out.println(course.getName() + " - [Current Course]");
+            } else if (!course.getUserAccess()) {
+                System.out.println(course.getName() + " - [Locked]");
+            } else {
+                System.out.println(course.getName());
+            }
+        }
+    }
+    
 
     /**
      * Tracks the progress of a specific course for the current user.
@@ -224,14 +240,32 @@ public class LanguageLearningFacade {
         assessments.addQuestion(question);
     }
 
-    public void startAssessment1(Scanner k){
-
-        for(int i =0; i < 5; i++){
-            getaQuestion();
-            answeraQuestion(k);
+    public void startLessonAssessment(Scanner scanner) {
+        if (course != null && course.getUserAccess()) {
+            // Reset assessment state before starting
+            assessments = new Assessment();
+            
+            for (int i = 0; i < 5; i++) {
+                getaQuestion();  // Generate and display random question
+                answeraQuestion(scanner);  // Allow the user to answer the question
+            }
+    
+            // After answering all questions, evaluate the performance
+            assessments.evaluatePerformance();
+            
+            // Mark the current lesson as completed
+            if (course.getAllLessons() != null && !course.getAllLessons().isEmpty()) {
+                Lesson currentLesson = course.getCurrentLesson();
+                currentLesson.markAsCompleted(); // Mark the current lesson as completed
+            }
+    
+            // Update the course progress after completing the lesson
+            course.calculateProgress();
+            
+        } else {
+            System.out.println("You do not have access to this course.");
         }
-
-        assessments.evaluatePerformance();
     }
+    
 
 }
