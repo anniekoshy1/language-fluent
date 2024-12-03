@@ -58,7 +58,7 @@ public class ProjectUI {
 
             switch (choice) {
                 case 1:
-                    login();
+                    login(null, null);
                     break;
                 case 2:
                     register();
