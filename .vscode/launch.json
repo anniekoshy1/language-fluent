@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "LanguageLearningFacade",
+            "request": "launch",
+            "mainClass": "com.languagefluent/com.model.LanguageLearningFacade",
+            "projectName": "hellofx"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"

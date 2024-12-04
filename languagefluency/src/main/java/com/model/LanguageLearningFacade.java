@@ -266,6 +266,19 @@ public class LanguageLearningFacade {
         }
     }
 
+    public static void main(String[] args) {
+        // Create the facade instance and generate a question
+        LanguageLearningFacade facade = new LanguageLearningFacade();
+
+        Scanner scanner = new Scanner(System.in);
+
+        facade.startLessonAssessment(scanner);  // This will ask 5 questions and evaluate performance
+
+        scanner.close();
+
+    }
 }
+
+
 
 
