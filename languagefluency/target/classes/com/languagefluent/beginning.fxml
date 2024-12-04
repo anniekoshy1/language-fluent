@@ -11,9 +11,9 @@
 
 <AnchorPane id="AnchorPane" fx:id="library_pane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7; -fx-border-radius: 30; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.BeginningController">
    <children>
-<Label fx:id="loginlabel" layoutX="72.0" layoutY="606.0" prefHeight="34.0" prefWidth="403.0" stylesheets="@styles.css" text="Unlock the Language, Embrace the Culture" textAlignment="CENTER">
+<Label fx:id="loginlabel" layoutX="94.0" layoutY="610.0" prefHeight="34.0" prefWidth="360.0" stylesheets="@styles.css" text="Unlock the Language, Embrace the Culture" textAlignment="CENTER">
          <font>
-            <Font name="AppleMyungjo Regular" size="20.0" />
+            <Font name="Baskerville" size="20.0" />
          </font>
       </Label>
 
@@ -22,7 +22,7 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
          <font>
-            <Font size="20.0" />
+            <Font name="Arial" size="20.0" />
          </font></Button>
       <ImageView fx:id="image1" fitHeight="211.0" fitWidth="487.0" layoutX="19.0" layoutY="43.0">
             <image>
@@ -44,7 +44,7 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
          <font>
-            <Font size="20.0" />
+            <Font name="Arial" size="20.0" />
          </font>
       </Button>
 

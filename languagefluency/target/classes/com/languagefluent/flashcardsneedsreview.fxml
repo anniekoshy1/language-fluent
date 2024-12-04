@@ -5,37 +5,40 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
 
-<AnchorPane id="AnchorPane" fx:id="library_pane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <Label fx:id="flashcardsLabel" layoutX="28.0" layoutY="122.0" style="-fx-font-size: 24px" text="Flashcards" />
-        <ImageView fx:id="line" fitHeight="1.0" fitWidth="172.0" layoutX="21.0" layoutY="158.0">
-            <image>
-                <Image url="@../../images/line.png" />
-            </image>
-        </ImageView>
-         <ImageView fx:id="statusbar" fitHeight="70.0" fitWidth="522.0">
+        <!-- Status Bar -->
+        <ImageView fx:id="statusBar" fitHeight="53.0" fitWidth="522.0" layoutX="0.0" layoutY="0.0">
             <image>
                 <Image url="@../../images/bar.png" />
             </image>
         </ImageView>
-        <ImageView fx:id="courseicon" fitHeight="70.0" fitWidth="79.0" layoutX="18.0" layoutY="54.0">
+
+        <!-- Header -->
+        <ImageView fx:id="courseIcon" fitHeight="70.0" fitWidth="70.0" layoutX="10.0" layoutY="70.0">
             <image>
                 <Image url="@../../images/courseicon.png" />
             </image>
         </ImageView>
-        <ImageView fx:id="logocorner" fitHeight="108.0" fitWidth="117.0" layoutX="399.0" layoutY="52.0">
+        <ImageView fx:id="logocorner" fitHeight="120.0" fitWidth="135.0" layoutX="372.0" layoutY="62.0">
             <image>
                 <Image url="@../../images/logocorner.png" />
             </image>
         </ImageView>
-                        <Pane layoutX="89.0" layoutY="245.0" prefHeight="416.0" prefWidth="337.0" style="-fx-background-color: #F9EFDB; -fx-border-radius: 10px; -fx-border-color: black; -fx-border-width: 2px">
-         <children>
-            <Label layoutX="21.0" layoutY="7.0" prefHeight="39.0" prefWidth="107.0" text="Words &amp; Phrases:" />
-         </children></Pane>
+        <!-- word box -->
+        <ImageView fx:id="wordsIcon" fitHeight="267.0" fitWidth="327.0" layoutX="111.0" layoutY="370.0">
+            <image>
+                <Image url="@../../images/words.png" />
+            </image>
+        </ImageView>
 
-                <!-- Navigation Bar -->
+        <Label fx:id="flashcardsTitle" layoutX="23.0" layoutY="130.0" style="-fx-font-size: 24px; -fx-font-weight: regular;" text="Flashcards" />
+
+        <!-- Close Button -->
+        <Button fx:id="closeButton" layoutX="199.0" layoutY="699.0" prefHeight="50.0" prefWidth="124.0" style="-fx-background-color: CCDBEE; -fx-text-fill: #FFFFFF; -fx-font-size: 16px;" text="Close" />
+
+        <!-- Navigation Bar -->
         <AnchorPane fx:id="bottomNavBar" layoutY="844.0" prefHeight="70.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;">
             <children>
                 <!-- Home Button -->
@@ -68,12 +71,9 @@
                 <Button fx:id="logoutButton" layoutX="162.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Profile" />
             </children>
         </AnchorPane>
-      <Label layoutX="213.0" layoutY="211.0" prefHeight="17.0" prefWidth="102.0" text="Words Mastered:" />
-      <Label layoutX="130.0" layoutY="179.0" prefHeight="17.0" prefWidth="265.0" text="Congratulations! You are on the road to Mastery!" />
-      <Button layoutX="234.0" layoutY="706.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="57.0" text="Close" />
-
+      <Label fx:id="flashcardsTitle1" layoutX="45.0" layoutY="206.0" prefHeight="63.0" prefWidth="438.0" style="-fx-font-size: 18px; -fx-font-weight: bolregulard;" text="Congratulations! You are on the road to mastery!" />
+      <Label fx:id="flashcardsTitle11" layoutX="216.0" layoutY="259.0" prefHeight="63.0" prefWidth="117.0" style="-fx-font-size: 16px; -fx-font-weight: bolregulard;" text="Needs Review:" />
+      <Label fx:id="flashcardsTitle111" layoutX="260.0" layoutY="290.0" prefHeight="63.0" prefWidth="30.0" style="-fx-font-size: 16px; -fx-font-weight: regular;" text="3/3" />
+      <Label fx:id="flashcardsTitle2" layoutX="22.0" layoutY="148.0" style="-fx-font-size: 24px; -fx-font-weight: regular;" text="Mastered" />
     </children>
-    <stylesheets>
-        <URL value="@styles.css" />
-    </stylesheets>
 </AnchorPane>

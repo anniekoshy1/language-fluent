@@ -1,95 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.DialogPane?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane id="AnchorPane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <!-- Status Bar -->
         <ImageView fx:id="statusBar" fitHeight="53.0" fitWidth="522.0" layoutX="0.0" layoutY="0.0">
             <image>
                 <Image url="@../../images/bar.png" />
             </image>
         </ImageView>
         
-        <!-- User Profile Icon -->
-        <ImageView fx:id="userIcon" fitHeight="70.0" fitWidth="70.0" layoutX="18.0" layoutY="70.0">
+        <ImageView fx:id="userIcon" fitHeight="72.0" fitWidth="77.0" layoutX="18.0" layoutY="52.0">
             <image>
                 <Image url="@../../images/user.png" />
             </image>
         </ImageView>
         
-        <!-- App Logo -->
         <ImageView fx:id="logoCorner" fitHeight="108.0" fitWidth="117.0" layoutX="400.0" layoutY="50.0">
             <image>
                 <Image url="@../../images/logocorner.png" />
             </image>
         </ImageView>
-        
-        <!-- Profile Header -->
-        <Label fx:id="profileTitle" layoutX="17.0" layoutY="150.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="My Profile" />
 
-        <!-- Profile Details -->
-        <Label layoutX="24.0" layoutY="219.0" style="-fx-font-weight: bold;" text="Name" />
-        <Label layoutX="24.0" layoutY="240.0" text="Users Name" />
-
-        <Label layoutX="22.0" layoutY="277.0" style="-fx-font-weight: bold;" text="UserName" />
-        <Label layoutX="22.0" layoutY="299.0" text="Users Username" />
-
-        <Label layoutX="20.0" layoutY="332.0" style="-fx-font-weight: bold;" text="Password" />
-        <Label layoutX="20.0" layoutY="354.0" text="Users Password" />
-
-        <Label layoutX="22.0" layoutY="386.0" style="-fx-font-weight: bold;" text="Email" />
-        <Label layoutX="19.0" layoutY="409.0" text="UsersEmail" />
-
-        <Label layoutX="63.0" layoutY="460.0" style="-fx-font-weight: bold;" text="Phone Number" />
-        <Label layoutX="252.0" layoutY="469.0" text="678-778-9354" />
-
-        <Label layoutX="32.0" layoutY="550.0" style="-fx-font-weight: bold;" text="Language" />
-        <Label layoutX="119.0" layoutY="513.0" text="Spanish" />
-
-        <Label layoutX="42.0" layoutY="605.0" style="-fx-font-weight: bold;" text="Level" />
-        <Label layoutX="123.0" layoutY="606.0" text="Bronze" />
-
-        <Label layoutX="23.0" layoutY="673.0" style="-fx-font-weight: bold;" text="Member since" />
-        <Label layoutX="142.0" layoutY="673.0" text="2024" />
-
-        <Label layoutX="28.0" layoutY="744.0" style="-fx-font-weight: bold;" text="Birthday" />
-        <Label layoutX="106.0" layoutY="752.0" text="Users Birthday" />
-
-        <!-- Navigation Bar -->
-        <AnchorPane fx:id="bottomNavBar" layoutY="800.0" prefHeight="70.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;">
+        <AnchorPane fx:id="bottomNavBar" layoutX="1.0" layoutY="850.0" prefHeight="70.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;">
             <children>
                 <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="43.0" layoutY="7.0">
                     <image>
                         <Image url="@../../images/home.png" />
                     </image>
                 </ImageView>
-                <Label layoutX="28.0" layoutY="42.0" text="Home" />
+                <Label layoutX="42.0" layoutY="42.0" text="Home" />
 
                 <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="177.0" layoutY="7.0">
                     <image>
                         <Image url="@../../images/profile.png" />
                     </image>
                 </ImageView>
-                <Label layoutX="162.0" layoutY="42.0" text="Profile" />
+                <Label layoutX="175.0" layoutY="42.0" text="Profile" />
 
                 <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="305.0" layoutY="7.0">
                     <image>
                         <Image url="@../../images/logout.png" />
                     </image>
                 </ImageView>
-                <Label layoutX="290.0" layoutY="42.0" text="Logout" />
+                <Label layoutX="301.0" layoutY="42.0" text="Logout" />
 
                 <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="429.0" layoutY="7.0">
                     <image>
                         <Image url="@../../images/review.png" />
                     </image>
                 </ImageView>
-                <Label layoutX="414.0" layoutY="42.0" text="Review" />
+                <Label layoutX="425.0" layoutY="42.0" text="Review" />
             </children>
         </AnchorPane>
+      <DialogPane layoutY="262.0" prefHeight="59.0" prefWidth="536.0" style="-fx-background-color: FFFFFF; -fx-border-color: BBBBBB;" />
+      <DialogPane layoutY="204.0" prefHeight="59.0" prefWidth="536.0" style="-fx-background-color: FFFFFF; -fx-border-color: BBBBBB;" />
+      <Text layoutX="19.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" wrappingWidth="56.5">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Text>
+      <Label layoutX="19.0" layoutY="238.0" text="Username">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font></Label>
+      <Text layoutX="17.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="75.5">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Label layoutX="18.0" layoutY="295.0" text="Users Password" />
+      <DialogPane layoutY="320.0" prefHeight="59.0" prefWidth="536.0" style="-fx-background-color: FFFFFF; -fx-border-color: BBBBBB;" />
+      <Text layoutX="18.0" layoutY="344.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="44.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Label layoutX="18.0" layoutY="352.0" text="Users Email" />
+      <DialogPane layoutY="378.0" prefHeight="59.0" prefWidth="536.0" style="-fx-background-color: FFFFFF; -fx-border-color: BBBBBB;" />
+      <Text layoutX="17.0" layoutY="401.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Language" wrappingWidth="75.5">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Label layoutX="18.0" layoutY="409.0" text="Users Language" />
+      <DialogPane layoutY="436.0" prefHeight="59.0" prefWidth="536.0" style="-fx-background-color: FFFFFF; -fx-border-color: BBBBBB;" />
+      <Text layoutX="17.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Level" wrappingWidth="75.5">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Text>
+      <Label layoutX="18.0" layoutY="467.0" text="Users Level" />
+      <Label layoutX="23.0" layoutY="123.0" text="My Profile">
+         <font>
+            <Font name="Baskerville" size="36.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>
