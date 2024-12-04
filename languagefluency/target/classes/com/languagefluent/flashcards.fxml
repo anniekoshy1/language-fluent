@@ -12,7 +12,7 @@
     <children>
         <Label fx:id="flashcardsLabel" layoutX="28.0" layoutY="122.0" style="-fx-font-size: 24px" text="Flashcards">
          <font>
-            <Font name="AppleMyungjo Regular" size="13.0" />
+            <Font name="Baskerville Old Face" size="36.0" />
          </font></Label>
         <ImageView fx:id="line" fitHeight="1.0" fitWidth="172.0" layoutX="21.0" layoutY="158.0">
             <image>
@@ -74,9 +74,9 @@
                 <Button fx:id="logoutButton" layoutX="162.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Profile" />
             </children>
         </AnchorPane>
-      <Label layoutX="133.0" layoutY="222.0" prefHeight="25.0" prefWidth="274.0" text="How do you say this in Spanish?">
+      <Label layoutX="145.0" layoutY="222.0" prefHeight="25.0" prefWidth="239.0" text="How do you say this in Spanish?">
          <font>
-            <Font name="AppleMyungjo Regular" size="18.0" />
+            <Font name="Baskerville Old Face" size="18.0" />
          </font></Label>
         <AnchorPane fx:id="bottomNavBar" layoutX="1.0" layoutY="850.0" prefHeight="70.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;">
             <children>
