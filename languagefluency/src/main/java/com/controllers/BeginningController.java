@@ -26,13 +26,11 @@ public class BeginningController implements Initializable {
     }
 
     @FXML
-    public void btnLoginClicked(ActionEvent event) {
-        try {
-            App.setRoot("login");
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-
+    public void btnLoginClicked(ActionEvent event) throws IOException{
+        App.setRoot("login");
+    }
+    @FXML
+    public void btnSignupClicked(ActionEvent event) throws IOException{
+        App.setRoot("signup");
     }
 }
