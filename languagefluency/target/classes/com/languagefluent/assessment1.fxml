@@ -7,11 +7,15 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" fx:id="library_pane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <Label fx:id="assessment1" layoutX="28.0" layoutY="131.0" prefHeight="35.0" prefWidth="130.0" style="-fx-font-size: 24px" text="Starting Out" />
-        <ImageView fx:id="line" fitHeight="1.0" fitWidth="172.0" layoutX="26.0" layoutY="197.0">
+        <Label fx:id="assessment1" layoutX="28.0" layoutY="131.0" prefHeight="35.0" prefWidth="130.0" style="-fx-font-size: 24px" text="Starting Out">
+         <font>
+            <Font name="Baskerville Old Face" size="24.0" />
+         </font></Label>
+        <ImageView fx:id="line" fitHeight="1.0" fitWidth="247.0" layoutX="26.0" layoutY="191.0">
             <image>
                 <Image url="@../../images/line.png" />
             </image>
@@ -22,19 +26,31 @@
             </image>
         </ImageView>
 
-        <Label layoutX="28.0" layoutY="240.0" text="1. ___ means ___. True or False?" />
-        <TextField fx:id="question1Input" layoutX="25.0" layoutY="273.0" prefWidth="471.0" />
+        <Label layoutX="16.0" layoutY="251.0" text="1. ___ means ___. True or False?">
+         <font>
+            <Font name="Baskerville Old Face" size="18.0" />
+         </font></Label>
 
-        <Label layoutX="28.0" layoutY="321.0" text="2. ___ means ___. True or False?" />
-        <TextField fx:id="question2Input" layoutX="25.0" layoutY="347.0" prefWidth="471.0" />
+        <Label layoutX="16.0" layoutY="326.0" text="2. ___ means ___. True or False?">
+         <font>
+            <Font name="Baskerville Old Face" size="18.0" />
+         </font></Label>
 
-        <Label layoutX="28.0" layoutY="392.0" text="3. What is the Spanish word for ___?" />
+        <Label layoutX="16.0" layoutY="405.0" text="3. What is the Spanish word for ___?">
+         <font>
+            <Font name="Baskerville Old Face" size="18.0" />
+         </font></Label>
 
-        <Label layoutX="29.0" layoutY="480.0" text="4. What is the word for ___ in Spanish?" />
-        <TextField fx:id="question4Input" layoutX="29.0" layoutY="509.0" prefWidth="471.0" />
+        <Label layoutX="16.0" layoutY="481.0" text="4. What is the word for ___ in Spanish?">
+         <font>
+            <Font name="Baskerville Old Face" size="18.0" />
+         </font></Label>
 
-        <Label layoutX="28.0" layoutY="571.0" text="5. Fill in the blank: Juan tuvo que hacer la ___ antes de ir a la esquela." />
-        <TextField fx:id="question5Input" layoutX="28.0" layoutY="597.0" prefWidth="471.0" />
+        <Label layoutX="16.0" layoutY="578.0" text="5. Fill in the blank: Juan tuvo que hacer la ___ antes de ir a la esquela.">
+         <font>
+            <Font name="Baskerville Old Face" size="18.0" />
+         </font></Label>
+        <TextField fx:id="question5Input" layoutX="16.0" layoutY="610.0" prefHeight="25.0" prefWidth="497.0" />
       <ImageView fx:id="logocorner" fitHeight="119.0" fitWidth="130.0" layoutX="370.0" layoutY="53.0">
             <image>
                 <Image url="@../../images/logocorner.png" />
@@ -45,8 +61,7 @@
                 <Image url="@../../images/bar.png" />
             </image>
         </ImageView>
-      <Button layoutX="234.0" layoutY="684.0" mnemonicParsing="false" text="Submit" />
-      <ChoiceBox layoutX="30.0" layoutY="420.0" prefHeight="26.0" prefWidth="199.0" />
+      <ChoiceBox layoutX="15.0" layoutY="434.0" prefHeight="26.0" prefWidth="267.0" />
       <!-- Navigation Bar -->
         <AnchorPane fx:id="bottomNavBar" layoutX="1.0" layoutY="850.0" prefHeight="70.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;">
             <children>
@@ -79,7 +94,18 @@
                 <Label layoutX="425.0" layoutY="42.0" text="Review" />
             </children>
         </AnchorPane>
-      <Label fx:id="assessment11" layoutX="25.0" layoutY="157.0" style="-fx-font-size: 24px" text="Assessment" />
+      <Label fx:id="assessment11" layoutX="25.0" layoutY="157.0" style="-fx-font-size: 24px" text="Assessment">
+         <font>
+            <Font name="Baskerville Old Face" size="24.0" />
+         </font></Label>
+      <TextField fx:id="question5Input1" layoutX="15.0" layoutY="510.0" prefHeight="25.0" prefWidth="497.0" />
+      <TextField fx:id="question5Input2" layoutX="16.0" layoutY="355.0" prefHeight="25.0" prefWidth="497.0" />
+      <Button fx:id="playButton1" layoutX="195.0" layoutY="692.0" onAction="#onPlayButtonClicked" prefHeight="42.0" prefWidth="109.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: CCDBEE; -fx-border-color: BBBBBB;" styleClass="dark-button" text="Submit">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Button>
+      <TextField fx:id="question5Input21" layoutX="12.0" layoutY="285.0" prefHeight="25.0" prefWidth="497.0" />
     </children>
     <stylesheets>
         <URL value="@styles.css" />
