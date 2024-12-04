@@ -1,7 +1,6 @@
 package com.model;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 import java.util.UUID;
@@ -108,9 +107,19 @@ public class LanguageLearningFacade {
      * @param languageName the name of the language to select
      */
     public void selectLanguage(String languageName) {
-        ArrayList<Language> language = languageList.getLanguages();
-        if (language != null) {
-            this.currentLanguage = language;
+        if (user != null) {
+            for (Language language : languageList.getLanguages()) {
+                if (language.getName().equalsIgnoreCase(languageName)) {
+                    user.setCurrentLanguage(language.getId());
+                    user.setCurrentLanguageName(language.getName());
+                    UserList.getInstance().saveUsers(); // Save changes to JSON
+                    System.out.println("Language updated: " + language.getName());
+                    return;
+                }
+            }
+            System.out.println("Language not found: " + languageName);
+        } else {
+            System.out.println("No user logged in to select a language.");
         }
     }
 
@@ -148,21 +157,6 @@ public class LanguageLearningFacade {
         return 0.0;
     }
 
-    /**
-     * Retrieves all languages that match a specified keyword.
-     *
-     * @param keyWord the keyword to match languages against
-     * @return a list of languages matching the keyword
-     */
-    public ArrayList<Language> getAllLanguagesByKeyWord(String keyWord) {
-        ArrayList<Language> matchingLanguages = new ArrayList<>();
-        for (Language language : languageList.getLanguages()) {
-            if (language.getKeyWords().contains(keyWord)) {
-                matchingLanguages.add(language);
-            }
-        }
-        return matchingLanguages;
-    }
 
     /**
      * Gets the currently logged-in user.
@@ -192,7 +186,7 @@ public class LanguageLearningFacade {
      */
     public void registerUser(String username, String email, String password) {
         UUID userId = UUID.randomUUID();
-        User newUser = new User(userId, username, email, password, new ArrayList<>(), new HashMap<>(), new ArrayList<>(), null, new ArrayList<>(), null, "English");
+        User newUser = new User(userId, username, email, password);
         userList.addUser(newUser);
         userList.saveUsers();
     }
@@ -210,12 +204,12 @@ public class LanguageLearningFacade {
         return false;
     }
 
-     /**
+    /**
      * Generates a random question from the available words.
      */
     public void getaQuestion() {
         // Generate a random question using the words from the loaded WordsList
-         question = assessments.generateRandomQuestion(wordsList);
+        question = assessments.generateRandomQuestion(wordsList);
 
         // Check if the question is null before calling toString()
         if (question != null) {
@@ -266,6 +260,9 @@ public class LanguageLearningFacade {
             System.out.println("You do not have access to this course.");
         }
     }
+
     
 
 }
+
+

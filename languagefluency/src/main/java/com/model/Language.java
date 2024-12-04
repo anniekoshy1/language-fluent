@@ -1,166 +1,107 @@
-/**
- * Represents a language within the language learning system, tracking a user's progress, completed courses, assessments, and keywords associated with the language
- */
 package com.model;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.UUID;
 
+/**
+ * Represents a language within the language learning program.
+ * Tracks progress, completed courses, and course access for a specific language.
+ */
 public class Language {
-
     private final UUID id;
-    private User user;
-    private StarterTest starterTest;
-    private final String name;
-    private double coursePercentage;
-    private double totalPercentage;
+    private String name;
     private double languageProgress;
-    private ArrayList<String> keyWords;
-    private ArrayList<Course> completedCourses;
-    private ArrayList<Assessment> completedAssessments;
-    private HashMap<Course, Boolean> courseAccess;
+    private ArrayList<UUID> completedCourses;
+    private HashMap<UUID, Boolean> courseAccess;
 
     /**
-     * Constructs a Language instance associated with a user and language name
-     * @param user the user learning the language
-     * @param name the name of the language
+     * Constructs a new Language instance with the specified details.
+     * 
+     * @param id              Unique identifier for the language.
+     * @param name            Name of the language.
+     * @param languageProgress Overall progress percentage in learning the language.
+     * @param completedCourses List of completed course IDs for the language.
+     * @param courseAccess     Map of course IDs to their access status.
      */
-    public Language(User user, String name) {
-        this.id = UUID.randomUUID();
-        this.user = user;
-        this.name = name;
-        this.coursePercentage = 0.0;
-        this.totalPercentage = 0.0;
-        this.languageProgress = 0.0;
-        this.keyWords = new ArrayList<>();
-        this.completedCourses = new ArrayList<>();
-        this.completedAssessments = new ArrayList<>();
-        this.courseAccess = new HashMap<>();
-    }
-
-    /**
-     * Constructs a Language instance with the specified name.
-     * @param name the name of the language
-     */
-    public Language(String name) {
-        this(UUID.randomUUID(), name);
-    }
-
-    /**
-     * Constructs a Language instance with a specified UUID and name.
-     * @param id   the unique identifier of the language
-     * @param name the name of the language
-     */
-    public Language(UUID id, String name) {
+    public Language(UUID id, String name, double languageProgress, ArrayList<UUID> completedCourses, 
+                    HashMap<UUID, Boolean> courseAccess) {
         this.id = id;
         this.name = name;
+        this.languageProgress = languageProgress;
+        this.completedCourses = completedCourses != null ? completedCourses : new ArrayList<>();
+        this.courseAccess = courseAccess != null ? courseAccess : new HashMap<>();
     }
 
+    /**
+     * Gets the unique identifier for the language.
+     * 
+     * @return The unique identifier.
+     */
+    public UUID getId() {
+        return id;
+    }
+
+    /**
+     * Gets the name of the language.
+     * 
+     * @return The name of the language.
+     */
     public String getName() {
         return name;
     }
 
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
     /**
-     * Sets access to a specific course in the language.
-     * @param course the course to set access for
-     * @param access the access status (true if accessible)
+     * Gets the overall progress percentage in learning the language.
+     * 
+     * @return The progress percentage.
      */
-    public void setCourseAccess(Course course, boolean access) {
-        courseAccess.put(course, access);
-    }
-
-    public double getTotalPercentage() {
-        return totalPercentage;
-    }
-
-    public double getCoursePercentage() {
-        return coursePercentage;
-    }
-
     public double getLanguageProgress() {
         return languageProgress;
     }
 
     /**
-     * Sets the progress percentage of the language and updates the total percentage.
-     * @param languageProgress the progress percentage in learning the language
+     * Sets the overall progress percentage in learning the language.
+     * 
+     * @param languageProgress The progress percentage to set.
      */
     public void setLanguageProgress(double languageProgress) {
         this.languageProgress = languageProgress;
-        updateTotalPercentage();
     }
 
-    public ArrayList<Course> getCompletedCourses() {
+    /**
+     * Gets the list of completed course IDs for the language.
+     * 
+     * @return The list of completed course IDs.
+     */
+    public ArrayList<UUID> getCompletedCourses() {
         return completedCourses;
     }
 
     /**
-     * Sets the list of completed courses and updates the course completion percentage.
-     * @param completedCourses the list of completed courses
+     * Sets the list of completed course IDs for the language.
+     * 
+     * @param completedCourses The list of completed course IDs to set.
      */
-    public void setCompletedCourses(ArrayList<Course> completedCourses) {
+    public void setCompletedCourses(ArrayList<UUID> completedCourses) {
         this.completedCourses = completedCourses;
-        updateCoursePercentage();
     }
 
     /**
-     * Checks if the user has taken the starter test.
-     * @return true if the starter test is taken, false otherwise
+     * Gets the map of course IDs to their access status.
+     * 
+     * @return The map of course access status.
      */
-    public boolean takenStarterTest() {
-        return starterTest != null;
+    public HashMap<UUID, Boolean> getCourseAccess() {
+        return courseAccess;
     }
 
     /**
-     * Adds a keyword associated with the language.
-     * @param keyWord the keyword to add
+     * Sets the map of course IDs to their access status.
+     * 
+     * @param courseAccess The map of course access status to set.
      */
-    public void addKeyWord(String keyWord) {
-        keyWords.add(keyWord);
-    }
-
-    /**
-     * Updates the overall total percentage by averaging course and language progress.
-     */
-    private void updateTotalPercentage() {
-        this.totalPercentage = (this.coursePercentage + this.languageProgress) / 2.0;
-    }
-
-    /**
-     * Updates the course completion percentage to 100 if there are completed courses.
-     */
-    private void updateCoursePercentage() {
-        if (!completedCourses.isEmpty()) {
-            this.coursePercentage = 100.0;
-        }
-    }
-
-    public UUID getId() {
-        return id;
-    }
-
-    public ArrayList<String> getKeyWords() {
-        return keyWords;
-    }
-
-    /**
-     * Adds a completed assessment to the list of completed assessments
-     * @param assessment the assessment to add
-     */
-    public void addCompletedAssessment(Assessment assessment) {
-        completedAssessments.add(assessment);
-    }
-
-    public ArrayList<Assessment> getCompletedAssessments() {
-        return completedAssessments;
+    public void setCourseAccess(HashMap<UUID, Boolean> courseAccess) {
+        this.courseAccess = courseAccess;
     }
 }

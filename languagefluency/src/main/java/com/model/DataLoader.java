@@ -16,7 +16,7 @@ public class DataLoader extends DataConstants {
 
     public static final String USERS_FILE = "languagefluency/src/main/java/com/data/User.json";
     public static final String COURSES_FILE = "languagefluency/src/main/java/com/data/Courses.json";
-    public static final String LANGUAGES_FILE = "languagefluency/src/main/java/com/data/Languages.json";
+    public static final String LANGUAGES_FILE = "languagefluency/src/main/java/com/data/Language.json";
     public static final String WORDS_FILE = "languagefluency/src/main/java/com/data/words.json";
     public static final String PHRASES_FILE = "languagefluency/src/main/java/com/data/phrases.json";
     
@@ -77,9 +77,7 @@ public class DataLoader extends DataConstants {
      * @return 
      */
     public static void loadCourses() {
-        CourseList courseListInstance = CourseList.getInstance();
-        System.out.println("Dataloader.loadCourses is called");
-    
+        CourseList courseListInstance = CourseList.getInstance();    
         try (FileReader reader = new FileReader(COURSES_FILE)) {
             JSONParser jsonParser = new JSONParser();
             JSONArray courseList = (JSONArray) jsonParser.parse(reader);
@@ -100,10 +98,7 @@ public class DataLoader extends DataConstants {
                 Course course = new Course(id, name, description, userAccess, courseProgress, completed, lessons, flashcards);
                 courseListInstance.addCourseWithoutSaving(course);
     
-                // Debug/test lines:
-                System.out.println("Course Loaded: " + name);
             }
-            System.out.println("Total Courses Loaded: " + courseListInstance.getCourses().size());
         } catch (Exception e) {
             e.printStackTrace();
             System.err.println("Error loading courses: " + e.getMessage());
@@ -153,25 +148,39 @@ public class DataLoader extends DataConstants {
      * Loads languages from the JSON file and adds them to the LanguageList singleton.
      */
     public static void loadLanguages() {
-        LanguageList languageListInstance = LanguageList.getInstance();
-
+        LanguageList languageList = LanguageList.getInstance(); // Get singleton instance
+    
         try (FileReader reader = new FileReader(LANGUAGES_FILE)) {
-            JSONParser jsonParser = new JSONParser();
-            JSONArray languageArray = (JSONArray) jsonParser.parse(reader);
-
-            for (Object languageObject : languageArray) {
-                JSONObject languageJson = (JSONObject) languageObject;
-                UUID languageID = UUID.fromString((String) languageJson.get("languageID"));
+            JSONParser parser = new JSONParser();
+            JSONArray languageArray = (JSONArray) parser.parse(reader);
+    
+            for (Object obj : languageArray) {
+                JSONObject languageJson = (JSONObject) obj;
+    
+                // Parse fields from JSON
+                UUID id = UUID.fromString((String) languageJson.get("languageId"));
                 String name = (String) languageJson.get("name");
-
-                Language language = new Language(languageID, name);
-                languageListInstance.addLanguage(language);
+                double progress = Double.parseDouble(((String) languageJson.get("languageProgress")).replace("%", ""));
+                ArrayList<UUID> completedCourses = parseUUIDList((JSONArray) languageJson.get("completedCourses"));
+                HashMap<UUID, Boolean> courseAccess = parseCourseAccess((JSONObject) languageJson.get("courseAccess"));
+    
+                // Create Language object and add to LanguageList
+                Language language = new Language(id, name, progress, completedCourses, courseAccess);
+                languageList.addLanguage(language);
             }
-            System.out.println("Languages loaded successfully: " + languageListInstance.getLanguages().size());
-
+            System.out.println("Languages loaded successfully.");
         } catch (IOException | ParseException e) {
             System.err.println("Error loading languages: " + e.getMessage());
         }
+    }
+
+    // Helper method to parse course access map
+    private static HashMap<UUID, Boolean> parseCourseAccess(JSONObject jsonObject) {
+        HashMap<UUID, Boolean> map = new HashMap<>();
+        for (Object key : jsonObject.keySet()) {
+            map.put(UUID.fromString((String) key), Boolean.parseBoolean((String) jsonObject.get(key)));
+        }
+        return map;
     }
 
     /**
@@ -202,7 +211,6 @@ public class DataLoader extends DataConstants {
                 Word word = new Word(id, wordText, definition, difficulty, translation);
                 wordsList.addWordWithoutSaving(word); // Add without saving during the load phase
             }
-            System.out.println("Total words loaded: " + wordsList.getAllWords().size());
 
         } catch (IOException | ParseException e) {
             e.printStackTrace();
@@ -255,6 +263,27 @@ public class DataLoader extends DataConstants {
             System.err.println("Invalid UUID format for field: " + fieldName + ", value: " + uuidString);
             return null;
         }
+    }
+
+
+    /**
+     * Helper method to parse a list of UUIDs from a JSON array.
+     * Uses the existing parseUUID method for individual parsing.
+     * 
+     * @param jsonArray The JSON array containing UUID strings.
+     * @return A list of parsed UUIDs.
+     */
+    private static ArrayList<UUID> parseUUIDList(JSONArray jsonArray) {
+        ArrayList<UUID> list = new ArrayList<>();
+        if (jsonArray != null) {
+            for (Object obj : jsonArray) {
+                UUID uuid = parseUUID((String) obj, "UUID List");
+                if (uuid != null) {
+                    list.add(uuid);
+                }
+            }
+        }
+        return list;
     }
 
     /**
@@ -312,16 +341,5 @@ public class DataLoader extends DataConstants {
         return null; // Return null if not found
     }
 
-
-
-    /**
-     * Loads an assessment by its ID.
-     * @param assessmentIDSTR the ID of the assessment as a String
-     * @return the loaded Assessment object
-     * @throws UnsupportedOperationException if the method is not implemented
-     */
-    public static Assessment loadAssessmentById(String assessmentIDSTR) {
-        throw new UnsupportedOperationException("Unimplemented method 'loadAssessmentById'");
-    }
 
 }

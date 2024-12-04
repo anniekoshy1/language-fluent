@@ -43,9 +43,9 @@ public class User {
      * Constructs a User with default course and language settings.
      */
     public User(UUID id, String username, String email, String password) {
-        this(id, username, email, password, new ArrayList<>(), new HashMap<>(), new ArrayList<>(), null, new ArrayList<>(), null, "English");
+        this(id, username, email, password, new ArrayList<>(), new HashMap<>(), 
+            new ArrayList<>(), null, new ArrayList<>(), null, null);
     }
-
     // Getters and Setters
     public UUID getId() {
         return id;

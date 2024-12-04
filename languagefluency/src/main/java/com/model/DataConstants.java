@@ -11,7 +11,7 @@ public class DataConstants {
     // File paths for storing data
     public static final String USERS_FILE = "languagefluency/src/main/java/com/data/User.json";
     public static final String COURSES_FILE = "languagefluency/src/main/java/com/data/Courses.json";
-    public static final String LANGUAGES_FILE = "languagefluency/src/main/java/com/data/Languages.json";
+    public static final String LANGUAGES_FILE = "languagefluency/src/main/java/com/data/Language.json";
     public static final String WORDS_FILE = "languagefluency/src/main/java/com/data/words.json";
     public static final String PHRASES_FILE = "languagefluency/src/main/java/com/data/phrases.json";
     
@@ -41,14 +41,9 @@ public class DataConstants {
     public static final int MAX_WORDS_PER_LESSON = 50;
     public static final int MAX_HISTORICAL_FACTS_PER_LESSON = 10;
 
-    // Constants for assessments
-    public static final String ASSESSMENT_ID = "assessmentID";
-    public static final int ASSESSMENT_SCORE = 60;
-    public static final int MAX_QUESTIONS_PER_QUIZ = 10;
 
     // Constants for languages
     public static final String LANGUAGE_NAME = "languageName";
-    public static final String DEFAULT_LANGUAGE = "English";
     public static final String LANGUAGE_ID = "languageId";
     public static final String LANGUAGE_PROGRESS = "progress";
 

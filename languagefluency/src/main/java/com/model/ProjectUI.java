@@ -163,12 +163,13 @@ private void login() {
         facade.registerUser(username, email, password);
         System.out.println("Registration successful! Please login to continue.");
     }
-//LANGUAGE
+    //LANGUAGE
     private void selectLanguage() {
         if (!isLoggedIn()) {
             System.out.println("You must log in to select a language.");
             return;
         }
+
         System.out.println("Available languages:");
         for (Language language : facade.getAllLanguages()) {
             System.out.println("- " + language.getName());
@@ -176,10 +177,15 @@ private void login() {
         System.out.print("Select a language: ");
         String languageName = scanner.nextLine();
 
-        facade.selectLanguage(languageName);
-        System.out.println("Language selected: " + languageName);
+        try {
+            facade.selectLanguage(languageName);
+            System.out.println("Language selected: " + languageName);
+        } catch (IllegalStateException e) {
+            System.out.println(e.getMessage());
+        }
     }
-//START COURSE
+
+    //START COURSE
     private void startCourse() {
         ArrayList<Course> allCourses = facade.getAllCourses();
         if (!isLoggedIn()) {
@@ -353,6 +359,11 @@ private void login() {
     public void logout() {
         facade.saveAndLogout();
         System.out.println("You have been logged out.");
+    }
+
+
+    public void test(){
+        facade.getaQuestion();
     }
 
     public static void main(String[] args) {

@@ -5,6 +5,7 @@ package com.model;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.UUID;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -120,29 +121,47 @@ public class DataWriter extends DataConstants {
      */
     @SuppressWarnings("unchecked")
     public static void saveLanguages() {
-        LanguageList languages = LanguageList.getInstance();
-        JSONArray jsonLanguages = new JSONArray();
+        LanguageList languageList = LanguageList.getInstance(); // Get singleton instance
+        JSONArray languageArray = new JSONArray();
 
-        for (Language language : languages.getLanguages()) {
-            jsonLanguages.add(getLanguageJSON(language));
+        for (Language language : languageList.getLanguages()) {
+            languageArray.add(getLanguageJSON(language)); // Convert each Language object to JSON
         }
 
         try (FileWriter file = new FileWriter(LANGUAGES_FILE)) {
-            file.write(jsonLanguages.toJSONString());
+            file.write(languageArray.toJSONString()); // Write JSON array to file
             file.flush();
+            System.out.println("Languages saved successfully.");
         } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("Error saving languages: " + e.getMessage());
         }
     }
 
+    // Convert a Language object to a JSONObject
     @SuppressWarnings("unchecked")
     private static JSONObject getLanguageJSON(Language language) {
-        JSONObject languageDetails = new JSONObject();
-        languageDetails.put(LANGUAGE_ID, language.getId().toString());
-        languageDetails.put(LANGUAGE_NAME, language.getName());
-        languageDetails.put(LANGUAGE_PROGRESS, language.getLanguageProgress());
-        return languageDetails;
+        JSONObject languageJson = new JSONObject();
+        languageJson.put("languageId", language.getId().toString());
+        languageJson.put("name", language.getName());
+        languageJson.put("languageProgress", language.getLanguageProgress() + "%");
+
+        // Convert completed courses to JSON array
+        JSONArray completedCoursesJson = new JSONArray();
+        for (UUID courseId : language.getCompletedCourses()) {
+            completedCoursesJson.add(courseId.toString());
+        }
+        languageJson.put("completedCourses", completedCoursesJson);
+
+        // Convert course access map to JSON object
+        JSONObject courseAccessJson = new JSONObject();
+        for (UUID courseId : language.getCourseAccess().keySet()) {
+            courseAccessJson.put(courseId.toString(), language.getCourseAccess().get(courseId).toString());
+        }
+        languageJson.put("courseAccess", courseAccessJson);
+
+        return languageJson;
     }
+
 
     /**
      * Saves the list of words to a JSON file using the WordsList singleton.

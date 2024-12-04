@@ -14,6 +14,7 @@ public class LanguageList {
     public static LanguageList getInstance() {
         if (languageList == null) {
             languageList = new LanguageList();
+            languageList.loadLanguages();
         }
         return languageList;
     }
@@ -24,6 +25,7 @@ public class LanguageList {
 
     public void addLanguage(Language language) {
         languages.add(language);
+        saveLanguages();
     }
 
     public ArrayList<Language> getLanguages() {
