@@ -28,6 +28,21 @@ public class LanguageLearningFacade {
         wordsList = WordsList.getInstance();  // Use the singleton instance of WordsList
     }
 
+
+        /**
+     * Registers a new user with the provided credentials.
+     *
+     * @param username the username of the new user
+     * @param email    the email address of the new user
+     * @param password the password for the new user
+     */
+    public void registerUser(String username, String email, String password) {
+        UUID userId = UUID.randomUUID();
+        User newUser = new User(userId, username, email, password);
+        userList.addUser(newUser);
+        userList.saveUsers();
+    }
+
     /**
      * Logs in a user based on provided credentials.
      *
@@ -36,31 +51,37 @@ public class LanguageLearningFacade {
      * @return true if login is successful, false otherwise
      */
     public boolean login(String username, String password) {
-        User foundUser = userList.getUser(username);
-        if (foundUser != null && foundUser.getPassword().equals(password)) {
-            this.user = foundUser;
+        User currentUser = userList.getUser(username);
+        if (currentUser != null && currentUser.getPassword().equals(password)) {
+            this.user = currentUser;
             return true;
         }
         return false;
     }
 
-    /**
-     * Logs out the currently logaged-in user and clears the current language.
-     */
-    public void logout() {
-        this.user = null;
-        this.currentLanguage = null;
+    public User getCurrentUser(){
+        return user;
     }
 
-    /**
-     * Starts a specified course for the current user.
+        /**
+     * Selects a language for the current user based on language name.
      *
-     * @param course the course to start
+     * @param languageName the name of the language to select
      */
-    public void startCourse(Course course) {
+    public void selectLanguage(String languageName) {
         if (user != null) {
-            user.getCourses().add(course);
-            course.setUserAccess(true);
+            for (Language language : languageList.getLanguages()) {
+                if (language.getName().equalsIgnoreCase(languageName)) {
+                    user.setCurrentLanguage(language.getId());
+                    user.setCurrentLanguageName(language.getName());
+                    UserList.getInstance().saveUsers(); // Save changes to JSON
+                    System.out.println("Language updated: " + language.getName());
+                    return;
+                }
+            }
+            System.out.println("Language not found: " + languageName);
+        } else {
+            System.out.println("No user logged in to select a language.");
         }
     }
 
@@ -79,6 +100,30 @@ public class LanguageLearningFacade {
             } else {
                 System.out.println(course.getName());
             }
+        }
+
+    }
+
+    public User setCurrentCourse(){
+        return 
+    }
+    /**
+     * Logs out the currently logaged-in user and clears the current language.
+     */
+    public void logout() {
+        this.user = null;
+        this.currentLanguage = null;
+    }
+
+    /**
+     * Starts a specified course for the current user.
+     *
+     * @param course the course to start
+     */
+    public void startCourse(Course course) {
+        if (user != null) {
+            user.getCourses().add(course);
+            course.setUserAccess(true);
         }
     }
     
@@ -106,27 +151,6 @@ public class LanguageLearningFacade {
         return languageList.getLanguages();
     }
 
-    /**
-     * Selects a language for the current user based on language name.
-     *
-     * @param languageName the name of the language to select
-     */
-    public void selectLanguage(String languageName) {
-        if (user != null) {
-            for (Language language : languageList.getLanguages()) {
-                if (language.getName().equalsIgnoreCase(languageName)) {
-                    user.setCurrentLanguage(language.getId());
-                    user.setCurrentLanguageName(language.getName());
-                    UserList.getInstance().saveUsers(); // Save changes to JSON
-                    System.out.println("Language updated: " + language.getName());
-                    return;
-                }
-            }
-            System.out.println("Language not found: " + languageName);
-        } else {
-            System.out.println("No user logged in to select a language.");
-        }
-    }
 
     /**
      * Retrieves all available courses in the system.
@@ -164,15 +188,6 @@ public class LanguageLearningFacade {
 
 
     /**
-     * Gets the currently logged-in user.
-     *
-     * @return the current user, or null if no user is logged in
-     */
-    public User getCurrentUser() {
-        return user;
-    }
-
-    /**
      * Saves the current user's progress and logs them out.
      */
     public void saveAndLogout() {
@@ -182,19 +197,6 @@ public class LanguageLearningFacade {
         }
     }
 
-    /**
-     * Registers a new user with the provided credentials.
-     *
-     * @param username the username of the new user
-     * @param email    the email address of the new user
-     * @param password the password for the new user
-     */
-    public void registerUser(String username, String email, String password) {
-        UUID userId = UUID.randomUUID();
-        User newUser = new User(userId, username, email, password);
-        userList.addUser(newUser);
-        userList.saveUsers();
-    }
 
     /**
      * Checks if the current user has access to a specified course.
@@ -240,7 +242,8 @@ public class LanguageLearningFacade {
     }
 
     public void startLessonAssessment(Scanner scanner) {
-        if (course != null && course.getUserAccess()) {
+        
+        System.out.println("nejf");
             // Reset assessment state before starting
             assessments = new Assessment();
             
@@ -261,9 +264,9 @@ public class LanguageLearningFacade {
             // Update the course progress after completing the lesson
             course.calculateProgress();
             
-        } else {
+    
             System.out.println("You do not have access to this course.");
-        }
+
     }
 
     public static void main(String[] args) {
@@ -277,8 +280,7 @@ public class LanguageLearningFacade {
         scanner.close();
 
     }
+
 }
-
-
 
 

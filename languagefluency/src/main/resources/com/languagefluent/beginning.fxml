@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="library_pane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7; -fx-border-radius: 30; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+<AnchorPane id="AnchorPane" fx:id="library_pane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7; -fx-border-radius: 30; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.BeginningController">
    <children>
 <Label fx:id="loginlabel" layoutX="72.0" layoutY="606.0" prefHeight="34.0" prefWidth="403.0" stylesheets="@styles.css" text="Unlock the Language, Embrace the Culture" textAlignment="CENTER">
          <font>
@@ -29,7 +29,7 @@
                 <Image url="@../../images/logobackground.png" />
             </image>
         </ImageView>
-      <ImageView fx:id="image3" fitHeight="64.0" fitWidth="531.0" layoutX="-2.0" layoutY="-4.0">
+      <ImageView fx:id="image2" fitHeight="64.0" fitWidth="531.0" layoutX="-2.0" layoutY="-4.0">
             <image>
                 <Image url="@../../images/bar.png" />
             </image>
