@@ -13,9 +13,8 @@
         <Label layoutX="31.0" layoutY="129.0" text="Flashcards">
          <font>
             <Font name="Baskerville" size="36.0" />
-         </font>
-      </Label>
-         <ImageView fx:id="line" fitHeight="1.0" fitWidth="247.0" layoutX="21.0" layoutY="174.0">
+         </font></Label>
+        <ImageView fx:id="line" fitHeight="1.0" fitWidth="247.0" layoutX="28.0" layoutY="171.0">
             <image>
                 <Image url="@../../images/line.png" />
             </image>
