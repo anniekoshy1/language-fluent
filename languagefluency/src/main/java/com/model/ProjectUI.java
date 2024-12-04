@@ -256,7 +256,7 @@ private void login() {
     private void startFlashcards() {
         System.out.println("Starting Flashcard Practice...");
         
-        List<FlashcardQuestion> flashcards = DataLoader.loadFlashcardsFromJson("languagefluency/src/main/java/com/data/Words.json");
+        List<FlashcardQuestion> flashcards = DataLoader.parseFlashcards("languagefluency/src/main/java/com/data/Words.json");
 
         if (flashcards.isEmpty()) {
             System.out.println("No flashcards available.");
