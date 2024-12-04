@@ -5,6 +5,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane id="AnchorPane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
@@ -21,17 +22,22 @@
                 <Image url="@../../images/user.png" />
             </image>
         </ImageView>
+        <ImageView fx:id="logocorner" fitHeight="120.0" fitWidth="135.0" layoutX="372.0" layoutY="62.0">
+            <image>
+                <Image url="@../../images/logocorner.png" />
+            </image>
+        </ImageView>
 
         <!-- Welcome Text -->
-        <Label fx:id="welcomeLabel" layoutX="11.0" layoutY="143.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Hi, User User" />
-        <ImageView fx:id="levelIcon" fitHeight="30.0" fitWidth="87.0" layoutX="203.0" layoutY="172.0">
+        <Label fx:id="welcomeLabel" layoutX="21.0" layoutY="132.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Hi, User User" />
+        <ImageView fx:id="levelIcon" fitHeight="35.0" fitWidth="36.0" layoutX="247.0" layoutY="175.0">
             <image>
-                <Image url="@../../images/level.png" />
+                <Image url="@../../images/star.png" />
             </image>
         </ImageView>
 
         <!-- Starting Out Section -->
-        <AnchorPane fx:id="startingOutPane" layoutX="20.0" layoutY="220.0" prefHeight="150.0" prefWidth="487.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #CCCCCC; -fx-border-width: 1px; -fx-border-radius: 8px;">
+        <AnchorPane fx:id="startingOutPane" layoutX="20.0" layoutY="240.0" prefHeight="150.0" prefWidth="487.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #CCCCCC; -fx-border-width: 1px; -fx-border-radius: 8px;">
             <children>
                 <ImageView fx:id="startingOutImage" fitHeight="102.0" fitWidth="212.0" layoutX="14.0" layoutY="33.0">
                     <image>
@@ -44,7 +50,7 @@
         </AnchorPane>
 
         <!-- Advanced Learning Section -->
-        <AnchorPane fx:id="advancedLearningPane" layoutX="20.0" layoutY="400.0" prefHeight="150.0" prefWidth="487.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #CCCCCC; -fx-border-width: 1px; -fx-border-radius: 8px;">
+        <AnchorPane fx:id="advancedLearningPane" layoutX="21.0" layoutY="415.0" prefHeight="150.0" prefWidth="487.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #CCCCCC; -fx-border-width: 1px; -fx-border-radius: 8px;">
             <children>
                 <ImageView fx:id="advancedLearningImage" fitHeight="102.0" fitWidth="206.0" layoutX="14.0" layoutY="36.0">
                     <image>
@@ -89,5 +95,6 @@
                 <Button fx:id="logoutButton" layoutX="162.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Profile" />
             </children>
         </AnchorPane>
+      <Text layoutX="205.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 18;" text="Level" wrappingWidth="42.0" />
     </children>
 </AnchorPane>
