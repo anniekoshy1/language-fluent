@@ -4,9 +4,11 @@
 <?import javafx.scene.chart.LineChart?>
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane id="AnchorPane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
@@ -18,26 +20,25 @@
         </ImageView>
 
         <!-- Book Icon -->
-        <ImageView fx:id="bookIcon" fitHeight="70.0" fitWidth="70.0" layoutX="21.0" layoutY="44.0">
+        <ImageView fx:id="bookIcon" fitHeight="70.0" fitWidth="77.0" layoutX="21.0" layoutY="53.0">
             <image>
                 <Image url="@../../images/courseicon.png" />
             </image>
         </ImageView>
 
         <!-- App Logo -->
-        <ImageView fx:id="logoCorner" fitHeight="108.0" fitWidth="117.0" layoutX="400.0" layoutY="50.0">
+        <ImageView fx:id="logoCorner" fitHeight="112.0" fitWidth="140.0" layoutX="377.0" layoutY="44.0">
             <image>
                 <Image url="@../../images/logocorner.png" />
             </image>
         </ImageView>
 
         <!-- Header -->
-        <Label fx:id="courseTitle" layoutX="28.0" layoutY="114.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Starting Out" />
-        <Label fx:id="progressStatus" layoutX="14.0" layoutY="158.0" style="-fx-font-size: 16px;" text="Course Progress Status: Incomplete" />
-        <Label fx:id="courseDescription" layoutX="9.0" layoutY="183.0" prefHeight="60.0" prefWidth="503.0" style="-fx-font-size: 14px;" text="Introduces essential vocabulary, basic grammar, and foundational conversational skills, helping learners confidently navigate everyday interactions in Spanish." wrapText="true" />
+        <Label fx:id="courseTitle" layoutX="21.0" layoutY="123.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Starting Out" />
+        <Label fx:id="courseDescription" layoutX="12.0" layoutY="197.0" prefHeight="60.0" prefWidth="498.0" style="-fx-font-size: 14px;" text="Introduces essential vocabulary, basic grammar, and foundational conversational skills, helping learners confidently navigate everyday interactions in Spanish." wrapText="true" />
 
         <!-- Lesson Cards -->
-        <AnchorPane layoutX="28.0" layoutY="253.0" prefHeight="123.0" prefWidth="159.0" style="-fx-border-color: #CCCCCC; -fx-border-width: 1; -fx-border-radius: 8px;">
+        <AnchorPane layoutX="49.0" layoutY="288.0" prefHeight="123.0" prefWidth="159.0" style="-fx-border-color: #CCCCCC; -fx-border-width: 1; -fx-border-radius: 8px;">
             <children>
                 <ImageView fx:id="languageBasicsIcon" fitHeight="70.0" fitWidth="70.0" layoutX="45.0" layoutY="39.0">
                     <image>
@@ -54,8 +55,8 @@
         </AnchorPane>
 
         <!-- Activity Chart -->
-        <Label layoutX="209.0" layoutY="733.0" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Your Activity:" />
-        <LineChart fx:id="activityChart" layoutX="27.0" layoutY="767.0" prefHeight="150.0" prefWidth="471.0">
+        <Label layoutX="213.0" layoutY="614.0" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Your Activity:" />
+        <LineChart fx:id="activityChart" layoutX="29.0" layoutY="652.0" prefHeight="150.0" prefWidth="471.0">
             <xAxis>
                 <CategoryAxis fx:id="daysAxis" />
             </xAxis>
@@ -65,38 +66,38 @@
         </LineChart>
 
         <!-- Navigation Bar -->
-        <AnchorPane fx:id="bottomNavBar" layoutY="950.0" prefHeight="70.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;">
+        <AnchorPane fx:id="bottomNavBar" layoutX="1.0" layoutY="850.0" prefHeight="70.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;">
             <children>
                 <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="43.0" layoutY="7.0">
                     <image>
                         <Image url="@../../images/home.png" />
                     </image>
                 </ImageView>
-                <Label layoutX="28.0" layoutY="42.0" text="Home" />
+                <Label layoutX="42.0" layoutY="42.0" text="Home" />
 
                 <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="177.0" layoutY="7.0">
                     <image>
                         <Image url="@../../images/profile.png" />
                     </image>
                 </ImageView>
-                <Label layoutX="162.0" layoutY="42.0" text="Profile" />
+                <Label layoutX="175.0" layoutY="42.0" text="Profile" />
 
                 <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="305.0" layoutY="7.0">
                     <image>
                         <Image url="@../../images/logout.png" />
                     </image>
                 </ImageView>
-                <Label layoutX="290.0" layoutY="42.0" text="Logout" />
+                <Label layoutX="301.0" layoutY="42.0" text="Logout" />
 
                 <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="429.0" layoutY="7.0">
                     <image>
                         <Image url="@../../images/review.png" />
                     </image>
                 </ImageView>
-                <Label layoutX="414.0" layoutY="42.0" text="Review" />
+                <Label layoutX="425.0" layoutY="42.0" text="Review" />
             </children>
-        </AnchorPane>
-      <AnchorPane layoutX="284.0" layoutY="253.0" prefHeight="123.0" prefWidth="167.0" style="-fx-border-color: #CCCCCC; -fx-border-width: 1; -fx-border-radius: 8px;">
+        </AnchorPane> 
+      <AnchorPane layoutX="293.0" layoutY="288.0" prefHeight="123.0" prefWidth="167.0" style="-fx-border-color: #CCCCCC; -fx-border-width: 1; -fx-border-radius: 8px;">
          <children>
             <ImageView fx:id="languageBasicsIcon1" fitHeight="70.0" fitWidth="70.0" layoutX="49.0" layoutY="37.0">
                <image>
@@ -106,40 +107,42 @@
             <Label fx:id="languageBasicsLabel1" layoutX="11.0" layoutY="12.0" prefHeight="25.0" prefWidth="131.0" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Expanding Vocab" />
             <ImageView fx:id="unlockIcon1" fitHeight="20.0" fitWidth="20.0" layoutX="143.0" layoutY="15.0">
                <image>
-                  <Image url="@../../images/unlock.png" />
+                  <Image url="@../../images/lock.png" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="134.0" layoutY="437.0" prefHeight="112.0" prefWidth="257.0" style="-fx-border-color: #CCCCCC; -fx-border-width: 1; -fx-border-radius: 8px;">
+      <AnchorPane layoutX="45.0" layoutY="467.0" prefHeight="123.0" prefWidth="167.0" style="-fx-border-color: #CCCCCC; -fx-border-width: 1; -fx-border-radius: 8px;">
          <children>
-            <Label fx:id="languageBasicsLabel2" layoutX="9.0" layoutY="12.0" prefHeight="25.0" prefWidth="215.0" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Language Basics Assessment" />
-            <ImageView fx:id="unlockIcon2" fitHeight="20.0" fitWidth="20.0" layoutX="229.0" layoutY="15.0">
+            <Label fx:id="languageBasicsLabel11" layoutX="11.0" layoutY="12.0" prefHeight="25.0" prefWidth="131.0" style="-fx-font-size: 9.7px; -fx-font-weight: bold;" text="Language Basics Assessment" />
+            <ImageView fx:id="unlockIcon11" fitHeight="17.0" fitWidth="20.0" layoutX="143.0" layoutY="15.0">
                <image>
-                  <Image url="@../../images/unlock.png" />
+                  <Image url="@../../images/lock.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="languageBasicsAssessmentIcon1" fitHeight="60.0" fitWidth="131.0" layoutX="63.0" layoutY="37.0">
+            <ImageView fx:id="languageBasicsAssessmentIcon111" fitHeight="60.0" fitWidth="96.0" layoutX="36.0" layoutY="49.0">
                <image>
                   <Image url="@../../images/expand.png" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="132.0" layoutY="585.0" prefHeight="112.0" prefWidth="257.0" style="-fx-border-color: #CCCCCC; -fx-border-width: 1; -fx-border-radius: 8px;">
+      <AnchorPane layoutX="293.0" layoutY="467.0" prefHeight="123.0" prefWidth="167.0" style="-fx-border-color: #CCCCCC; -fx-border-width: 1; -fx-border-radius: 8px;">
          <children>
-            <Label fx:id="languageBasicsLabel21" layoutX="9.0" layoutY="12.0" prefHeight="25.0" prefWidth="223.0" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Expanding Vocab Assessment" />
-            <ImageView fx:id="unlockIcon21" fitHeight="20.0" fitWidth="20.0" layoutX="232.0" layoutY="15.0">
+            <Label fx:id="languageBasicsLabel111" layoutX="11.0" layoutY="12.0" prefHeight="25.0" prefWidth="131.0" style="-fx-font-size: 9.4px; -fx-font-weight: bold;" text="Expanding Vocab Assessment" />
+            <ImageView fx:id="unlockIcon111" fitHeight="17.0" fitWidth="20.0" layoutX="143.0" layoutY="15.0">
                <image>
-                  <Image url="@../../images/unlock.png" />
+                  <Image url="@../../images/lock.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="languageBasicsAssessmentIcon11" fitHeight="60.0" fitWidth="131.0" layoutX="68.0" layoutY="26.0">
+            <ImageView fx:id="languageBasicsAssessmentIcon1111" fitHeight="60.0" fitWidth="96.0" layoutX="36.0" layoutY="49.0">
                <image>
                   <Image url="@../../images/expand.png" />
                </image>
             </ImageView>
          </children>
       </AnchorPane>
+      <ProgressBar layoutX="17.0" layoutY="172.0" prefHeight="25.0" prefWidth="222.0" progress="0.0" />
+      <Text layoutX="28.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course Progress Status: Incomplete" wrappingWidth="198.17706298828125" />
     </children>
 </AnchorPane>
