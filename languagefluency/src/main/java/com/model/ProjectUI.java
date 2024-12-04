@@ -58,7 +58,7 @@ public class ProjectUI {
 
             switch (choice) {
                 case 1:
-                    login(null, null);
+                    login();
                     break;
                 case 2:
                     register();
@@ -117,13 +117,17 @@ public class ProjectUI {
         }
     }
 //LOGIN
-public boolean login(String username, String password) {
+
+private void login() {
+    System.out.print("Enter username: ");
+    String username = scanner.nextLine();
+    System.out.print("Enter password: ");
+    String password = scanner.nextLine();
+
     if (facade.login(username, password)) {
         System.out.println("Login successful! Welcome, " + username);
-        return true;
     } else {
         System.out.println("Login failed. Please check your credentials.");
-        return false;
     }
 }
 

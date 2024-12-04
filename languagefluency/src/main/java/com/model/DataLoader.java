@@ -4,7 +4,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.UUID;
 
 import org.json.simple.JSONArray;
@@ -114,16 +113,38 @@ public class DataLoader extends DataConstants {
     
     private static ArrayList<FlashcardQuestion> parseFlashcards(JSONArray flashcardsArray) {
         ArrayList<FlashcardQuestion> flashcards = new ArrayList<>();
-            for (Object obj : flashcardsArray) {
-                JSONObject flashcardJSON = (JSONObject) obj;
-                String front = (String) flashcardJSON.get("front");
-                String back = (String) flashcardJSON.get("back");
-    
-                FlashcardQuestion flashcard = new FlashcardQuestion(front, back);
-                flashcards.add(flashcard);
-            }
-        
+        for (Object obj : flashcardsArray) {
+            JSONObject flashcardJSON = (JSONObject) obj;
+            UUID flashcardId = UUID.fromString((String) flashcardJSON.get("flashcardId"));
+            boolean completed = (Boolean) flashcardJSON.get("completed");
+            double flashcardProgress = ((Number) flashcardJSON.get("flashcardProgress")).doubleValue();
+
+            flashcards.add(new FlashcardQuestion(flashcardId, completed, flashcardProgress));
+        }
         return flashcards;
+    }
+    
+    /**
+     * Helper method to parse lessons from a JSON array.
+     */
+    private static ArrayList<Lesson> parseLessons(JSONArray lessonsArray) {
+        ArrayList<Lesson> lessons = new ArrayList<>();
+        for (Object obj : lessonsArray) {
+            JSONObject lessonJSON = (JSONObject) obj;
+            String lessonName = (String) lessonJSON.get("lessonName");
+            UUID lessonId = UUID.fromString((String) lessonJSON.get("lessonID"));
+            String lessonDescription = (String) lessonJSON.get("description");
+            double lessonProgress = ((Number) lessonJSON.get("lessonProgress")).doubleValue();
+    
+            // Use default values if fields are missing in the JSON
+            String englishContent = lessonJSON.containsKey("englishContent") ? 
+                (String) lessonJSON.get("englishContent") : "";
+            String spanishContent = lessonJSON.containsKey("spanishContent") ? 
+                (String) lessonJSON.get("spanishContent") : "";
+    
+            lessons.add(new Lesson(lessonName, lessonId, lessonDescription, lessonProgress, englishContent, spanishContent));
+        }
+        return lessons;
     }
     
     
@@ -218,25 +239,7 @@ public class DataLoader extends DataConstants {
         return completedCourses;
     }
 
-    /**
-     * Helper method to parse lessons from a JSON array.
-     */
-    private static ArrayList<Lesson> parseLessons(JSONArray lessonsArray) {
-        ArrayList<Lesson> lessons = new ArrayList<>();
-        for (Object obj : lessonsArray) {
-            JSONObject lessonJSON = (JSONObject) obj;
-            String lessonName = (String) lessonJSON.get("lessonName");
-            UUID lessonId = UUID.fromString((String) lessonJSON.get("lessonID"));
-            String lessonDescription = (String) lessonJSON.get("description");
-            double lessonProgress = ((Number) lessonJSON.get("lessonProgress")).doubleValue();
-            String englishContent = (String) lessonJSON.get("englishContent");
-            String spanishContent = (String) lessonJSON.get("spanishContent");
 
-            Lesson lesson = new Lesson(lessonName, lessonId, lessonDescription, lessonProgress, englishContent, spanishContent);
-            lessons.add(lesson);
-        }
-        return lessons;
-    }
 
     /**
      * Helper method to parse a UUID from a string.
@@ -310,18 +313,6 @@ public class DataLoader extends DataConstants {
     }
 
 
-    /**
-     * Saves the list of courses to storage.
-     * @param courses the list of courses to be saved
-     */
-    public void saveCourses(ArrayList<Course> courses) {}
-
-    /**
-     * Saves the assessment history for a user.
-     * @param user the User for whom the history is saved
-     * @param assessment the Assessment being saved
-     */
-    public void saveAssessmentHistory(User user, Assessment assessment) {}
 
     /**
      * Loads an assessment by its ID.
@@ -331,23 +322,6 @@ public class DataLoader extends DataConstants {
      */
     public static Assessment loadAssessmentById(String assessmentIDSTR) {
         throw new UnsupportedOperationException("Unimplemented method 'loadAssessmentById'");
-    }
-    public static List<FlashcardQuestion> loadFlashcardsFromJson(String filePath) {
-        List<FlashcardQuestion> flashcards = new ArrayList<>();
-        JSONParser parser = new JSONParser();
-
-        try (FileReader reader = new FileReader(filePath)) {
-            JSONArray wordsArray = (JSONArray) parser.parse(reader);
-            for (Object obj : wordsArray) {
-                JSONObject wordObject = (JSONObject) obj;
-                String frontInfo = (String) wordObject.get("word");  // Correct key
-                String backAnswer = (String) wordObject.get("translation");  // Correct key
-                flashcards.add(new FlashcardQuestion(frontInfo, backAnswer));
-            }
-        } catch (IOException | ParseException e) {
-            e.printStackTrace();
-        }
-        return flashcards;
     }
 
 }

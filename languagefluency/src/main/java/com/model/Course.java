@@ -12,23 +12,10 @@ public class Course {
     private ArrayList<Lesson> lessons;
     private UUID id;
     private boolean completed;
-    private ArrayList<FlashcardQuestion> flashcards; // Updated to correct field name
-    private Lesson lesson;
+    private ArrayList<FlashcardQuestion> flashcards;
 
-    /**
-     * Constructs a Course with all details.
-     *
-     * @param id the unique identifier of the course
-     * @param name the name of the course
-     * @param description the description of the course
-     * @param userAccess the access status of the course
-     * @param courseProgress the progress of the course
-     * @param completed indicates whether the course is completed
-     * @param lessons the list of lessons in the course
-     * @param flashcards the list of flashcard questions in the course
-     */
     public Course(UUID id, String name, String description, boolean userAccess, double courseProgress, boolean completed,
-        ArrayList<Lesson> lessons, FlashcardQuestion flashcard) {
+                ArrayList<Lesson> lessons, ArrayList<FlashcardQuestion> flashcards) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -38,6 +25,7 @@ public class Course {
         this.lessons = lessons;
         this.flashcards = flashcards;
     }
+
 
     /**
      * Constructs a Course with an ID and progress
@@ -103,6 +91,10 @@ public class Course {
 
     public ArrayList<FlashcardQuestion> getFlashcards() {
         return flashcards;
+    }
+
+    public void setFlashcards(ArrayList<FlashcardQuestion> flashcards){
+        this.flashcards = flashcards;
     }
 
     public void addFlashcard(FlashcardQuestion flashcard) {
