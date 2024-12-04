@@ -6,3 +6,16 @@
     -fx-scale-x: 1.1; 
     -fx-scale-y: 1.1;
 }
+.dark-button {
+    -fx-background-color: #444444; /* Dark background color */
+    -fx-text-fill: white;         /* White text color */
+    -fx-font-size: 14px;          /* Font size */
+    -fx-border-color: black;      /* Border color */
+    -fx-border-width: 2px;        /* Border width */
+}
+
+.dark-button:hover {
+    -fx-background-color: #555555; /* Slightly lighter on hover */
+    -fx-scale-x: 1.05;             /* Scale effect on hover */
+    -fx-scale-y: 1.05;
+}
