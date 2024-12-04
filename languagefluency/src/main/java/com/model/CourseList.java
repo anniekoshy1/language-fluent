@@ -25,7 +25,6 @@ public class CourseList {
 
     public void addCourse(Course course) {
         courses.add(course);
-        saveCourses(); // Save after adding a course
     }
 
     public ArrayList<Course> getCourses() {

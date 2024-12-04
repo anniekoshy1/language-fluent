@@ -34,17 +34,6 @@ public class Lesson {
         this.spanishContent = spanishContent;
     }
 
-    /**
-     * Constructs a Lesson with description and content, initializing progress at 0.
-     *
-     * @param lessonName     the name of the lesson
-     * @param description    a brief description of the lesson
-     * @param englishContent the main English content of the lesson
-     * @param spanishContent the main Spanish content of the lesson
-     */
-    public Lesson(String lessonName, String description, String englishContent, String spanishContent) {
-        this(lessonName, UUID.randomUUID(), description, 0.0, englishContent, spanishContent);
-    }
 
     public String getLessonName() {
         return lessonName;

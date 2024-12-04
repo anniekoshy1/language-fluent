@@ -82,8 +82,9 @@ public class DataWriter extends DataConstants {
             JSONArray flashcardsArray = new JSONArray();
             for (FlashcardQuestion flashcard : course.getFlashcards()) {
                 JSONObject flashcardJSON = new JSONObject();
-                flashcardJSON.put("front", flashcard.getFrontInfo());
-                flashcardJSON.put("back", flashcard.getBackAnswer());
+                flashcardJSON.put("flashcardId", flashcard.getFlashcardId().toString());
+                flashcardJSON.put("completed", flashcard.isCompleted());
+                flashcardJSON.put("flashcardProgress", flashcard.getFlashcardProgress());
                 flashcardsArray.add(flashcardJSON);
             }
             courseJSON.put("flashcards", flashcardsArray);
@@ -100,6 +101,7 @@ public class DataWriter extends DataConstants {
             System.err.println("Error saving courses: " + e.getMessage());
         }
     }
+    
     
     
 
