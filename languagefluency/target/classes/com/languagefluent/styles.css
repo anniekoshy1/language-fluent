@@ -1,38 +1,8 @@
 .root {
-    -fx-font-size: 16pt;
-    -fx-font-family: "Playfair Display";
-    -fx-background: #F7F7F7; /* Corrected the typo */
-}
-
-
-.button {
-    -fx-background-color: white;
-    -fx-text-fill: tan;
-    -fx-border-color: white;
+    -fx-background: #F7F7F7; 
 }
 
 .button:hover {
     -fx-scale-x: 1.1; 
     -fx-scale-y: 1.1;
 }
-
-.loginlabel {
-    -fx-font-family: "Playfair Display";
-}
-
-/* Define the Playfair Display font for headings with weight 700 (bold) */
-.playfair-display-heading {
-    -fx-font-family: "Playfair Display", serif;
-    -fx-font-optical-sizing: auto;
-    -fx-font-weight: 700; /* Bold */
-    -fx-font-style: normal;
-  }
-  
-  /* Define Playfair Display font for body text with weight 400 (normal) */
-  .playfair-display-body {
-    -fx-font-family: "Playfair Display", serif;
-    -fx-font-optical-sizing: auto;
-    -fx-font-weight: 400; /* Normal */
-    -fx-font-style: normal;
-  }
-  

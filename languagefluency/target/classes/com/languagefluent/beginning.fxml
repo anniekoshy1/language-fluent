@@ -1,39 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="library_pane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.BeginningController">
-    <children>
-        <Button fx:id="button" layoutX="240.0" layoutY="483.0" onAction="#onLoginClicked" text="Login" />
-        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
-        <Button fx:id="button1" layoutX="237.0" layoutY="428.0" onAction="#onSignupClicked" text="Signup" />
+<AnchorPane id="AnchorPane" fx:id="library_pane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7; -fx-border-radius: 30; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+   <children>
+<Label fx:id="loginlabel" layoutX="72.0" layoutY="606.0" prefHeight="34.0" prefWidth="403.0" stylesheets="@styles.css" text="Unlock the Language, Embrace the Culture" textAlignment="CENTER">
+         <font>
+            <Font name="AppleMyungjo Regular" size="20.0" />
+         </font>
+      </Label>
 
-        <ImageView fx:id="image1" fitHeight="187.0" fitWidth="455.0" layoutX="34.0" layoutY="45.0">
+      <Button layoutX="160.0" layoutY="317.0" mnemonicParsing="false" onMouseClicked="#btnLoginClicked" prefHeight="78.0" prefWidth="226.0" style="-fx-background-color: F9EFDB; -fx-text-fill: FFFFF; -fx-border-color: BBBBBB; -fx-background-radius: 10; -fx-border-radius: 10;" text="Login">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <ImageView fx:id="image1" fitHeight="211.0" fitWidth="487.0" layoutX="19.0" layoutY="43.0">
             <image>
                 <Image url="@../../images/logobackground.png" />
             </image>
         </ImageView>
-
-        <ImageView fx:id="image2" fitHeight="232.0" fitWidth="497.0" layoutX="21.0" layoutY="675.0">
-            <image>
-                <Image url="@../../images/homebottom.png" />
-            </image>
-        </ImageView>
-
-        <ImageView fx:id="image3" fitHeight="66.0" fitWidth="531.0" layoutX="-2.0" layoutY="-4.0">
+      <ImageView fx:id="image3" fitHeight="64.0" fitWidth="531.0" layoutX="-2.0" layoutY="-4.0">
             <image>
                 <Image url="@../../images/bar.png" />
             </image>
         </ImageView>
+        <ImageView fx:id="image3" fitHeight="280.0" fitWidth="533.0" layoutY="644.0">
+            <image>
+                <Image url="@../../images/homebottom.png" />
+            </image>
+        </ImageView>
+      <Button layoutX="161.0" layoutY="427.0" mnemonicParsing="false" onMouseClicked="#btnLoginClicked" prefHeight="78.0" prefWidth="226.0" style="-fx-background-color: F9EFDB; -fx-text-fill: FFFFF; -fx-border-color: BBBBBB; -fx-background-radius: 10; -fx-border-radius: 10;" text="Create Account">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
 
-        <Label fx:id="image2Text" layoutX="54.0" layoutY="640.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Unlock the Language, Embrace the Culture" />
-    </children>
-
-    <stylesheets>
-        <URL value="@styles.css" />
-    </stylesheets>
+   </children>
+   <stylesheets>
+      <URL value="@styles.css" />
+   </stylesheets>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
 </AnchorPane>
