@@ -104,9 +104,6 @@ public class LanguageLearningFacade {
 
     }
 
-    public User setCurrentCourse(){
-        return 
-    }
     /**
      * Logs out the currently logaged-in user and clears the current language.
      */
