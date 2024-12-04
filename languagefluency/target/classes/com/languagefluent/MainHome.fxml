@@ -57,7 +57,7 @@
         </AnchorPane>
 
         <!-- Navigation Bar -->
-        <AnchorPane fx:id="bottomNavBar" layoutY="800.0" prefHeight="70.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;">
+        <AnchorPane fx:id="bottomNavBar" layoutY="844.0" prefHeight="70.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;">
             <children>
                 <!-- Home Button -->
                 <Button fx:id="homeButton" layoutX="414.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Review" />

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" fx:id="library_pane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label fx:id="flashcardsLabel" layoutX="28.0" layoutY="122.0" style="-fx-font-size: 24px" text="Flashcards" />
+        <ImageView fx:id="line" fitHeight="1.0" fitWidth="172.0" layoutX="21.0" layoutY="158.0">
+            <image>
+                <Image url="@../../images/line.png" />
+            </image>
+        </ImageView>
+         <ImageView fx:id="statusbar" fitHeight="70.0" fitWidth="522.0">
+            <image>
+                <Image url="@../../images/bar.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="courseicon" fitHeight="70.0" fitWidth="79.0" layoutX="18.0" layoutY="54.0">
+            <image>
+                <Image url="@../../images/courseicon.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="logocorner" fitHeight="108.0" fitWidth="117.0" layoutX="399.0" layoutY="52.0">
+            <image>
+                <Image url="@../../images/logocorner.png" />
+            </image>
+        </ImageView>
+                        <Pane layoutX="95.0" layoutY="266.0" prefHeight="416.0" prefWidth="337.0" style="-fx-background-color: #F9EFDB; -fx-border-radius: 10px; -fx-border-color: black; -fx-border-width: 2px" />
+
+                <!-- Navigation Bar -->
+        <AnchorPane fx:id="bottomNavBar" layoutY="844.0" prefHeight="70.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;">
+            <children>
+                <!-- Home Button -->
+                <Button fx:id="homeButton" layoutX="414.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Review" />
+                <!-- Review Button -->
+                <Button fx:id="reviewButton" layoutX="290.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Logout" />
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="429.0" layoutY="7.0">
+                      <image>
+                          <Image url="@../../images/review.png" />
+                      </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="305.0" layoutY="7.0">
+                      <image>
+                          <Image url="@../../images/logout.png" />
+                      </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="177.0" layoutY="7.0">
+                      <image>
+                          <Image url="@../../images/profile.png" />
+                      </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="43.0" layoutY="7.0">
+                      <image>
+                          <Image url="@../../images/home.png" />
+                      </image>
+                  </ImageView>
+                <!-- Profile Button -->
+                <Button fx:id="profileButton" layoutX="28.0" layoutY="36.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Home" />
+                <!-- Logout Button -->
+                <Button fx:id="logoutButton" layoutX="162.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Profile" />
+            </children>
+        </AnchorPane>
+      <Label layoutX="170.0" layoutY="230.0" prefHeight="17.0" prefWidth="182.0" text="How do you say this in Spanish?" />
+      <Label layoutX="205.0" layoutY="693.0" text="Rate your confidence:" />
+      <Button layoutX="173.0" layoutY="739.0" mnemonicParsing="false" text="Low" />
+      <Button layoutX="233.0" layoutY="739.0" mnemonicParsing="false" text="Medium" />
+      <Button layoutX="316.0" layoutY="739.0" mnemonicParsing="false" text="High" />
+
+    </children>
+    <stylesheets>
+        <URL value="@styles.css" />
+    </stylesheets>
+</AnchorPane>

@@ -10,44 +10,43 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="library_pane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+<AnchorPane id="AnchorPane" fx:id="library_pane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7; -fx-border-radius: 10px;">" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
    <children>
-      <Label layoutX="233.0" layoutY="254.0" text="Login">
+      <Label fx:id="loginlabel" layoutX="238.0" layoutY="274.0" styleClass="playfair-display-heading" text="Login">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
 
-      <TextField fx:id="txt_username" layoutX="151.0" layoutY="410.0" promptText="Enter Username">
+      <TextField fx:id="txt_username" layoutX="140.0" layoutY="438.0" promptText="Enter Username" style="-fx-background-color: EDE7E3; -fx-border-color: BBBBBB; -fx-border-radius: 30;">
+         <padding>
+         </padding></TextField>
+
+      <TextField fx:id="txt_password" layoutX="141.0" layoutY="522.0" promptText="Enter Password" style="-fx-background-color: EDE7E3; -fx-border-color: BBBBBB;">
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding></TextField>
 
-      <TextField fx:id="txt_password" layoutX="152.0" layoutY="481.0" promptText="Enter Password">
+      <TextField fx:id="txt_email" layoutX="141.0" layoutY="360.0" promptText="Enter Email" style="-fx-background-color: EDE7E3; -fx-border-color: BBBBBB;">
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding></TextField>
 
-      <TextField fx:id="txt_email" layoutX="148.0" layoutY="347.0" promptText="Enter Email">
-         <padding>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </padding></TextField>
-
-      <Button layoutX="190.0" layoutY="599.0" mnemonicParsing="false" onMouseClicked="#btnLoginClicked" prefHeight="55.0" prefWidth="173.0" text="Login">
+      <Button layoutX="178.0" layoutY="618.0" mnemonicParsing="false" onMouseClicked="#btnLoginClicked" prefHeight="55.0" prefWidth="173.0" style="-fx-background-color: F9EFDB; -fx-text-fill: FFFFF; -fx-border-color: BBBBBB;" text="Login">
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding></Button>
-      <Button layoutX="192.0" layoutY="675.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="173.0" text="Create Account">
+      <Button layoutX="178.0" layoutY="707.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="173.0" style="-fx-background-color: F9EFDB; -fx-text-fill: FFFFF; -fx-border-color: BBBBBB;" text="Create Account">
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding></Button>
 
-      <ImageView fx:id="image2" fitHeight="1.0" fitWidth="220.0" layoutX="159.0" layoutY="297.0">
+      <ImageView fx:id="image2" fitHeight="1.0" fitWidth="220.0" layoutX="152.0" layoutY="313.0">
          <image>
             <Image url="@../../images/line.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="image1" fitHeight="187.0" fitWidth="455.0" layoutX="34.0" layoutY="45.0">
+      <ImageView fx:id="image1" fitHeight="211.0" fitWidth="487.0" layoutX="19.0" layoutY="43.0">
             <image>
                 <Image url="@../../images/logobackground.png" />
             </image>
@@ -62,4 +61,7 @@
    <stylesheets>
       <URL value="@styles.css" />
    </stylesheets>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
 </AnchorPane>
