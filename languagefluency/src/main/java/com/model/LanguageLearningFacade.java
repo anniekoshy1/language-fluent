@@ -65,7 +65,11 @@ public class LanguageLearningFacade {
         }
     }
 
-    public void displayCourses(User user) {
+    public void displayCourses() {
+        if (user == null) {
+            System.out.println("No user is logged in.");
+            return;
+        }
         ArrayList<Course> courses = CourseList.getInstance().getAvailableCourses(user.getCurrentCourse());
         System.out.println("Courses:");
         for (Course course : courses) {
@@ -78,6 +82,7 @@ public class LanguageLearningFacade {
             }
         }
     }
+    
     
 
     /**
@@ -266,6 +271,5 @@ public class LanguageLearningFacade {
             System.out.println("You do not have access to this course.");
         }
     }
-    
 
 }
