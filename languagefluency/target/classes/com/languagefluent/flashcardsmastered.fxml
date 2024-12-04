@@ -15,6 +15,11 @@
                 <Image url="@../../images/bar.png" />
             </image>
         </ImageView>
+        <ImageView fx:id="line" fitHeight="1.0" fitWidth="247.0" layoutX="19.0" layoutY="196.0">
+            <image>
+                <Image url="@../../images/line.png" />
+            </image>
+        </ImageView>
 
         <!-- Header -->
         <ImageView fx:id="courseIcon" fitHeight="76.0" fitWidth="79.0" layoutY="53.0">
@@ -27,16 +32,11 @@
                 <Image url="@../../images/logocorner.png" />
             </image>
         </ImageView>
-        <ImageView fx:id="line" fitHeight="1.0" fitWidth="135.0" layoutX="54.0" layoutY="208.0">
-            <image>
-                <Image url="@../../images/line.png" />
-            </image>
-        </ImageView>
 
         <Label fx:id="flashcardsTitle" layoutX="19.0" layoutY="116.0" style="-fx-font-size: 36px; -fx-font-weight: regular;" text="Flashcards" />
 
         <!-- Close Button -->
-        <Button fx:id="closeButton" layoutX="206.0" layoutY="651.0" prefHeight="50.0" prefWidth="124.0" style="-fx-background-color: CCDBEE; -fx-background-radius: 10; -fx-border-radius: 10; -fx-text-fill: #FFFFFF; -fx-font-size: 16px; -fx-border-color: BBBBBB;" text="Close" />
+        <Button fx:id="closeButton" layoutX="206.0" layoutY="651.0" prefHeight="50.0" prefWidth="124.0" style="-fx-background-color: CCDBEE; -fx-background-radius: 10; -fx-border-radius: 10; -fx-text-fill: black; -fx-font-size: 16px; -fx-border-color: BBBBBB;" text="Close" />
 
         <!-- Navigation Bar -->
         <AnchorPane fx:id="bottomNavBar" layoutY="844.0" prefHeight="70.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;">
@@ -71,7 +71,7 @@
                 <Button fx:id="logoutButton" layoutX="162.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Profile" />
             </children>
         </AnchorPane>
-      <Label fx:id="flashcardsTitle1" layoutX="23.0" layoutY="203.0" prefHeight="63.0" prefWidth="484.0" style="-fx-font-size: 18px; -fx-font-family: baskerville; -fx-font-weight: regular;" text="Keep practicing! Continue learning and challenging yourself! ">
+      <Label fx:id="flashcardsTitle1" layoutX="24.0" layoutY="215.0" prefHeight="63.0" prefWidth="484.0" style="-fx-font-size: 18px; -fx-font-family: baskerville; -fx-font-weight: regular;" text="Keep practicing! Continue learning and challenging yourself! ">
          <font>
             <Font name="Baskerville Old Face" size="18.0" />
          </font></Label>
