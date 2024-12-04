@@ -72,25 +72,25 @@
         </AnchorPane>
       <Label layoutX="144.0" layoutY="222.0" prefHeight="27.0" prefWidth="241.0" text="How do you say this in Spanish?">
          <font>
-            <Font name="Baskerville Old Face" size="18.0" />
+            <Font name="Baskerville" size="18.0" />
          </font></Label>
-      <Label layoutX="196.0" layoutY="699.0" prefHeight="23.0" prefWidth="165.0" text="Rate your confidence:">
+      <Label layoutX="190.0" layoutY="696.0" prefHeight="23.0" prefWidth="165.0" text="Rate your confidence:">
          <font>
-            <Font name="Baskerville Old Face" size="18.0" />
+            <Font name="Baskerville" size="18.0" />
          </font></Label>
       <Button layoutX="115.0" layoutY="742.0" mnemonicParsing="false" onMouseClicked="#btnLoginClicked" prefHeight="37.0" prefWidth="81.0" style="-fx-background-color: E54D4D; -fx-text-fill: FFFFF; -fx-border-color: BBBBBB; -fx-background-radius: 20; -fx-border-radius: 20;" text="Low">
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
          <font>
-            <Font size="20.0" />
+            <Font name="Arial" size="20.0" />
          </font></Button>
       <Button layoutX="211.0" layoutY="742.0" mnemonicParsing="false" onMouseClicked="#btnLoginClicked" prefHeight="41.0" prefWidth="103.0" style="-fx-background-color: FFBF6B; -fx-text-fill: FFFFF; -fx-border-color: BBBBBB; -fx-background-radius: 20; -fx-border-radius: 20;" text="Medium">
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
          <font>
-            <Font size="20.0" />
+            <Font name="Arial" size="20.0" />
          </font>
       </Button>
       <Button layoutX="329.0" layoutY="742.0" mnemonicParsing="false" onMouseClicked="#btnLoginClicked" prefHeight="37.0" prefWidth="81.0" style="-fx-background-color: green; -fx-text-fill: FFFFF; -fx-border-color: BBBBBB; -fx-background-radius: 20; -fx-border-radius: 20;" text="High">
@@ -98,7 +98,7 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
          <font>
-            <Font size="20.0" />
+            <Font name="Arial" size="20.0" />
          </font>
       </Button>
       <Label layoutX="31.0" layoutY="129.0" text="Flashcards">

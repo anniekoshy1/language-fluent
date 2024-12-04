@@ -10,11 +10,12 @@
 
 <AnchorPane id="AnchorPane" fx:id="library_pane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <Label fx:id="flashcardsLabel" layoutX="28.0" layoutY="136.0" style="-fx-font-size: 24px" text="Flashcards">
+        <Label layoutX="31.0" layoutY="129.0" text="Flashcards">
          <font>
             <Font name="Baskerville" size="36.0" />
-         </font></Label>
-        <ImageView fx:id="line" fitHeight="1.0" fitWidth="247.0" layoutX="21.0" layoutY="174.0">
+         </font>
+      </Label>
+         <ImageView fx:id="line" fitHeight="1.0" fitWidth="247.0" layoutX="21.0" layoutY="174.0">
             <image>
                 <Image url="@../../images/line.png" />
             </image>

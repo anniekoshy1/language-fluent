@@ -5,12 +5,10 @@
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <AnchorPane id="AnchorPane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
@@ -20,14 +18,14 @@
                 <Image url="@../../images/bar.png" />
             </image>
         </ImageView>
-        <ImageView fx:id="line" fitHeight="1.0" fitWidth="247.0" layoutX="17.0" layoutY="158.0">
+        <ImageView fx:id="line" fitHeight="1.0" fitWidth="247.0" layoutX="21.0" layoutY="174.0">
             <image>
                 <Image url="@../../images/line.png" />
             </image>
         </ImageView>
 
         <!-- Book Icon -->
-        <ImageView fx:id="bookIcon" fitHeight="70.0" fitWidth="77.0" layoutX="21.0" layoutY="53.0">
+         <ImageView fx:id="courseicon" fitHeight="83.0" fitWidth="86.0" layoutX="17.0" layoutY="53.0">
             <image>
                 <Image url="@../../images/courseicon.png" />
             </image>
@@ -39,19 +37,6 @@
                 <Image url="@../../images/logocorner.png" />
             </image>
         </ImageView>
-
-        <!-- Header -->
-        <Label fx:id="courseTitle" layoutX="21.0" layoutY="123.0" style="-fx-font-size: 24px; -fx-font-weight: regular;" text="Starting Out">
-         <font>
-            <Font name="Baskerville Old Face" size="36.0" />
-         </font></Label>
-        <Label fx:id="courseDescription" layoutX="17.0" layoutY="206.0" prefHeight="60.0" prefWidth="494.0" style="-fx-font-size: 14px;" text="Introduces essential vocabulary, basic grammar, and foundational conversational skills, helping learners confidently navigate everyday interactions in Spanish." wrapText="true">
-         <font>
-            <Font name="Baskerville Old Face" size="14.0" />
-         </font></Label>
-
-        <!-- Activity Chart -->
-        <Label layoutX="213.0" layoutY="614.0" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Your Activity:" />
         <LineChart fx:id="activityChart" layoutX="25.0" layoutY="652.0" prefHeight="150.0" prefWidth="471.0">
             <xAxis>
                 <CategoryAxis fx:id="daysAxis" />
@@ -93,58 +78,104 @@
                 <Label layoutX="425.0" layoutY="42.0" text="Review" />
             </children>
         </AnchorPane>
-      <ProgressBar layoutX="17.0" layoutY="172.0" prefHeight="25.0" prefWidth="265.0" progress="0.0" />
-      <Text layoutX="23.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course Progress Status: Incomplete" wrappingWidth="255.33333333333348">
-         <font>
-            <Font name="Baskerville Old Face" size="18.0" />
-         </font></Text>
-      <Button layoutX="291.0" layoutY="465.0" mnemonicParsing="false" prefHeight="123.0" prefWidth="198.0" style="-fx-background-color: CCDBEE;" />
-      <ImageView fx:id="unlockIcon112" fitHeight="17.0" fitWidth="20.0" layoutX="463.0" layoutY="475.0">
+      <Button layoutX="284.0" layoutY="449.0" mnemonicParsing="false" prefHeight="123.0" prefWidth="198.0" style="-fx-background-color: CCDBEE;" />
+      <ImageView fx:id="unlockIcon112" fitHeight="17.0" fitWidth="20.0" layoutX="453.0" layoutY="458.0">
          <image>
             <Image url="@../../images/lock.png" />
          </image>
       </ImageView>
-      <Label fx:id="languageBasicsLabel112" layoutX="295.0" layoutY="471.0" prefHeight="25.0" prefWidth="167.0" style="-fx-font-size: 12px; -fx-font-weight: bold;" text="Expanding Vocab Assessment" />
-      <ImageView fx:id="languageBasicsAssessmentIcon1112" fitHeight="60.0" fitWidth="103.0" layoutX="339.0" layoutY="510.0">
+      <ImageView fx:id="languageBasicsAssessmentIcon1112" fitHeight="60.0" fitWidth="103.0" layoutX="333.0" layoutY="497.0">
          <image>
             <Image url="@../../images/expand.png" />
          </image>
       </ImageView>
-      <Button layoutX="29.0" layoutY="465.0" mnemonicParsing="false" prefHeight="123.0" prefWidth="198.0" style="-fx-background-color: CCDBEE;" />
-      <ImageView fx:id="unlockIcon1121" fitHeight="17.0" fitWidth="20.0" layoutX="201.0" layoutY="475.0">
+      <Button layoutX="46.0" layoutY="449.0" mnemonicParsing="false" prefHeight="123.0" prefWidth="198.0" style="-fx-background-color: CCDBEE;" />
+      <ImageView fx:id="unlockIcon1121" fitHeight="17.0" fitWidth="20.0" layoutX="216.0" layoutY="456.0">
          <image>
             <Image url="@../../images/lock.png" />
          </image>
       </ImageView>
-      <Label fx:id="languageBasicsLabel1121" layoutX="34.0" layoutY="471.0" prefHeight="25.0" prefWidth="167.0" style="-fx-font-size: 12px; -fx-font-weight: bold;" text="Language Basics Assessment" />
-      <ImageView fx:id="languageBasicsAssessmentIcon11121" fitHeight="60.0" fitWidth="103.0" layoutX="77.0" layoutY="510.0">
+      <ImageView fx:id="languageBasicsAssessmentIcon11121" fitHeight="60.0" fitWidth="103.0" layoutX="90.0" layoutY="497.0">
          <image>
             <Image url="@../../images/expand.png" />
          </image>
       </ImageView>
-      <Button layoutX="291.0" layoutY="287.0" mnemonicParsing="false" prefHeight="123.0" prefWidth="198.0" style="-fx-background-color: CCDBEE;" />
+      <Button layoutX="284.0" layoutY="287.0" mnemonicParsing="false" prefHeight="123.0" prefWidth="198.0" style="-fx-background-color: CCDBEE;" />
       <ImageView fx:id="unlockIcon11211" fitHeight="20.0" fitWidth="20.0" layoutX="453.0" layoutY="296.0">
          <image>
             <Image url="@../../images/lock.png" />
          </image>
       </ImageView>
-      <Label fx:id="languageBasicsLabel11211" layoutX="313.0" layoutY="293.0" prefHeight="25.0" prefWidth="140.0" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Expanding Vocab" />
-      <ImageView fx:id="languageBasicsIcon11" fitHeight="70.0" fitWidth="70.0" layoutX="362.0" layoutY="327.0">
+      <ImageView fx:id="languageBasicsIcon11" fitHeight="70.0" fitWidth="70.0" layoutX="349.0" layoutY="327.0">
          <image>
             <Image url="@../../images/basic.png" />
          </image>
       </ImageView>
-      <Button layoutX="34.0" layoutY="287.0" mnemonicParsing="false" prefHeight="123.0" prefWidth="198.0" style="-fx-background-color: CCDBEE;" />
-      <Label fx:id="languageBasicsLabel112111" layoutX="63.0" layoutY="293.0" prefHeight="25.0" prefWidth="140.0" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Language Basics" />
-      <ImageView fx:id="languageBasicsIcon111" fitHeight="70.0" fitWidth="70.0" layoutX="105.0" layoutY="327.0">
+      <Button layoutX="46.0" layoutY="287.0" mnemonicParsing="false" prefHeight="123.0" prefWidth="198.0" style="-fx-background-color: CCDBEE;" />
+      <ImageView fx:id="languageBasicsIcon111" fitHeight="70.0" fitWidth="70.0" layoutX="110.0" layoutY="327.0">
          <image>
             <Image url="@../../images/basic.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="unlockIcon1" fitHeight="20.0" fitWidth="20.0" layoutX="201.0" layoutY="296.0">
+      <ImageView fx:id="unlockIcon1" fitHeight="20.0" fitWidth="20.0" layoutX="216.0" layoutY="296.0">
          <image>
             <Image url="@../../images/unlock.png" />
          </image>
       </ImageView>
+      <Label layoutX="16.0" layoutY="193.0" text="Course Progress Satus:">
+         <font>
+            <Font name="Baskerville" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="129.0" text="Starting Out">
+         <font>
+            <Font name="Baskerville" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="191.0" layoutY="193.0" text="Incomplete">
+         <font>
+            <Font name="Baskerville" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="18.0" layoutY="209.0" prefHeight="53.0" prefWidth="492.0" text="Introduces essential vocabulary, basic grammar, and foundational conversational skills, helping learners confidently navigate everyday interactions in Spanish." wrapText="true">
+         <font>
+            <Font name="Baskerville" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="234.0" layoutY="633.0" text="Activity:">
+         <font>
+            <Font name="Baskerville" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="81.0" layoutY="295.0" text="Language Basics">
+         <font>
+            <Font name="Baskerville" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="315.0" layoutY="295.0" text="Expanding Vocab">
+         <font>
+            <Font name="Baskerville" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="79.0" layoutY="452.0" prefHeight="30.0" prefWidth="132.0" text="Language Basics " wrapText="true">
+         <font>
+            <Font name="Baskerville" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="98.0" layoutY="472.0" prefHeight="25.0" prefWidth="86.0" text="Assessment" wrapText="true">
+         <font>
+            <Font name="Baskerville" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="314.0" layoutY="452.0" prefHeight="30.0" prefWidth="140.0" text="Expanding Vocab " wrapText="true">
+         <font>
+            <Font name="Baskerville" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="333.0" layoutY="472.0" prefHeight="25.0" prefWidth="86.0" text="Assessment" wrapText="true">
+         <font>
+            <Font name="Baskerville" size="18.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>
