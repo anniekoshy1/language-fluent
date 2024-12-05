@@ -15,11 +15,6 @@
                 <Image url="@../../images/line.png" />
             </image>
         </ImageView>
-         <ImageView fx:id="statusbar" fitHeight="70.0" fitWidth="522.0">
-            <image>
-                <Image url="@../../images/bar.png" />
-            </image>
-        </ImageView>
         <ImageView fx:id="courseicon" fitHeight="83.0" fitWidth="86.0" layoutX="17.0" layoutY="53.0">
             <image>
                 <Image url="@../../images/courseicon.png" />
@@ -30,7 +25,7 @@
                 <Image url="@../../images/logocorner.png" />
             </image>
         </ImageView>
-        <ImageView fx:id="image3" fitHeight="66.0" fitWidth="531.0" layoutX="-2.0" layoutY="-4.0">
+        <ImageView fx:id="bar" fitHeight="66.0" fitWidth="531.0" layoutX="-2.0" layoutY="-4.0">
             <image>
                 <Image url="@../../images/bar.png" />
             </image>

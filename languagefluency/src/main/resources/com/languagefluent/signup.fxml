@@ -13,27 +13,27 @@
 
 <AnchorPane id="AnchorPane" fx:id="library_pane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7; -fx-border-radius: 30; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
    <children>
-<Label fx:id="loginlabel" layoutX="222.0" layoutY="264.0" stylesheets="@styles.css" text="Sign Up" textAlignment="CENTER">
+<Label fx:id="loginlabel3" layoutX="222.0" layoutY="264.0" stylesheets="@styles.css" text="Sign Up" textAlignment="CENTER">
          <font>
             <Font name="Baskerville" size="36.0" />
          </font>
       </Label>
 
-      <TextField fx:id="txt_username" layoutX="140.0" layoutY="438.0" prefHeight="42.0" prefWidth="264.0" promptText="Create Username" style="-fx-background-color: EDE7E3; -fx-border-color: BBBBBB; -fx-border-radius: 30; -fx-background-radius: 30;">
+      <TextField fx:id="txt_username2" layoutX="140.0" layoutY="438.0" prefHeight="42.0" prefWidth="264.0" promptText="Create Username" style="-fx-background-color: EDE7E3; -fx-border-color: BBBBBB; -fx-border-radius: 30; -fx-background-radius: 30;">
          <padding>
          </padding></TextField>
 
-      <TextField fx:id="txt_password" layoutX="141.0" layoutY="514.0" prefHeight="37.0" prefWidth="259.0" promptText="Create Password" style="-fx-background-color: EDE7E3; -fx-border-color: BBBBBB; -fx-background-radius: 30; -fx-border-radius: 30;">
-         <padding>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-         </padding></TextField>
-
-      <TextField fx:id="txt_email" layoutX="141.0" layoutY="366.0" prefHeight="37.0" prefWidth="259.0" promptText="Enter Email" style="-fx-background-color: EDE7E3; -fx-border-color: BBBBBB; -fx-background-radius: 30; -fx-border-radius: 30;">
+      <TextField fx:id="txt_password2" layoutX="141.0" layoutY="514.0" prefHeight="37.0" prefWidth="259.0" promptText="Create Password" style="-fx-background-color: EDE7E3; -fx-border-color: BBBBBB; -fx-background-radius: 30; -fx-border-radius: 30;">
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding></TextField>
 
-      <ImageView fx:id="image2" fitHeight="1.0" fitWidth="220.0" layoutX="152.0" layoutY="313.0">
+      <TextField fx:id="txt_email2" layoutX="141.0" layoutY="366.0" prefHeight="37.0" prefWidth="259.0" promptText="Enter Email" style="-fx-background-color: EDE7E3; -fx-border-color: BBBBBB; -fx-background-radius: 30; -fx-border-radius: 30;">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding></TextField>
+
+      <ImageView fx:id="image4" fitHeight="1.0" fitWidth="220.0" layoutX="152.0" layoutY="313.0">
          <image>
             <Image url="@../../images/line.png" />
          </image>
@@ -43,7 +43,7 @@
                 <Image url="@../../images/logobackground.png" />
             </image>
         </ImageView>
-      <ImageView fx:id="image3" fitHeight="64.0" fitWidth="531.0" layoutX="-2.0" layoutY="-4.0">
+      <ImageView fx:id="image2" fitHeight="64.0" fitWidth="531.0" layoutX="-2.0" layoutY="-4.0">
             <image>
                 <Image url="@../../images/bar.png" />
             </image>

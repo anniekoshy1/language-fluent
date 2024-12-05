@@ -12,7 +12,7 @@
 
 <AnchorPane id="AnchorPane" fx:id="library_pane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7; -fx-border-radius: 30; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.LoginController">
    <children>
-<Label fx:id="loginlabel" layoutX="222.0" layoutY="264.0" stylesheets="@styles.css" text="Login" textAlignment="CENTER">
+<Label fx:id="loginlabel2" layoutX="222.0" layoutY="264.0" stylesheets="@styles.css" text="Login" textAlignment="CENTER">
          <font>
             <Font name="Baskerville" size="36.0" />
          </font>
@@ -40,7 +40,7 @@
             <Font name="Arial" size="20.0" />
          </font></Button>
 
-      <ImageView fx:id="image2" fitHeight="1.0" fitWidth="220.0" layoutX="152.0" layoutY="313.0">
+      <ImageView fx:id="image4" fitHeight="1.0" fitWidth="220.0" layoutX="152.0" layoutY="313.0">
          <image>
             <Image url="@../../images/line.png" />
          </image>
@@ -50,7 +50,7 @@
                 <Image url="@../../images/logobackground.png" />
             </image>
         </ImageView>
-      <ImageView fx:id="image3" fitHeight="64.0" fitWidth="531.0" layoutX="-2.0" layoutY="-4.0">
+      <ImageView fx:id="image2" fitHeight="64.0" fitWidth="531.0" layoutX="-2.0" layoutY="-4.0">
             <image>
                 <Image url="@../../images/bar.png" />
             </image>
