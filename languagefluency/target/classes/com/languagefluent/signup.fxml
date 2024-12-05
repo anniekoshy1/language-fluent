@@ -10,8 +10,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<?import java.net.*?>
-
 
 <AnchorPane id="AnchorPane" fx:id="library_pane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7; -fx-border-radius: 30; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.SignupController">
    <children>
@@ -21,16 +19,16 @@
          </font>
       </Label>
 
-      <TextField fx:id="txt_username2" layoutX="140.0" layoutY="438.0" prefHeight="42.0" prefWidth="264.0" promptText="Create Username" style="-fx-background-color: EDE7E3; -fx-border-color: BBBBBB; -fx-border-radius: 30; -fx-background-radius: 30;">
+      <TextField fx:id="txt_username2" layoutX="140.0" layoutY="413.0" prefHeight="42.0" prefWidth="264.0" promptText="Create Username" style="-fx-background-color: EDE7E3; -fx-border-color: BBBBBB; -fx-border-radius: 30; -fx-background-radius: 30;">
          <padding>
          </padding></TextField>
 
-      <TextField fx:id="txt_password2" layoutX="141.0" layoutY="514.0" prefHeight="37.0" prefWidth="259.0" promptText="Create Password" style="-fx-background-color: EDE7E3; -fx-border-color: BBBBBB; -fx-background-radius: 30; -fx-border-radius: 30;">
+      <TextField fx:id="txt_password2" layoutX="141.0" layoutY="475.0" prefHeight="37.0" prefWidth="259.0" promptText="Create Password" style="-fx-background-color: EDE7E3; -fx-border-color: BBBBBB; -fx-background-radius: 30; -fx-border-radius: 30;">
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding></TextField>
 
-      <TextField fx:id="txt_email2" layoutX="141.0" layoutY="366.0" prefHeight="37.0" prefWidth="259.0" promptText="Enter Email" style="-fx-background-color: EDE7E3; -fx-border-color: BBBBBB; -fx-background-radius: 30; -fx-border-radius: 30;">
+      <TextField fx:id="txt_email2" layoutX="141.0" layoutY="353.0" prefHeight="37.0" prefWidth="259.0" promptText="Enter Email" style="-fx-background-color: EDE7E3; -fx-border-color: BBBBBB; -fx-background-radius: 30; -fx-border-radius: 30;">
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding></TextField>
@@ -50,7 +48,7 @@
                 <Image url="@../../images/bar.png" />
             </image>
         </ImageView>
-      <Button layoutX="181.0" layoutY="700.0" mnemonicParsing="false" onMouseClicked="#btnSignupClicked" prefHeight="55.0" prefWidth="173.0" style="-fx-background-color: F9EFDB; -fx-text-fill: FFFFF; -fx-border-color: BBBBBB; -fx-background-radius: 10; -fx-border-radius: 10;" text="Create Account">
+      <Button layoutX="178.0" layoutY="618.0" mnemonicParsing="false" onMouseClicked="#btnSignupClicked" prefHeight="55.0" prefWidth="173.0" style="-fx-background-color: F9EFDB; -fx-text-fill: FFFFF; -fx-border-color: BBBBBB; -fx-background-radius: 10; -fx-border-radius: 10;" text="Create Account">
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
@@ -58,7 +56,16 @@
             <Font name="Arial" size="20.0" />
          </font>
       </Button>
-      <ChoiceBox layoutX="143.0" layoutY="585.0" prefHeight="37.0" prefWidth="260.0" style="-fx-background-color: EDE7E3; -fx-border-color: BBBBBB; -fx-background-radius: 30; -fx-border-radius: 30;" />
+      <Button layoutX="180.0" layoutY="701.0" mnemonicParsing="false" onMouseClicked="#btnLoginClicked" prefHeight="55.0" prefWidth="173.0" style="-fx-background-color: F9EFDB; -fx-text-fill: black; -fx-border-color: BBBBBB; -fx-background-radius: 10; -fx-border-radius: 10;" text="Back">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Button>
+      <Label id="Error" layoutX="248.0" layoutY="779.0" text="Error" visible="false" />
+      <ChoiceBox layoutX="141.0" layoutY="532.0" prefHeight="37.0" prefWidth="260.0" style="-fx-background-color: EDE7E3; -fx-border-color: BBBBBB; -fx-background-radius: 30; -fx-border-radius: 30;" />
 
    </children>
    <stylesheets>
