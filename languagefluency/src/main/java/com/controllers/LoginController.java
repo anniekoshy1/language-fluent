@@ -39,8 +39,8 @@ public class LoginController implements Initializable {
     }
 
     @FXML
-    private void back(MouseEvent event) throws IOException {
-        App.setRoot("home");
+    public void btnBackClicked(MouseEvent event) throws IOException{
+        App.setRoot("beginning");
     }
 
     @Override
