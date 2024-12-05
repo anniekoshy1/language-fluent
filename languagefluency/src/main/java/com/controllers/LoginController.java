@@ -6,7 +6,6 @@ import java.util.ResourceBundle;
 
 import com.languagefluent.App;
 import com.model.LanguageLearningFacade;
-import com.model.ProjectUI;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -35,7 +34,7 @@ public class LoginController implements Initializable {
             return;
         }
 
-        ProjectUI.getInstance().setRoot("user_home");
+        App.setRoot("user_home");
     }
 
     @FXML
