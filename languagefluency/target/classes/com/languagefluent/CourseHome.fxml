@@ -15,12 +15,12 @@
 <AnchorPane id="AnchorPane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <!-- Status Bar -->
-        <ImageView fx:id="statusBar" fitHeight="53.0" fitWidth="522.0" layoutX="0.0" layoutY="0.0">
+        <ImageView fx:id="image2" fitHeight="53.0" fitWidth="522.0" layoutX="0.0" layoutY="0.0">
             <image>
                 <Image url="@../../images/bar.png" />
             </image>
         </ImageView>
-        <ImageView fx:id="line" fitHeight="1.0" fitWidth="247.0" layoutX="21.0" layoutY="174.0">
+        <ImageView fx:id="image4" fitHeight="1.0" fitWidth="247.0" layoutX="21.0" layoutY="174.0">
             <image>
                 <Image url="@../../images/line.png" />
             </image>
@@ -49,35 +49,36 @@
         </LineChart>
 
         <!-- Navigation Bar -->
-        <AnchorPane fx:id="bottomNavBar" layoutX="1.0" layoutY="850.0" prefHeight="70.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;">
+        <AnchorPane fx:id="bottomNavBar" layoutY="844.0" prefHeight="70.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;">
             <children>
-                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="43.0" layoutY="7.0">
-                    <image>
-                        <Image url="@../../images/home.png" />
-                    </image>
-                </ImageView>
-                <Label layoutX="42.0" layoutY="42.0" text="Home" />
-
-                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="177.0" layoutY="7.0">
-                    <image>
-                        <Image url="@../../images/profile.png" />
-                    </image>
-                </ImageView>
-                <Label layoutX="175.0" layoutY="42.0" text="Profile" />
-
-                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="305.0" layoutY="7.0">
-                    <image>
-                        <Image url="@../../images/logout.png" />
-                    </image>
-                </ImageView>
-                <Label layoutX="301.0" layoutY="42.0" text="Logout" />
-
-                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="429.0" layoutY="7.0">
-                    <image>
-                        <Image url="@../../images/review.png" />
-                    </image>
-                </ImageView>
-                <Label layoutX="425.0" layoutY="42.0" text="Review" />
+                <!-- Home Button -->
+                <Button fx:id="homeButton" layoutX="414.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Review" />
+                <!-- Review Button -->
+                <Button fx:id="reviewButton" layoutX="290.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Logout" />
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="429.0" layoutY="7.0">
+                      <image>
+                          <Image url="@../../images/review.png" />
+                      </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="305.0" layoutY="7.0">
+                      <image>
+                          <Image url="@../../images/logout.png" />
+                      </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="177.0" layoutY="7.0">
+                      <image>
+                          <Image url="@../../images/profile.png" />
+                      </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="43.0" layoutY="7.0">
+                      <image>
+                          <Image url="@../../images/home.png" />
+                      </image>
+                  </ImageView>
+                <!-- Profile Button -->
+                <Button fx:id="profileButton" layoutX="28.0" layoutY="36.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Home" />
+                <!-- Logout Button -->
+                <Button fx:id="logoutButton" layoutX="162.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Profile" />
             </children>
         </AnchorPane>
       <Button layoutX="284.0" layoutY="449.0" mnemonicParsing="false" prefHeight="123.0" prefWidth="198.0" style="-fx-background-color: CCDBEE;" />

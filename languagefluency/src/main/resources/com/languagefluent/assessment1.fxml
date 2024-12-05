@@ -60,37 +60,39 @@
         </ImageView>
       <ChoiceBox layoutX="25.0" layoutY="409.0" prefHeight="26.0" prefWidth="249.0" />
       <!-- Navigation Bar -->
-        <AnchorPane fx:id="bottomNavBar" layoutX="1.0" layoutY="850.0" prefHeight="70.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;">
+        <AnchorPane fx:id="bottomNavBar" layoutY="844.0" prefHeight="70.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;">
             <children>
-                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="43.0" layoutY="7.0">
-                    <image>
-                        <Image url="@../../images/home.png" />
-                    </image>
-                </ImageView>
-                <Label layoutX="42.0" layoutY="42.0" text="Home" />
-
-                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="177.0" layoutY="7.0">
-                    <image>
-                        <Image url="@../../images/profile.png" />
-                    </image>
-                </ImageView>
-                <Label layoutX="175.0" layoutY="42.0" text="Profile" />
-
-                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="305.0" layoutY="7.0">
-                    <image>
-                        <Image url="@../../images/logout.png" />
-                    </image>
-                </ImageView>
-                <Label layoutX="301.0" layoutY="42.0" text="Logout" />
-
-                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="429.0" layoutY="7.0">
-                    <image>
-                        <Image url="@../../images/review.png" />
-                    </image>
-                </ImageView>
-                <Label layoutX="425.0" layoutY="42.0" text="Review" />
+                <!-- Home Button -->
+                <Button fx:id="homeButton" layoutX="414.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Review" />
+                <!-- Review Button -->
+                <Button fx:id="reviewButton" layoutX="290.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Logout" />
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="429.0" layoutY="7.0">
+                      <image>
+                          <Image url="@../../images/review.png" />
+                      </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="305.0" layoutY="7.0">
+                      <image>
+                          <Image url="@../../images/logout.png" />
+                      </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="177.0" layoutY="7.0">
+                      <image>
+                          <Image url="@../../images/profile.png" />
+                      </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="43.0" layoutY="7.0">
+                      <image>
+                          <Image url="@../../images/home.png" />
+                      </image>
+                  </ImageView>
+                <!-- Profile Button -->
+                <Button fx:id="profileButton" layoutX="28.0" layoutY="36.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Home" />
+                <!-- Logout Button -->
+                <Button fx:id="logoutButton" layoutX="162.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Profile" />
             </children>
         </AnchorPane>
+        
       <TextField fx:id="question5Input1" layoutX="25.0" layoutY="495.0" prefHeight="26.0" prefWidth="257.0" />
       <TextField fx:id="question5Input2" layoutX="26.0" layoutY="334.0" prefHeight="26.0" prefWidth="249.0" />
       <Button fx:id="playButton3" layoutX="195.0" layoutY="692.0" onAction="#onPlayButtonClicked" prefHeight="42.0" prefWidth="109.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: CCDBEE; -fx-border-color: BBBBBB;" styleClass="dark-button" text="Submit">
