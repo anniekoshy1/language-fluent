@@ -9,10 +9,8 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<?import java.net.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:controller="com.controllers.CourseHomeController" id="AnchorPane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <!-- Status Bar -->
         <ImageView fx:id="image2" fitHeight="53.0" fitWidth="522.0" layoutX="0.0" layoutY="0.0">
@@ -51,7 +49,7 @@
         <!-- Navigation Bar -->
         <AnchorPane fx:id="bottomNavBar" layoutY="844.0" prefHeight="70.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;">
             <children>
-                <!-- Home Button -->
+                <!-- Review Button -->
                 <Button fx:id="homeButton" layoutX="414.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Review" />
                 <!-- Review Button -->
                 <Button fx:id="reviewButton" layoutX="290.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Logout" />
@@ -75,8 +73,9 @@
                           <Image url="@../../images/home.png" />
                       </image>
                   </ImageView>
-                <!-- Profile Button -->
-                <Button fx:id="profileButton" layoutX="28.0" layoutY="36.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Home" />
+                <!-- Home Button -->
+                <Button fx:id="homeButton" layoutX="28.0" layoutY="36.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Home" onMouseClicked="#onHomeButtonClicked" />
+
                 <!-- Logout Button -->
                 <Button fx:id="logoutButton" layoutX="162.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Profile" />
             </children>
@@ -114,7 +113,7 @@
             <Image url="@../../images/basic.png" />
          </image>
       </ImageView>
-      <Button layoutX="46.0" layoutY="287.0" mnemonicParsing="false" prefHeight="123.0" prefWidth="198.0" style="-fx-background-color: CCDBEE;" />
+      <Button fx:id="languagebasicsbutton" layoutX="46.0" layoutY="287.0" mnemonicParsing="false" prefHeight="123.0" prefWidth="198.0" style="-fx-background-color: CCDBEE;" onMouseClicked="#languagebasics" />
       <ImageView fx:id="languageBasicsIcon111" fitHeight="70.0" fitWidth="70.0" layoutX="110.0" layoutY="327.0">
          <image>
             <Image url="@../../images/basic.png" />

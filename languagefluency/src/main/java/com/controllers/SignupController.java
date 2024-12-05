@@ -7,6 +7,7 @@ import java.util.ResourceBundle;
 import com.languagefluent.App;
 import com.model.LanguageLearningFacade;
 
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
@@ -23,7 +24,7 @@ public class SignupController implements Initializable{
     @FXML
     private TextField txt_email2;
     @FXML
-    private ChoiceBox txt_Language;
+    private ChoiceBox<String> txt_Language;
     @FXML 
     private Label Error;
 
@@ -32,11 +33,10 @@ public class SignupController implements Initializable{
         String username = txt_username2.getText();
         String password = txt_password2.getText();
         String email = txt_email2.getText();
-        String language = txt_Language.getText();
 
         LanguageLearningFacade facade = LanguageLearningFacade.getInstance();
 
-        if (!facade.registerUser(username, password, email)) {
+        if (!facade.registerUser(username, email, password)) {
             Error.setVisible(true);
             return;
         }
@@ -52,5 +52,8 @@ public class SignupController implements Initializable{
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        txt_Language.setItems(FXCollections.observableArrayList("Spanish", "French"));
+        txt_Language.setValue("Spanish");
+        Error.setVisible(false);
     }
 }

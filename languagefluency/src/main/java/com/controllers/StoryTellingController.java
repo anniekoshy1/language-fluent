@@ -1,10 +1,9 @@
 package com.controllers;
 
+import javax.print.attribute.standard.Media;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
-import javafx.scene.media.MediaView;
 import javafx.stage.Stage;
 
 public class StoryTellingController {

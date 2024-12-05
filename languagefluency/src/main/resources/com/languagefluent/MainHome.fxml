@@ -43,7 +43,7 @@
         </ImageView>
 
         <!-- Starting Out Section -->
-        <AnchorPane fx:id="startingOutPane" layoutX="20.0" layoutY="240.0" prefHeight="150.0" prefWidth="487.0" style="-fx-background-color: #FFFFFF; -fx-border-color: BBBBBB; -fx-border-width: 1px; -fx-border-radius: 8px;">
+        <AnchorPane fx:id="startingOutPane" layoutX="20.0" layoutY="240.0" prefHeight="150.0" prefWidth="487.0" style="-fx-background-color: #FFFFFF; -fx-border-color: BBBBBB; -fx-border-width: 1px; -fx-border-radius: 8px;" onMouseClicked="#StartingOutPaneClicked" >
             <children>
                 <ImageView fx:id="startingOutImage" fitHeight="102.0" fitWidth="212.0" layoutX="14.0" layoutY="33.0">
                     <image>
@@ -80,10 +80,10 @@
         <!-- Navigation Bar -->
         <AnchorPane fx:id="bottomNavBar" layoutY="844.0" prefHeight="70.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;">
             <children>
-                <!-- Home Button -->
-                <Button fx:id="homeButton" layoutX="414.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Review" />
                 <!-- Review Button -->
-                <Button fx:id="reviewButton" layoutX="290.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Logout" />
+                <Button fx:id="reviewButton" layoutX="414.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Review" />
+                <!-- Logout Button -->
+                <Button fx:id="logoutButton" layoutX="290.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Logout" />
                   <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="429.0" layoutY="7.0">
                       <image>
                           <Image url="@../../images/review.png" />
@@ -104,10 +104,10 @@
                           <Image url="@../../images/home.png" />
                       </image>
                   </ImageView>
+                <!-- Home Button -->
+                <Button fx:id="homeButton" layoutX="28.0" layoutY="36.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Home" />
                 <!-- Profile Button -->
-                <Button fx:id="profileButton" layoutX="28.0" layoutY="36.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Home" />
-                <!-- Logout Button -->
-                <Button fx:id="logoutButton" layoutX="162.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Profile" />
+                <Button fx:id="profileButton" layoutX="162.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Profile" />
             </children>
         </AnchorPane>
       <Label layoutX="226.0" layoutY="199.0" text="Level">
