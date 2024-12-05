@@ -14,11 +14,6 @@
                 <Image url="@../../images/line.png" />
             </image>
         </ImageView>
-         <ImageView fx:id="statusbar" fitHeight="70.0" fitWidth="522.0">
-            <image>
-                <Image url="@../../images/bar.png" />
-            </image>
-        </ImageView>
         <ImageView fx:id="courseicon" fitHeight="83.0" fitWidth="86.0" layoutX="17.0" layoutY="53.0">
             <image>
                 <Image url="@../../images/courseicon.png" />
@@ -29,13 +24,13 @@
                 <Image url="@../../images/logocorner.png" />
             </image>
         </ImageView>
-        <ImageView fx:id="image3" fitHeight="66.0" fitWidth="531.0" layoutX="-2.0" layoutY="-4.0">
+        <ImageView fx:id="image2" fitHeight="66.0" fitWidth="531.0" layoutX="-2.0" layoutY="-4.0">
             <image>
                 <Image url="@../../images/bar.png" />
             </image>
         </ImageView>
       <ProgressBar layoutX="121.0" layoutY="199.0" prefHeight="46.0" prefWidth="290.0" progress="0.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: BBBBBB;" />
-      <Button fx:id="playButton" layoutX="129.0" layoutY="207.0" onAction="#onPlayButtonClicked" prefHeight="29.0" prefWidth="47.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: CCDBEE;" styleClass="dark-button" text="Play">
+      <Button fx:id="playButton2" layoutX="129.0" layoutY="207.0" onAction="#onPlayButtonClicked" prefHeight="29.0" prefWidth="47.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: CCDBEE;" styleClass="dark-button" text="Play">
          <font>
             <Font name="Arial" size="13.0" />
          </font></Button>
