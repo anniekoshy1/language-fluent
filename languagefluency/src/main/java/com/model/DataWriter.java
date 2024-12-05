@@ -41,8 +41,8 @@ public class DataWriter extends DataConstants {
         userDetails.put(USER_EMAIL, user.getEmail());
         userDetails.put(USER_PASSWORD, user.getPassword());
         if (user.getCurrentCourse() != null) {
-            userDetails.put("currentCourseID", user.getCurrentCourse().toString());
-        }
+            userDetails.put(USER_CURRENT_COURSE_ID, user.getCurrentCourse().toString());
+        }        
         if (user.getCurrentLanguage() != null) {
             userDetails.put("currentLanguageID", user.getCurrentLanguage().toString());
         }

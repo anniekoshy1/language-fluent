@@ -48,8 +48,9 @@ public class DataLoader extends DataConstants {
                 HashMap<UUID, Double> progress = parseProgress((JSONObject) userJSON.get("progress"));
                 ArrayList<UUID> completedCourses = parseCompletedCourses((JSONArray) userJSON.get("completedCourses"));
                 UUID currentCourseID = userJSON.get("currentCourseID") != null
-                    ? UUID.fromString((String) userJSON.get("currentCourseID"))
-                    : null;
+                ? UUID.fromString((String) userJSON.get("currentCourseID"))
+                : null;
+                Course currentCourse = currentCourseID != null ? CourseList.getInstance().getCourse(currentCourseID.toString()) : null;
                 UUID currentLanguageID = userJSON.get("currentLanguageID") != null
                     ? UUID.fromString((String) userJSON.get("currentLanguageID"))
                     : null;
@@ -59,8 +60,13 @@ public class DataLoader extends DataConstants {
     
                 // Create and add user to UserList singleton
                 User user = new User(id, username, email, password, CourseList.getInstance().getCourses(), progress,
-                        completedCourses, currentCourseID, LanguageList.getInstance().getLanguages(), currentLanguageID,
-                        currentLanguageName);
+                completedCourses, currentCourseID, LanguageList.getInstance().getLanguages(), currentLanguageID,
+                currentLanguageName);
+            
+                if (currentCourse != null) {
+                    user.setCurrentCourse(currentCourse.getId());
+                }
+            
                 userListInstance.addUserWithoutSaving(user); // Use a method that doesn't trigger a save
             }
             System.out.println("Total users loaded: " + userListInstance.getUsers().size());

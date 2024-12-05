@@ -131,8 +131,11 @@ public class LanguageLearningFacade {
      */
     public void startCourse(Course course) {
         if (user != null) {
+            user.setCurrentCourse(course.getId());
             user.getCourses().add(course);
             course.setUserAccess(true);
+
+            UserList.getInstance().saveUsers();
         }
     }
     
@@ -167,7 +170,7 @@ public class LanguageLearningFacade {
      * @return a list of all available courses
      */
     public ArrayList<Course> getAllCourses() {
-        return courseList.getCourses();
+        return user.getCourses();
     }
 
     /**
@@ -266,7 +269,7 @@ public class LanguageLearningFacade {
             
             // Mark the current lesson as completed
             if (course.getAllLessons() != null && !course.getAllLessons().isEmpty()) {
-                Lesson currentLesson = course.getCurrentLesson();
+                Lesson currentLesson = (Lesson) course.getCurrentLesson();
                 currentLesson.markAsCompleted(); // Mark the current lesson as completed
             }
     

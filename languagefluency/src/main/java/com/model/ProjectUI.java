@@ -2,7 +2,6 @@ package com.model;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 import com.narration.Narriator;
@@ -218,6 +217,8 @@ private void login() {
     
         Course selectedCourse = allCourses.get(courseIndex);
         facade.startCourse(selectedCourse); 
+        facade.getCurrentUser().setCurrentCourse(selectedCourse.getId());
+        UserList.getInstance().saveUsers();
         this.course = selectedCourse;
         System.out.println("Course started: " + selectedCourse.getName());
 
@@ -254,57 +255,8 @@ private void login() {
     }
     //FLASHCARDS
     private void startFlashcards() {
-        System.out.println("Starting Flashcard Practice...");
-        
-        List<FlashcardQuestion> flashcards = DataLoader.parseFlashcards("languagefluency/src/main/java/com/data/Words.json");
-
-        if (flashcards.isEmpty()) {
-            System.out.println("No flashcards available.");
-            return;
-        }
-
-        for (FlashcardQuestion flashcard : flashcards) {
-            
-            if (flashcard.getFlashcardProgress() >= 100) {
-                System.out.println("All flashcards completed! Returning to Course Activities.");
-                startAssessment();  // Start assessment after all flashcards are completed
-                return;
-            }
-            if (flashcard.isCompleted()) continue;
-
-            System.out.println("Translate the following: " + flashcard.getFrontInfo());
-            Narriator.playSound(flashcard.getFrontInfo());
-
-            String userAnswer = scanner.nextLine().trim();
-            flashcard.submitAnswer(userAnswer);
-
-            if (flashcard.checkAnswer()) {
-                System.out.println("Correct!");
-                Narriator.playSound("Correct!");
-            } else {
-                System.out.println("Incorrect. The correct answer is: " + flashcard.showCorrectAnswer());
-                Narriator.playSound("The correct answer is: " + flashcard.showCorrectAnswer());
-            }
-
-            System.out.print("Enter 'done' to mark this flashcard as completed or press Enter to continue: ");
-            String continueResponse = scanner.nextLine().trim();
-
-            // Check if the user entered "done"1
-
-            if (continueResponse.equalsIgnoreCase("done")) {
-                flashcard.markAsCompleted(continueResponse);  // Mark flashcard as completed
-                System.out.println("Flashcard marked as complete.");
-                startAssessment();  // Start the assessment immediately
-                return;  // Exit the flashcard loop
-            } else {
-                //hey chatgpt can you complete this
-                //put in logic that will just do another flashcard when you press enter here
-            }
-
-            System.out.println("Flashcard Progress: " + flashcard.getFlashcardProgress() + "%");
-        }
-
-        System.out.println("Exiting Flashcard Practice.");
+        currentLesson.markAsCompleted();
+        currentLesson.isCompleted();
     }
 
     //LESSON/STORYTELLING

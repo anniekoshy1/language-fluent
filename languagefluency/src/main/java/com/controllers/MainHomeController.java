@@ -2,9 +2,11 @@ package com.controllers;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import com.languagefluent.App;
+import com.model.Course;
 import com.model.LanguageLearningFacade;
 import com.model.User;
 
@@ -38,6 +40,15 @@ public class MainHomeController implements Initializable {
 
     }
 
+    
+    private void displayCourses(){
+        ArrayList<Course> courses = user.getCourses();
+        for( int i =0; i < courses.size(); i++){
+            
+            //Course course = courses.get(i);
+
+        }
+    }
     
 
     @FXML 
