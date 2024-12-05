@@ -12,14 +12,9 @@
 
 <AnchorPane id="AnchorPane" fx:id="library_pane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <ImageView fx:id="line" fitHeight="1.0" fitWidth="172.0" layoutX="21.0" layoutY="158.0">
+        <ImageView fx:id="image4" fitHeight="1.0" fitWidth="172.0" layoutX="21.0" layoutY="158.0">
             <image>
                 <Image url="@../../images/line.png" />
-            </image>
-        </ImageView>
-         <ImageView fx:id="statusbar" fitHeight="70.0" fitWidth="522.0">
-            <image>
-                <Image url="@../../images/bar.png" />
             </image>
         </ImageView>
         <ImageView fx:id="courseicon" fitHeight="70.0" fitWidth="79.0" layoutX="18.0" layoutY="54.0">
@@ -32,7 +27,7 @@
                 <Image url="@../../images/logocorner.png" />
             </image>
         </ImageView>
-        <ImageView fx:id="image3" fitHeight="66.0" fitWidth="531.0" layoutX="-2.0" layoutY="-4.0">
+        <ImageView fx:id="image2" fitHeight="66.0" fitWidth="531.0" layoutX="-2.0" layoutY="-4.0">
             <image>
                 <Image url="@../../images/bar.png" />
             </image>
@@ -84,37 +79,6 @@
          <font>
             <Font name="Baskerville" size="18.0" />
          </font></Label>
-        <AnchorPane fx:id="bottomNavBar" layoutX="1.0" layoutY="850.0" prefHeight="70.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;">
-            <children>
-                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="43.0" layoutY="7.0">
-                    <image>
-                        <Image url="@../../images/home.png" />
-                    </image>
-                </ImageView>
-                <Label layoutX="42.0" layoutY="42.0" text="Home" />
-
-                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="177.0" layoutY="7.0">
-                    <image>
-                        <Image url="@../../images/profile.png" />
-                    </image>
-                </ImageView>
-                <Label layoutX="175.0" layoutY="42.0" text="Profile" />
-
-                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="305.0" layoutY="7.0">
-                    <image>
-                        <Image url="@../../images/logout.png" />
-                    </image>
-                </ImageView>
-                <Label layoutX="301.0" layoutY="42.0" text="Logout" />
-
-                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="429.0" layoutY="7.0">
-                    <image>
-                        <Image url="@../../images/review.png" />
-                    </image>
-                </ImageView>
-                <Label layoutX="425.0" layoutY="42.0" text="Review" />
-            </children>
-        </AnchorPane>
       <Label layoutX="40.0" layoutY="116.0" text="Flashcards">
          <font>
             <Font name="Baskerville" size="36.0" />

@@ -8,12 +8,10 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<?import java.net.*?>
-
 
 <AnchorPane id="AnchorPane" fx:id="library_pane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7; -fx-border-radius: 30; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.BeginningController">
    <children>
-<Label fx:id="loginlabel" layoutX="94.0" layoutY="610.0" prefHeight="34.0" prefWidth="360.0" stylesheets="@styles.css" text="Unlock the Language, Embrace the Culture" textAlignment="CENTER">
+<Label fx:id="loginlabel" layoutX="81.0" layoutY="610.0" prefHeight="34.0" prefWidth="383.0" stylesheets="@styles.css" text="Unlock the Language, Embrace the Culture" textAlignment="CENTER">
          <font>
             <Font name="Baskerville" size="20.0" />
          </font>

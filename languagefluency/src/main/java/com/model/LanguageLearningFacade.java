@@ -42,12 +42,18 @@ public class LanguageLearningFacade {
      * @param email    the email address of the new user
      * @param password the password for the new user
      */
-    public void registerUser(String username, String email, String password) {
-        UUID userId = UUID.randomUUID();
-        User newUser = new User(userId, username, email, password);
-        userList.addUser(newUser);
-        userList.saveUsers();
+    public boolean registerUser(String username, String email, String password) {
+    if (username == null || username.isEmpty() || email == null || email.isEmpty() || password == null || password.isEmpty()) {
+        return false; // Invalid input
     }
+
+    UUID userId = UUID.randomUUID();
+    User newUser = new User(userId, username, email, password);
+    userList.addUser(newUser);
+    userList.saveUsers();
+    return true; // Registration successful
+}
+
 
     /**
      * Logs in a user based on provided credentials.
@@ -57,9 +63,9 @@ public class LanguageLearningFacade {
      * @return true if login is successful, false otherwise
      */
     public boolean login(String username, String password) {
-        User currentUser = userList.getUser(username);
-        if (currentUser != null && currentUser.getPassword().equals(password)) {
-            this.user = currentUser;
+        User user = userList.getUser(username);
+        if (user != null && user.getPassword().equals(password)) {
+            this.user = user;
             return true;
         }
         return false;

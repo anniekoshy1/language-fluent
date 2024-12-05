@@ -9,7 +9,7 @@
 <?import java.net.*?>
 
 
-<AnchorPane id="AnchorPane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.MainHomeController">
     <children>
         <!-- Status Bar -->
         <ImageView fx:id="statusBar" fitHeight="70.0" fitWidth="522.0" layoutX="0.0" layoutY="0.0">
@@ -31,7 +31,7 @@
         </ImageView>
 
         <!-- Welcome Text -->
-<Label layoutX="23.0" layoutY="123.0" text="Hi User, User">
+        <Label fx:id="dynamicUser" layoutX="23.0" layoutY="123.0">
          <font>
             <Font name="Baskerville" size="36.0" />
          </font>

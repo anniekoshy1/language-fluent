@@ -6,7 +6,6 @@ import java.util.ResourceBundle;
 
 import com.languagefluent.App;
 import com.model.LanguageLearningFacade;
-import com.model.ProjectUI;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -20,8 +19,8 @@ public class LoginController implements Initializable {
     private TextField txt_username;
     @FXML
     private TextField txt_password;
-    @FXML
-    private Label lbl_error;
+    @FXML 
+    private Label Error;
 
     @FXML
     private void btnLoginClicked(MouseEvent event) throws IOException {
@@ -31,11 +30,13 @@ public class LoginController implements Initializable {
         LanguageLearningFacade facade = LanguageLearningFacade.getInstance();
 
         if (!facade.login(username, password)) {
-            lbl_error.setText("Invalid login credentials.");
+            Error.setVisible(true);
             return;
         }
 
-        ProjectUI.getInstance().setRoot("user_home");
+        
+
+        App.setRoot("MainHome");
     }
 
     @FXML
