@@ -7,12 +7,10 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<?import java.net.*?>
-
 
 <AnchorPane id="AnchorPane" fx:id="library_pane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-         <ImageView fx:id="line" fitHeight="1.0" fitWidth="247.0" layoutX="21.0" layoutY="174.0">
+         <ImageView fx:id="image4" fitHeight="1.0" fitWidth="247.0" layoutX="21.0" layoutY="174.0">
             <image>
                 <Image url="@../../images/line.png" />
             </image>
@@ -27,7 +25,7 @@
                 <Image url="@../../images/logocorner.png" />
             </image>
         </ImageView>
-        <ImageView fx:id="bar" fitHeight="66.0" fitWidth="531.0" layoutX="-2.0" layoutY="-4.0">
+        <ImageView fx:id="image2" fitHeight="66.0" fitWidth="531.0" layoutX="-2.0" layoutY="-4.0">
             <image>
                 <Image url="@../../images/bar.png" />
             </image>
@@ -38,35 +36,36 @@
             <Font name="Arial" size="13.0" />
          </font></Button>
        <!-- Navigation Bar -->
-        <AnchorPane fx:id="bottomNavBar" layoutX="1.0" layoutY="850.0" prefHeight="70.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;">
+        <AnchorPane fx:id="bottomNavBar" layoutY="844.0" prefHeight="70.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;">
             <children>
-                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="43.0" layoutY="7.0">
-                    <image>
-                        <Image url="@../../images/home.png" />
-                    </image>
-                </ImageView>
-                <Label layoutX="42.0" layoutY="42.0" text="Home" />
-
-                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="177.0" layoutY="7.0">
-                    <image>
-                        <Image url="@../../images/profile.png" />
-                    </image>
-                </ImageView>
-                <Label layoutX="175.0" layoutY="42.0" text="Profile" />
-
-                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="305.0" layoutY="7.0">
-                    <image>
-                        <Image url="@../../images/logout.png" />
-                    </image>
-                </ImageView>
-                <Label layoutX="301.0" layoutY="42.0" text="Logout" />
-
-                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="429.0" layoutY="7.0">
-                    <image>
-                        <Image url="@../../images/review.png" />
-                    </image>
-                </ImageView>
-                <Label layoutX="425.0" layoutY="42.0" text="Review" />
+                <!-- Home Button -->
+                <Button fx:id="homeButton" layoutX="414.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Review" />
+                <!-- Review Button -->
+                <Button fx:id="reviewButton" layoutX="290.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Logout" />
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="429.0" layoutY="7.0">
+                      <image>
+                          <Image url="@../../images/review.png" />
+                      </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="305.0" layoutY="7.0">
+                      <image>
+                          <Image url="@../../images/logout.png" />
+                      </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="177.0" layoutY="7.0">
+                      <image>
+                          <Image url="@../../images/profile.png" />
+                      </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="43.0" layoutY="7.0">
+                      <image>
+                          <Image url="@../../images/home.png" />
+                      </image>
+                  </ImageView>
+                <!-- Profile Button -->
+                <Button fx:id="profileButton" layoutX="28.0" layoutY="36.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Home" />
+                <!-- Logout Button -->
+                <Button fx:id="logoutButton" layoutX="162.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Profile" />
             </children>
         </AnchorPane>
       <Label layoutX="31.0" layoutY="129.0" text="Storytelling">
