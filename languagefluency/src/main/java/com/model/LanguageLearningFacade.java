@@ -7,13 +7,13 @@ import java.util.UUID;
 
 public class LanguageLearningFacade {
 
-    private UserList userList;
-    private CourseList courseList;
-    private LanguageList languageList;
+    private final UserList userList;
+    private final CourseList courseList;
+    private final LanguageList languageList;
     private User user;
     private Course course;
     private ArrayList<Language> currentLanguage;
-    private WordsList wordsList;
+    private final WordsList wordsList;
     private Assessment assessments;
     private Questions question;
 
@@ -21,19 +21,11 @@ public class LanguageLearningFacade {
      * Initializes the facade, setting up user, course, and language lists,
      * and loads data such as words from storage.
      */
-    @SuppressWarnings("OverridableMethodCallInConstructor")
-    private LanguageLearningFacade() {
-        initializeSingletons(); 
-    }
-
-    /**
-     * Initializes all singleton instances required by the facade.
-     */
-    private void initializeSingletons() {
+    public LanguageLearningFacade() {
         userList = UserList.getInstance();
         courseList = CourseList.getInstance();
         languageList = LanguageList.getInstance();
-        wordsList = WordsList.getInstance();  
+        wordsList = WordsList.getInstance();  // Use the singleton instance of WordsList
     }
 
         /**
