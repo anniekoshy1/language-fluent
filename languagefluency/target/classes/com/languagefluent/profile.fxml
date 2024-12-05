@@ -12,7 +12,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <ImageView fx:id="statusBar" fitHeight="53.0" fitWidth="522.0" layoutX="0.0" layoutY="0.0">
+        <ImageView fx:id="image2" fitHeight="53.0" fitWidth="522.0" layoutX="0.0" layoutY="0.0">
             <image>
                 <Image url="@../../images/bar.png" />
             </image>
