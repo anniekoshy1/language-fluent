@@ -28,9 +28,9 @@ public class LoginController implements Initializable {
         String username = txt_username.getText();
         String password = txt_password.getText();
 
-        LanguageLearningFacade languageLearningFacade = LanguageLearningFacade.initializeSingletons();
+        LanguageLearningFacade facade = LanguageLearningFacade.getInstance();
 
-        if (!LanguageLearningFacade.login(username, password)) {
+        if (!facade.login(username, password)) {
             lbl_error.setText("Invalid login credentials.");
             return;
         }

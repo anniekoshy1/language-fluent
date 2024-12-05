@@ -16,6 +16,7 @@ public class LanguageLearningFacade {
     private final WordsList wordsList;
     private Assessment assessments;
     private Questions question;
+    private static LanguageLearningFacade facade;
 
     /**
      * Initializes the facade, setting up user, course, and language lists,
@@ -28,7 +29,13 @@ public class LanguageLearningFacade {
         wordsList = WordsList.getInstance();  // Use the singleton instance of WordsList
     }
 
-        /**
+    public static LanguageLearningFacade getInstance(){
+        if(facade == null){
+            facade = new LanguageLearningFacade();
+        }
+        return facade;
+    }    
+    /**
      * Registers a new user with the provided credentials.
      *
      * @param username the username of the new user
