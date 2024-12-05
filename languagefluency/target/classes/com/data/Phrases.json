@@ -1,0 +1,302 @@
+[
+    {
+        "id": "1",
+        "word": "Hola",
+        "translation": "Hello",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "2",
+        "word": "Adiós",
+        "translation": "Goodbye",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "3",
+        "word": "Buenos días",
+        "translation": "Good morning",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "4",
+        "word": "Buenas tardes",
+        "translation": "Good afternoon",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "5",
+        "word": "Buenas noches",
+        "translation": "Good night",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "6",
+        "word": "Hasta luego",
+        "translation": "See you later",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "7",
+        "word": "Nos vemos",
+        "translation": "See you",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "8",
+        "word": "Por favor",
+        "translation": "Please",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "9",
+        "word": "Gracias",
+        "translation": "Thank you",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "10",
+        "word": "De nada",
+        "translation": "You're welcome",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "11",
+        "word": "Perdón",
+        "translation": "Sorry/Excuse me",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "12",
+        "word": "Disculpa",
+        "translation": "Excuse me",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "13",
+        "word": "¿Cómo estás?",
+        "translation": "How are you?",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "14",
+        "word": "¿Qué tal?",
+        "translation": "How's it going?",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "15",
+        "word": "Estoy bien",
+        "translation": "I’m good",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "16",
+        "word": "Estoy mal",
+        "translation": "I’m bad",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "17",
+        "word": "Me llamo",
+        "translation": "My name is",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "18",
+        "word": "Mucho gusto",
+        "translation": "Nice to meet you",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "19",
+        "word": "Igualmente",
+        "translation": "Likewise",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "20",
+        "word": "¿Cómo te llamas?",
+        "translation": "What is your name?",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "21",
+        "word": "Encantado",
+        "translation": "Pleased to meet you (male)",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "22",
+        "word": "Encantada",
+        "translation": "Pleased to meet you (female)",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "23",
+        "word": "Hasta pronto",
+        "translation": "See you soon",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "24",
+        "word": "Hasta mañana",
+        "translation": "See you tomorrow",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "25",
+        "word": "¿Qué pasa?",
+        "translation": "What's up?",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "26",
+        "word": "Estoy cansado",
+        "translation": "I am tired (male)",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "27",
+        "word": "Estoy cansada",
+        "translation": "I am tired (female)",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "28",
+        "word": "¿Cómo está usted?",
+        "translation": "How are you? (formal)",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "29",
+        "word": "Hasta la vista",
+        "translation": "Goodbye (until I see you again)",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "30",
+        "word": "Nos vemos mañana",
+        "translation": "See you tomorrow",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "31",
+        "word": "¿Qué hora es?",
+        "translation": "What time is it?",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "32",
+        "word": "Hoy",
+        "translation": "Today",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "33",
+        "word": "Mañana",
+        "translation": "Tomorrow",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "34",
+        "word": "Ayer",
+        "translation": "Yesterday",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "35",
+        "word": "Por supuesto",
+        "translation": "Of course",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "36",
+        "word": "Tal vez",
+        "translation": "Maybe",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "37",
+        "word": "Lo siento",
+        "translation": "I’m sorry",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "38",
+        "word": "No importa",
+        "translation": "It doesn’t matter",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "39",
+        "word": "No entiendo",
+        "translation": "I don’t understand",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "40",
+        "word": "Entiendo",
+        "translation": "I understand",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "41",
+        "word": "¿Puedes ayudarme?",
+        "translation": "Can you help me?",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "42",
+        "word": "No sé",
+        "translation": "I don’t know",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "43",
+        "word": "Bienvenido",
+        "translation": "Welcome",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "44",
+        "word": "Hasta ahora",
+        "translation": "See you in a bit",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "45",
+        "word": "Te extraño",
+        "translation": "I miss you",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "46",
+        "word": "Cuídate",
+        "translation": "Take care",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "47",
+        "word": "Nos vemos la próxima vez",
+        "translation": "See you next time",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "48",
+        "word": "Buen día",
+        "translation": "Good day",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "49",
+        "word": "Feliz día",
+        "translation": "Have a nice day",
+        "difficulty": "RUDIMENTARY"
+    },
+    {
+        "id": "50",
+        "word": "Suerte",
+        "translation": "Good luck",
+        "difficulty": "RUDIMENTARY"
+    }
+]

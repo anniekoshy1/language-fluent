@@ -41,6 +41,18 @@ public class Assessment {
         return question;
     }
 
+        public FlashcardChild generateFlashcardQuestion(WordsList wordsList) {
+        // Get the list of all words from WordsList
+        List<Word> allWords = wordsList.getAllWords();
+
+        // Randomly select a Spanish word and its corresponding English word
+        Word spanishWord = allWords.get(new Random().nextInt(allWords.size()));
+        Word englishWord = allWords.get(new Random().nextInt(allWords.size()));
+
+        // Create and return a FlashcardChild question
+        return new FlashcardChild("Spanish", spanishWord, englishWord);
+    }
+
         /**
      * Add a question to the list of answered questions.
      */

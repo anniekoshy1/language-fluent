@@ -3,13 +3,16 @@ package com.controllers;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import com.languagefluent.App;
+import com.model.LanguageLearningFacade;
+import com.model.ProjectUI;
+
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import com.languagefluent.App;
-import com.model.ProjectUI;
 
 
 public class LoginController implements Initializable {
@@ -25,9 +28,9 @@ public class LoginController implements Initializable {
         String username = txt_username.getText();
         String password = txt_password.getText();
 
-        ProjectUI projectUI = ProjectUI.getInstance();
+        LanguageLearningFacade languageLearningFacade = LanguageLearningFacade.initializeSingletons();
 
-        if (!projectUI.login(username, password)) {
+        if (!LanguageLearningFacade.login(username, password)) {
             lbl_error.setText("Invalid login credentials.");
             return;
         }
