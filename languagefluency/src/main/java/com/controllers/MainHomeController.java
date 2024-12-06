@@ -1,16 +1,18 @@
 package com.controllers;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+import com.languagefluent.App;
 import com.model.Course;
 import com.model.LanguageLearningFacade;
 import com.model.User;
 
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -22,6 +24,10 @@ public class MainHomeController implements Initializable {
 
     @FXML private Label dynamicUser;
     @FXML private GridPane grid_books;
+    @FXML private Button homebutton;
+    @FXML private Button profileButton;
+    @FXML private Button logoutButton;
+    @FXML private Button reviewButton;
 
     private LanguageLearningFacade facade;
     private User user;
@@ -49,6 +55,7 @@ public class MainHomeController implements Initializable {
             VBox vbox = new VBox();
             vbox.setSpacing(10);
             vbox.setStyle("-fx-alignment: center; -fx-padding: 10; -fx-border-color: lightgray;");
+            vbox.setOnMouseClicked(event -> handleCourseClick(event, course)); // Add click handler
 
             Label courseName = new Label(course.getName());
             courseName.setStyle("-fx-font-size: 16px; -fx-font-weight: bold;");
@@ -64,18 +71,52 @@ public class MainHomeController implements Initializable {
 
             vbox.getChildren().addAll(courseImage, courseName, courseDescription);
 
-            // Add click event
-            vbox.setOnMouseClicked(new EventHandler<MouseEvent>() {
-                @Override
-                public void handle(MouseEvent event) {
-                    if(course.getName().equalsIgnoreCase("Starting Out"))
-                    System.out.println("Clicked on course: " + course.getName());
-                    // Add navigation or dialog display logic here
-                }
-            });
-
             // Add the VBox to the GridPane
             grid_books.add(vbox, i % 3, i / 3); // Adjust column and row
         }
     }
+
+    @FXML
+    private void handleCourseClick(MouseEvent event, Course course) {
+        try {
+            LanguageLearningFacade.getInstance().startCourse(course);
+            App.setRoot("CourseHome");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    // @FXML
+    // private void onHomeButtonClicked(MouseEvent event) {
+    //     try{
+    //         App.setRoot("MainHome");
+    //     }
+    //     catch (IOException e) {
+    //         System.err.println("Navigation to MainHome failed: " + e.getMessage());
+    //     }
+    // }
+    // @FXML
+    // private void onProfileButtonClicked(MouseEvent event) {
+    //     try{
+    //         App.setRoot("profile");
+    //     }
+    //     catch (IOException e){
+    //         System.err.println("Navigation to profile failed: " + e.getMessage());
+    //     }
+    // }
+    // private void onLogoutButtonClicked(MouseEvent event) {
+    //     try{
+    //         App.setRoot("beginning");
+    //     }
+    //     catch (IOException e){
+    //         System.err.println("Navigation to beginning failed: " + e.getMessage());
+    //     }
+    // }
+    // private void onReviewButtonClicked(MouseEvent event) {
+    //     try{
+    //         App.setRoot("review");
+    //     }
+    //     catch (IOException e){
+    //         System.err.println("Navigation to review failed: " + e.getMessage());
+    //     }
+    // }
 }

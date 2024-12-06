@@ -116,6 +116,8 @@ public class LanguageLearningFacade {
 
     }
 
+
+
     /**
      * Logs out the currently logaged-in user and clears the current language.
      */
@@ -132,12 +134,35 @@ public class LanguageLearningFacade {
     public void startCourse(Course course) {
         if (user != null) {
             user.setCurrentCourse(course.getId());
-            user.getCourses().add(course);
-            course.setUserAccess(true);
-
             UserList.getInstance().saveUsers();
+
+
+        this.course = CourseList.getInstance().getCourse(course.getId().toString());
+        if (this.course != null) {
+            System.out.println("Course updated to: " + this.course.getName());
+            System.out.println("Lessons for the new course:");
+            ArrayList<Lesson> lessons = this.course.getAllLessons();
+            if (lessons != null && !lessons.isEmpty()) {
+                for (Lesson lesson : lessons) {
+                    System.out.println("- " + lesson.getLessonName());
+                }
+            } else {
+                System.out.println("No lessons found for this course.");
+            }
+        } else {
+            System.out.println("Failed to find the new course in the system.");
         }
     }
+    
+    }
+
+    public Course getCurrentCourseDetails() {
+    if (user != null && user.getCurrentCourse() != null) {
+        return CourseList.getInstance().getCourse(user.getCurrentCourse().toString());
+    }
+    return null;
+}
+
     
     
 
@@ -282,16 +307,39 @@ public class LanguageLearningFacade {
     }
 
     public static void main(String[] args) {
-        // Create the facade instance and generate a question
-        LanguageLearningFacade facade = new LanguageLearningFacade();
+    LanguageLearningFacade facade = LanguageLearningFacade.getInstance();
+    DataLoader.loadCourses();
+    DataLoader.getUsers();
 
-        Scanner scanner = new Scanner(System.in);
+    // Example test: Get the current user and their course's lessons
+    System.out.println("Testing lessons for the current course:");
+    if (facade.login("jjj", "jjj")) { // Replace with valid test credentials
+        User currentUser = facade.getCurrentUser();
+        System.out.println("Logged in as: " + currentUser.getUsername());
 
-        facade.startLessonAssessment(scanner);  // This will ask 5 questions and evaluate performance
+        // Get the current course
+        UUID currentCourseId = currentUser.getCurrentCourse();
+        if (currentCourseId != null) {
+            Course currentCourse = CourseList.getInstance().getCourse(currentCourseId.toString());
+            System.out.println("Current course: " + currentCourse.getName());
 
-        scanner.close();
-
+            // Retrieve and print lessons
+            ArrayList<Lesson> lessons = currentCourse.getAllLessons();
+            if (lessons != null && !lessons.isEmpty()) {
+                System.out.println("Lessons in this course:");
+                for (Lesson lesson : lessons) {
+                    System.out.println("- " + lesson.getLessonName() + " (Progress: " + lesson.getLessonProgress() + "%)");
+                }
+            } else {
+                System.out.println("No lessons found for this course.");
+            }
+        } else {
+            System.out.println("No current course is set for the user.");
+        }
+    } else {
+        System.out.println("Login failed. Check your credentials.");
     }
+}
 
 }
 

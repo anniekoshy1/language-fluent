@@ -75,7 +75,6 @@
                   </ImageView>
                 <!-- Home Button -->
                 <Button fx:id="homeButton" layoutX="28.0" layoutY="36.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Home" onMouseClicked="#onHomeButtonClicked" />
-
                 <!-- Logout Button -->
                 <Button fx:id="logoutButton" layoutX="162.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Profile" />
             </children>
@@ -124,7 +123,7 @@
             <Image url="@../../images/unlock.png" />
          </image>
       </ImageView>
-      <Label layoutX="16.0" layoutY="193.0" text="Course Progress Satus:">
+      <Label fx:id="test" layoutX="16.0" layoutY="193.0" text="Course Progress Satus:">
          <font>
             <Font name="Baskerville" size="18.0" />
          </font>
@@ -179,5 +178,6 @@
             <Font name="Baskerville" size="18.0" />
          </font>
       </Label>
+
     </children>
 </AnchorPane>

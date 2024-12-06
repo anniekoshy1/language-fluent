@@ -99,6 +99,13 @@ public class User {
         this.currentCourseID = courseId;
     }
 
+    public Course getCurrentCourseDetails(){
+        if (currentCourseID != null){
+            return CourseList.getInstance().getCourse(currentCourseID.toString());
+        }
+        return null;
+    }
+
     public ArrayList<Language> getLanguages() {
         return languages;
     }

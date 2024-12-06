@@ -31,10 +31,11 @@ public class CourseList {
 
 
     //gets indivdual course by its name
-    public Course getCourse(String name ){
+    public Course getCourse(String identifier ){
         for(Course course: courses){
-            if(course.getName().equalsIgnoreCase(name));
+        if (course.getName().equalsIgnoreCase(identifier) || course.getId().toString().equals(identifier)) {
             return course;
+        }
         }
         return null;
     }

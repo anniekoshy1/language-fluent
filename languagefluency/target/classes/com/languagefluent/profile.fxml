@@ -8,8 +8,8 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
-    <children>
+<AnchorPane id="AnchorPane" fx:controller="com.controllers.ProfileController" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children> 
         <ImageView fx:id="image2" fitHeight="53.0" fitWidth="522.0" layoutX="0.0" layoutY="0.0">
             <image>
                 <Image url="@../../images/bar.png" />
@@ -28,9 +28,9 @@
             </image>
         </ImageView>
 
-        <!-- Navigation Bar -->
+        Navigation Bar
         <AnchorPane fx:id="bottomNavBar" layoutY="844.0" prefHeight="70.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;">
-            <children>
+            <children> 
                 <!-- Home Button -->
                 <Button fx:id="homeButton" layoutX="414.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Review" />
                 <!-- Review Button -->
@@ -68,37 +68,38 @@
             <Font name="Arial Bold" size="18.0" />
          </font>
       </Text>
-      <Label layoutX="19.0" layoutY="238.0" text="Username">
-         <font>
+        <Label fx:id="dynamicUser" layoutX="18.0" layoutY="238.0" text="Username">
+        <font>
             <Font name="Arial" size="13.0" />
-         </font></Label>
-      <Text layoutX="18.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="84.66666666666674">
+         </font>
+        </Label>
+      <Text layoutX="18.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="84.66666666666674" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.ProfileController"/>
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Text>
-      <Label layoutX="18.0" layoutY="295.0" text="Users Password" />
+      <Label fx:id="dynamicPassword" layoutX="18.0" layoutY="295.0" text="Users Password" />
       <DialogPane layoutY="320.0" prefHeight="59.0" prefWidth="536.0" style="-fx-background-color: FFFFFF; -fx-border-color: BBBBBB;" />
       <Text layoutX="18.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="59.33333333333326">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Text>
-      <Label layoutX="18.0" layoutY="352.0" text="Users Email" />
+      <Label fx:id="dynamicEmail" layoutX="18.0" layoutY="352.0" text="Users Email" />
       <DialogPane layoutY="378.0" prefHeight="59.0" prefWidth="536.0" style="-fx-background-color: FFFFFF; -fx-border-color: BBBBBB;" />
       <Text layoutX="18.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Language" wrappingWidth="84.66666666666674">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Text>
-      <Label layoutX="18.0" layoutY="408.0" text="Users Language" />
+      <Label fx:id="dynamicLanguage" layoutX="18.0" layoutY="408.0" text="Users Language" />
       <DialogPane layoutY="436.0" prefHeight="59.0" prefWidth="536.0" style="-fx-background-color: FFFFFF; -fx-border-color: BBBBBB;" />
-      <Text layoutX="18.0" layoutY="461.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Level" wrappingWidth="75.5">
+      <Text layoutX="18.0" layoutY="461.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Course" wrappingWidth="75.5">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font>
       </Text>
-      <Label layoutX="18.0" layoutY="467.0" text="Users Level" />
+      <Label fx:id="dynamicCourse" layoutX="18.0" layoutY="467.0" text="Users Course" />
       <Label layoutX="23.0" layoutY="123.0" text="My Profile">
          <font>
             <Font name="Baskerville" size="36.0" />

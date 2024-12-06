@@ -185,45 +185,51 @@ private void login() {
     }
 
     //START COURSE
-    private void startCourse() {
-        ArrayList<Course> allCourses = facade.getAllCourses();
-        if (!isLoggedIn()) {
-            System.out.println("You must log in to start a course.");
-            return;
-        }
-        if (allCourses.isEmpty()) {
-            System.out.println("No courses available.");
-            return;
-        }
-
-        System.out.println("Available courses: ");
-        for (int i = 0; i < allCourses.size(); i++) {
-            System.out.println((i + 1) + ". " + allCourses.get(i).getName());
-        }
-    
-        System.out.print("Select a course by entering the corresponding number: ");
-        int courseIndex;
-        try {
-            courseIndex = Integer.parseInt(scanner.nextLine()) - 1;
-        } catch (NumberFormatException e) {
-            System.out.println("Invalid input. Please enter a number.");
-            return;
-        }
-    
-        if (courseIndex < 0 || courseIndex >= allCourses.size()) {
-            System.out.println("Invalid selection. Please choose a valid course number.");
-            return;
-        }
-    
-        Course selectedCourse = allCourses.get(courseIndex);
-        facade.startCourse(selectedCourse); 
-        facade.getCurrentUser().setCurrentCourse(selectedCourse.getId());
-        UserList.getInstance().saveUsers();
-        this.course = selectedCourse;
-        System.out.println("Course started: " + selectedCourse.getName());
-
-        courseActivitiesMenu();
+private void startCourse() {
+    ArrayList<Course> allCourses = facade.getAllCourses();
+    if (!isLoggedIn()) {
+        System.out.println("You must log in to start a course.");
+        return;
     }
+    if (allCourses.isEmpty()) {
+        System.out.println("No courses available.");
+        return;
+    }
+
+    System.out.println("Available courses: ");
+    for (int i = 0; i < allCourses.size(); i++) {
+        System.out.println((i + 1) + ". " + allCourses.get(i).getName());
+    }
+
+    System.out.print("Select a course by entering the corresponding number: ");
+    int courseIndex;
+    try {
+        courseIndex = Integer.parseInt(scanner.nextLine()) - 1;
+    } catch (NumberFormatException e) {
+        System.out.println("Invalid input. Please enter a number.");
+        return;
+    }
+
+    if (courseIndex < 0 || courseIndex >= allCourses.size()) {
+        System.out.println("Invalid selection. Please choose a valid course number.");
+        return;
+    }
+
+    Course selectedCourse = allCourses.get(courseIndex);
+    facade.startCourse(selectedCourse); 
+    Course currentCourse = facade.getCurrentUser().getCurrentCourseDetails();
+
+    if (currentCourse != null) {
+        System.out.println("Course started: " + currentCourse.getName());
+        ArrayList<Lesson> lessons = currentCourse.getAllLessons();
+        System.out.println("Lessons:");
+        for (Lesson lesson : lessons) {
+            System.out.println("- " + lesson.getLessonName());
+        }
+    }
+    courseActivitiesMenu();
+}
+
 
     private void courseActivitiesMenu() {
         boolean exit = false;
