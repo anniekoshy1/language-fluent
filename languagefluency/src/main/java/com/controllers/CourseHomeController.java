@@ -17,7 +17,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 
 public class CourseHomeController implements Initializable {
-
+        
     @FXML private Label test;
     @FXML private Label courseDescription;
     @FXML private Label courseTitle;

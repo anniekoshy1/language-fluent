@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.UUID;
 
 import com.languagefluent.App;
 import com.model.Course;
@@ -81,7 +82,10 @@ public class MainHomeController implements Initializable {
             LanguageLearningFacade.getInstance().startCourse(course);
             App.setRoot("CourseHome");
             System.out.println("Clicked on course: " + course.getName());
-            System.out.println("Clicked on course: " + course.getId());
+            UUID selectedId = course.getId();
+
+            user.setCurrentCourse(selectedId);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
