@@ -119,8 +119,9 @@ public class DataLoader extends DataConstants {
             UUID flashcardId = UUID.fromString((String) flashcardJSON.get("flashcardId"));
             boolean completed = (Boolean) flashcardJSON.get("completed");
             double flashcardProgress = ((Number) flashcardJSON.get("flashcardProgress")).doubleValue();
+            String flashcardName = (String) flashcardJSON.get("flashcardName");
 
-            flashcards.add(new FlashcardQuestion(flashcardId, completed, flashcardProgress));
+            flashcards.add(new FlashcardQuestion(flashcardName, flashcardId, completed, flashcardProgress));
         }
         return flashcards;
     }

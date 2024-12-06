@@ -161,7 +161,7 @@ public class LanguageLearningFacade {
         return CourseList.getInstance().getCourse(user.getCurrentCourse().toString());
     }
     return null;
-}
+    }
 
     
     

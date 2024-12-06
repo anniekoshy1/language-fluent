@@ -82,8 +82,8 @@ public class MainHomeController implements Initializable {
             LanguageLearningFacade.getInstance().startCourse(course);
             App.setRoot("CourseHome");
             System.out.println("Clicked on course: " + course.getName());
-            UUID selectedId = course.getId();
 
+            UUID selectedId = course.getId();
             user.setCurrentCourse(selectedId);
 
         } catch (IOException e) {

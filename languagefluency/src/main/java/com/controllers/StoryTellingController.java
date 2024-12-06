@@ -1,50 +1,46 @@
 package com.controllers;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-import javax.print.attribute.standard.Media;
+import com.narration.Narriator;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.stage.Stage;
+import javafx.scene.control.Label;
 
-public class StoryTellingController {
 
-    @FXML
-    private MediaView mediaView;
+public class StoryTellingController implements Initializable {
 
-    @FXML
+    @FXML 
     private Button playButton;
 
-    private MediaPlayer mediaPlayer;
-
     @FXML
-    public void initialize() {
-        // Load the audio file from resources
-        String audioPath = getClass().getResource("/audio/story.mp3").toExternalForm();
-        Media media = new Media(audioPath);
-        mediaPlayer = new MediaPlayer(media);
-        mediaView.setMediaPlayer(mediaPlayer);
+    private Button submitButton;
 
-        // Update button text based on media player status
-        mediaPlayer.setOnReady(() -> playButton.setText("Play Audio"));
-        mediaPlayer.setOnEndOfMedia(() -> playButton.setText("Replay Audio"));
+    @FXML 
+    private Label storyLabel;
+
+    private String spanishContent;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        loadStoryFromJSON();
+    }
+
+    private void loadStoryFromJSON() {
+         spanishContent = "test";
     }
 
     @FXML
     public void onPlayButtonClicked() {
-        MediaPlayer.Status status = mediaPlayer.getStatus();
-        if (status == MediaPlayer.Status.PLAYING) {
-            mediaPlayer.pause();
-            playButton.setText("Play Audio");
-        } else {
-            mediaPlayer.play();
-            playButton.setText("Pause Audio");
+        if (spanishContent != null && !spanishContent.isEmpty()) {
+            
+            readStoryAloud(spanishContent);
         }
     }
 
-    @FXML
-    public void onCloseButtonClicked() {
-        // Close the current window
-        Stage stage = (Stage) playButton.getScene().getWindow();
-        stage.close();
+    private void readStoryAloud(String content) {
+        Narriator.playSound(content);
     }
 }

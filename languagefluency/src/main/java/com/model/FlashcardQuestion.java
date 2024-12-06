@@ -8,6 +8,7 @@ import java.util.UUID;
 
 public class FlashcardQuestion {
 
+    private String flaschardName;
     private final UUID flashcardId;
     private boolean completed;
     private double flashcardProgress;
@@ -19,10 +20,15 @@ public class FlashcardQuestion {
      * @param backAnswer the answer on the back of the flashcard
      */
 
-    public FlashcardQuestion(UUID flashcardId, boolean completed, double flashcardProgress) {
+    public FlashcardQuestion(String flashcardName, UUID flashcardId, boolean completed, double flashcardProgress) {
+        this.flaschardName = flashcardName;
         this.flashcardId = flashcardId;
         this.completed = completed;
         this.flashcardProgress = flashcardProgress;
+    }
+
+    public String getFlaschardName() {
+        return flaschardName;
     }
 
     public UUID getFlashcardId() {

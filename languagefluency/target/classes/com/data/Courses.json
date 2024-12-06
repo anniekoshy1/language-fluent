@@ -18,6 +18,7 @@
         ],
         "flashcards": [
             {
+                "flashcardName": "Flashcard 1",
                 "flashcardId": "f524c736-31e0-4960-a810-0595f93b60f7",
                 "completed": false,
                 "flashcardProgress": 0.0
@@ -43,6 +44,7 @@
         ],
         "flashcards": [
             {
+                "flashcardName": "Flashcard 2",
                 "flashcardId": "ee332b2c-2dc7-4852-b21c-3cc6cecd2807",
                 "completed": false,
                 "flashcardProgress": 0.0
