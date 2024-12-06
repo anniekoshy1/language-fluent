@@ -49,10 +49,6 @@ public class CourseHomeController implements Initializable {
         App.setRoot("MainHome");
     }
 
-    // @FXML 
-    // private void onProfileButtonClicked(MouseEvent event) throws IOException {
-    //     App.setRoot("profile");
-    // }
 
 
 }

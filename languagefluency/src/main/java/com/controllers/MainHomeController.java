@@ -20,14 +20,13 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 
+
+
 public class MainHomeController implements Initializable {
 
     @FXML private Label dynamicUser;
     @FXML private GridPane grid_books;
-    @FXML private Button homebutton;
     @FXML private Button profileButton;
-    @FXML private Button logoutButton;
-    @FXML private Button reviewButton;
 
     private LanguageLearningFacade facade;
     private User user;
@@ -81,42 +80,11 @@ public class MainHomeController implements Initializable {
         try {
             LanguageLearningFacade.getInstance().startCourse(course);
             App.setRoot("CourseHome");
+            System.out.println("Clicked on course: " + course.getName());
+            System.out.println("Clicked on course: " + course.getId());
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    // @FXML
-    // private void onHomeButtonClicked(MouseEvent event) {
-    //     try{
-    //         App.setRoot("MainHome");
-    //     }
-    //     catch (IOException e) {
-    //         System.err.println("Navigation to MainHome failed: " + e.getMessage());
-    //     }
-    // }
-    // @FXML
-    // private void onProfileButtonClicked(MouseEvent event) {
-    //     try{
-    //         App.setRoot("profile");
-    //     }
-    //     catch (IOException e){
-    //         System.err.println("Navigation to profile failed: " + e.getMessage());
-    //     }
-    // }
-    // private void onLogoutButtonClicked(MouseEvent event) {
-    //     try{
-    //         App.setRoot("beginning");
-    //     }
-    //     catch (IOException e){
-    //         System.err.println("Navigation to beginning failed: " + e.getMessage());
-    //     }
-    // }
-    // private void onReviewButtonClicked(MouseEvent event) {
-    //     try{
-    //         App.setRoot("review");
-    //     }
-    //     catch (IOException e){
-    //         System.err.println("Navigation to review failed: " + e.getMessage());
-    //     }
-    // }
+
 }
