@@ -82,13 +82,26 @@ public class MainHomeController implements Initializable {
             LanguageLearningFacade.getInstance().startCourse(course);
             App.setRoot("CourseHome");
             System.out.println("Clicked on course: " + course.getName());
-
             UUID selectedId = course.getId();
+
             user.setCurrentCourse(selectedId);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+    @FXML
+    private void onProfileButtonClicked(MouseEvent event) throws IOException{
+        App.setRoot("profile");
+    }
+    @FXML
+    private void onLogoutButtonClicked(MouseEvent event) throws IOException{
+        App.setRoot("beginning");
+    }
+    @FXML
+    private void onReviewButtonClicked(MouseEvent event) throws IOException{
+        App.setRoot("review");
+    }
+
 
 }

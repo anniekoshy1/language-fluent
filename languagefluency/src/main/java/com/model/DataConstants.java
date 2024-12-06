@@ -29,6 +29,9 @@ public class DataConstants {
     public static final String USER_CURRENT_LANGUAGE_NAME = "currentLanguageName";
 
 
+    //Constants for flashcards
+    public static final String FLASHCARD_NAME = "name";
+    public static final String FLASHCARD_ID = "flashcardId";
     // Constants for courses
     public static final String COURSE_NAME = "name";
     public static final String COURSE_DESCRIPTION = "description";

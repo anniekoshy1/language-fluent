@@ -7,6 +7,7 @@ import java.util.ResourceBundle;
 
 import com.languagefluent.App;
 import com.model.Course;
+import com.model.FlashcardQuestion;
 import com.model.LanguageLearningFacade;
 import com.model.Lesson;
 import com.model.User;
@@ -15,7 +16,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 
 public class CourseHomeController implements Initializable {
@@ -23,11 +23,14 @@ public class CourseHomeController implements Initializable {
     @FXML private Label test;
     @FXML private Label courseDescription;
     @FXML private Label courseTitle;
-    @FXML private GridPane grid_lessons;
+    @FXML private VBox flashcardsVBox;
     @FXML private VBox lessonsVBox;
+
+    
     private LanguageLearningFacade facade;
     private User user;
     private Course currentCourse;
+    private FlashcardQuestion flashcards;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -42,6 +45,7 @@ public class CourseHomeController implements Initializable {
 
             // Display lessons
             displayLessons(currentCourse.getAllLessons());
+            displayFlashcards(currentCourse.getFlashcards());
         } else {
             courseTitle.setText("Course not found.");
             courseDescription.setText("Please select a valid course.");
@@ -68,14 +72,30 @@ public class CourseHomeController implements Initializable {
         }
     }
 
+        private void displayFlashcards(ArrayList<FlashcardQuestion> flashcards) {
+        flashcardsVBox.getChildren().clear(); // Clear existing flashcard nodes
+
+        for (FlashcardQuestion flashcard : flashcards) {
+            VBox flashcardBox = new VBox();
+            flashcardBox.setSpacing(10);
+            flashcardBox.setStyle("-fx-padding: 10; -fx-border-color: lightgray;");
+
+            Label flashcardName = new Label(flashcard.getFlashcardName());
+            flashcardName.setStyle("-fx-font-size: 14px; -fx-font-weight: bold;");
+
+            Label flashcardProgress = new Label("Progress: " + flashcard.getFlashcardProgress() + "%");
+
+            flashcardBox.getChildren().addAll(flashcardName, flashcardProgress);
+            flashcardsVBox.getChildren().add(flashcardBox);
+        }
+    }
+
 
 
     @FXML
-    public void languagebasics(MouseEvent event) throws IOException{
+    public void lessonsVBox(MouseEvent event) throws IOException{
         App.setRoot("StoryTelling");
     }
-
-    
 
     @FXML
     private void onHomeButtonClicked(MouseEvent event) throws IOException{

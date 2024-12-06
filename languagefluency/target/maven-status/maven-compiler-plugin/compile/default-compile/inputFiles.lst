@@ -1,38 +1,38 @@
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\narration\Narriator.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\model\Language.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\model\DataConstants.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\narration\VoiceList.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\model\Course.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\controllers\SignupController.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\controllers\StoryTellingController.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\model\Difficulty.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\model\ProjectUI.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\model\WordsList.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\languagefluent\App.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\controllers\PrimaryController.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\model\PhraseList.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\model\Phrase.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\model\DataWriter.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\model\TrueFalseQuestion.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\narration\Main.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\model\Dictionary.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\model\FlashcardQuestion.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\module-info.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\model\DataLoader.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\model\Lesson.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\model\StarterTest.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\model\User.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\model\LanguageLearningFacade.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\model\Questions.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\controllers\SecondaryController.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\model\UserList.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\controllers\ProfileController.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\model\FlashcardChild.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\model\QuestionsGenerator.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\model\CourseList.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\model\Word.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\controllers\BeginningController.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\controllers\LoginController.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\model\LanguageList.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\model\Assessment.java
-C:\Users\shawn\OneDrive\Sophomore 1st Semester\CSCE247\language-fluent\languagefluency\src\main\java\com\model\MultipleChoiceQuestion.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/model/ProjectUI.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/model/Language.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/model/Word.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/model/Questions.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/model/MultipleChoiceQuestion.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/model/TrueFalseQuestion.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/model/PhraseList.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/narration/Main.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/model/User.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/model/Assessment.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/controllers/SignupController.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/model/FlashcardChild.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/model/Difficulty.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/model/Dictionary.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/model/WordsList.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/model/DataConstants.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/narration/VoiceList.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/narration/Narriator.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/controllers/BeginningController.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/controllers/StoryTellingController.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/model/Phrase.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/controllers/CourseHomeController.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/module-info.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/model/LanguageList.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/model/Course.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/model/Lesson.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/model/LanguageLearningFacade.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/model/CourseList.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/model/DataLoader.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/controllers/ReviewController.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/controllers/ProfileController.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/controllers/MainHomeController.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/model/FlashcardQuestion.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/languagefluent/App.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/model/UserList.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/model/QuestionsGenerator.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/model/DataWriter.java
+/Users/josh.natkin/Desktop/language-fluent/languagefluency/src/main/java/com/controllers/LoginController.java

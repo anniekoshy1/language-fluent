@@ -1,32 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.control.Button?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.MainHomeController" prefHeight="600.0" prefWidth="800.0">
+<AnchorPane prefHeight="920.0" prefWidth="527.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.MainHomeController">
    <children>
-      <Label fx:id="dynamicUser" layoutX="24.0" layoutY="24.0" text="Welcome, User!" style="-fx-font-size: 24px;" />
-      <GridPane fx:id="grid_books" layoutX="24.0" layoutY="80.0" hgap="20.0" vgap="20.0" prefHeight="480.0" prefWidth="752.0">
+      <Label fx:id="dynamicUser" layoutX="17.0" layoutY="147.0" style="-fx-font-size: 24px;" text="Welcome, User!">
+         <font>
+            <Font name="Baskerville Old Face" size="12.0" />
+         </font>
+      </Label>
+      <GridPane fx:id="grid_books" hgap="20.0" layoutX="73.0" layoutY="256.0" prefHeight="480.0" prefWidth="380.0" vgap="20.0">
          <columnConstraints>
-            <ColumnConstraints percentWidth="50" />
-            <ColumnConstraints percentWidth="50" />
             <ColumnConstraints percentWidth="50" />
          </columnConstraints>
          <rowConstraints>
-            <RowConstraints percentHeight="50" />
-            <RowConstraints percentHeight="50" />
-            <RowConstraints percentHeight="50" />
-            <RowConstraints percentHeight="50" />
+            <RowConstraints percentHeight="50.0" />
+            <RowConstraints percentHeight="50.0" />
          </rowConstraints>
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
       </GridPane>
+      <ImageView fx:id="image2" fitHeight="53.0" fitWidth="522.0" layoutX="2.0">
+         <image>
+            <Image url="@../../images/bar.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="levelsicon" fitHeight="44.0" fitWidth="95.0" layoutX="216.0" layoutY="182.0">
+         <image>
+            <Image url="@../../images/levels.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="user" fitHeight="71.0" fitWidth="86.0" layoutX="14.0" layoutY="65.0">
+         <image>
+            <Image url="@../../images/user.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="logocorner" fitHeight="112.0" fitWidth="137.0" layoutX="376.0" layoutY="53.0">
+         <image>
+            <Image url="@../../images/logocorner.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="bottomNavBar" layoutX="5.0" layoutY="853.0" prefHeight="70.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="43.0" layoutY="7.0">
+               <image>
+                  <Image url="@../../images/home.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="41.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home" style="-fx-font-size: 14px;" />
+            <!-- Profile Button -->
+            <Button fx:id="profileButton" layoutX="162.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Profile" onMouseClicked="#onProfileButtonClicked" />
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="177.0" layoutY="7.0">
+               <image>
+                  <Image url="@../../images/profile.png" />
+               </image>
+            </ImageView>
 
+            <!-- Review Button -->
+            <Button fx:id="logoutButton" layoutX="290.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" 
+                    style="-fx-background-color: transparent;" text="Logout" 
+                    onMouseClicked="#onLogoutButtonClicked" />
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="305.0" layoutY="7.0">
+               <image>
+                  <Image url="@../../images/logout.png" />
+               </image>
+            </ImageView>
+
+            <Button fx:id="reviewButton" layoutX="414.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Review" onMouseClicked="#onReviewButtonClicked" />
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="429.0" layoutY="7.0">
+               <image>
+                  <Image url="@../../images/review.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

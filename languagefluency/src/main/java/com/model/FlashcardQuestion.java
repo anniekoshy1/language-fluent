@@ -8,7 +8,7 @@ import java.util.UUID;
 
 public class FlashcardQuestion {
 
-    private String flaschardName;
+    private String flashcardName;
     private final UUID flashcardId;
     private boolean completed;
     private double flashcardProgress;
@@ -21,14 +21,14 @@ public class FlashcardQuestion {
      */
 
     public FlashcardQuestion(String flashcardName, UUID flashcardId, boolean completed, double flashcardProgress) {
-        this.flaschardName = flashcardName;
+        this.flashcardName = flashcardName;
         this.flashcardId = flashcardId;
         this.completed = completed;
         this.flashcardProgress = flashcardProgress;
     }
 
-    public String getFlaschardName() {
-        return flaschardName;
+    public String getFlashcardName() {
+        return flashcardName;
     }
 
     public UUID getFlashcardId() {
