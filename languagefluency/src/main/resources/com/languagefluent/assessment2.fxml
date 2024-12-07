@@ -1,118 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<?import java.net.*?>
 
+<AnchorPane id="AnchorPane" fx:id="library_pane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7; -fx-border-radius: 30; -fx-background-radius: 30;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.Assessment2Controller">
+    <!-- Apply stylesheet using URL -->
 
-<AnchorPane id="AnchorPane" fx:id="library_pane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <ImageView fx:id="image4" fitHeight="1.0" fitWidth="247.0" layoutX="26.0" layoutY="194.0">
-            <image>
-                <Image url="@../../images/line.png" />
-            </image>
-        </ImageView>
-        <ImageView fx:id="courseicon" fitHeight="70.0" fitWidth="89.0" layoutX="14.0" layoutY="64.0">
-            <image>
-                <Image url="@../../images/courseicon.png" />
-            </image>
-        </ImageView>
+        <!-- Question Label -->
+        <Label fx:id="question" alignment="CENTER" contentDisplay="CENTER" layoutX="50.0" layoutY="267.0" prefHeight="169.0" prefWidth="430.0" style="-fx-font-size: 18;" text="Question will appear here Question will appear here Question will appear hereQuestion will appear here Question will appear here Question will appear hereQuestion will appear here Question will appear here" textAlignment="CENTER" wrapText="true" />
 
-        <Label layoutX="16.0" layoutY="223.0" text="1. ___ means ___. True or False?">
-         <font>
-            <Font name="Baskerville" size="18.0" />
-         </font></Label>
+        <!-- Answer Input -->
+        <TextField fx:id="answerField" alignment="CENTER" layoutX="150.0" layoutY="460.0" prefWidth="230.0" promptText="Enter your answer" style="-fx-font-size: 18;" />
 
-        <Label layoutX="18.0" layoutY="300.0" text="2. ___ means ___. True or False?">
-         <font>
-            <Font name="Baskerville" size="18.0" />
-         </font></Label>
+        <!-- Submit Button -->
+        <Button fx:id="submitButton" alignment="CENTER" contentDisplay="CENTER" layoutX="224.0" layoutY="562.0" onAction="#submitAnswer" style="-fx-background-color: fccb71; -fx-font-size: 18;" text="Submit" />
 
-        <Label layoutX="19.0" layoutY="376.0" text="3. What is the Spanish word for ___?">
-         <font>
-            <Font name="Baskerville" size="18.0" />
-         </font></Label>
+        <!-- Next Button -->
+        <Button fx:id="nextButton" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="233.0" layoutY="655.0" onAction="#nextQuestion" style="-fx-background-color: fccb71; -fx-font-size: 18;" text="Next" />
 
-        <Label layoutX="15.0" layoutY="460.0" text="4. What is the word for ___ in Spanish?">
-         <font>
-            <Font name="Baskerville" size="18.0" />
-         </font></Label>
+        <!-- Score Label -->
+        <Label fx:id="scoreLabel" layoutX="421.0" layoutY="211.0" prefHeight="27.0" prefWidth="67.0" style="-fx-font-size: 18;" text="Score: 0" />
 
-        <Label layoutX="15.0" layoutY="543.0" prefHeight="28.0" prefWidth="513.0" text="5. Fill in the blank: A Tracy le gusta pasear a su ___ en el parque.">
-         <font>
-            <Font name="Baskerville" size="18.0" />
-         </font></Label>
-        <TextField fx:id="question5Input3" layoutX="25.0" layoutY="583.0" prefHeight="26.0" prefWidth="257.0" />
-      <ImageView fx:id="logocorner" fitHeight="119.0" fitWidth="130.0" layoutX="370.0" layoutY="53.0">
-            <image>
-                <Image url="@../../images/logocorner.png" />
-            </image>
-        </ImageView>
-        <ImageView fx:id="image2" fitHeight="53.0" fitWidth="522.0">
-            <image>
-                <Image url="@../../images/bar.png" />
-            </image>
-        </ImageView>
-      <ChoiceBox layoutX="25.0" layoutY="409.0" prefHeight="26.0" prefWidth="249.0" />
-      <!-- Navigation Bar -->
-        <AnchorPane fx:id="bottomNavBar" layoutY="844.0" prefHeight="70.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;">
-            <children>
-                <!-- Home Button -->
-                <Button fx:id="homeButton" layoutX="414.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Review" />
-                <!-- Review Button -->
-                <Button fx:id="reviewButton" layoutX="290.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Logout" />
-                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="429.0" layoutY="7.0">
-                      <image>
-                          <Image url="@../../images/review.png" />
-                      </image>
-                  </ImageView>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="305.0" layoutY="7.0">
-                      <image>
-                          <Image url="@../../images/logout.png" />
-                      </image>
-                  </ImageView>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="177.0" layoutY="7.0">
-                      <image>
-                          <Image url="@../../images/profile.png" />
-                      </image>
-                  </ImageView>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="43.0" layoutY="7.0">
-                      <image>
-                          <Image url="@../../images/home.png" />
-                      </image>
-                  </ImageView>
-                <!-- Profile Button -->
-                <Button fx:id="profileButton" layoutX="28.0" layoutY="36.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Home" />
-                <!-- Logout Button -->
-                <Button fx:id="logoutButton" layoutX="162.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Profile" />
-            </children>
-        </AnchorPane>
-      <TextField fx:id="question5Input4" layoutX="25.0" layoutY="495.0" prefHeight="26.0" prefWidth="257.0" />
-      <TextField fx:id="question5Input5" layoutX="26.0" layoutY="334.0" prefHeight="26.0" prefWidth="249.0" />
-      <Button fx:id="playButton4" layoutX="195.0" layoutY="692.0" onAction="#onPlayButtonClicked" prefHeight="42.0" prefWidth="109.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: CCDBEE; -fx-border-color: BBBBBB;" styleClass="dark-button" text="Submit">
-         <font>
-            <Font name="Arial" size="13.0" />
-         </font>
-      </Button>
-      <TextField fx:id="question5Input22" layoutX="25.0" layoutY="258.0" prefHeight="26.0" prefWidth="249.0" />
-      <Label layoutX="34.0" layoutY="151.0" text="Learning Assessment">
+        <!-- Final Result Label (for score percentage) -->
+        <Label fx:id="resultLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="122.0" layoutY="725.0" prefHeight="25.0" prefWidth="285.0" style="-fx-font-size: 18px; -fx-text-fill: #333333;" textAlignment="CENTER" />
+        <Button fx:id="exitButton" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="18.0" layoutX="248.0" layoutY="783.0" onMouseClicked="#onExitButtonClicked" style="-fx-background-color: fccb71;" text="Exit" />
+      <ImageView fx:id="courseicon" fitHeight="83.0" fitWidth="86.0" layoutX="20.0" layoutY="60.0">
+         <image>
+            <Image url="@../../images/courseicon.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="image2" fitHeight="66.0" fitWidth="531.0">
+         <image>
+            <Image url="@../../images/bar.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="31.0" layoutY="134.0" prefHeight="53.0" prefWidth="193.0" text="Assessment">
          <font>
             <Font name="Baskerville" size="36.0" />
          </font>
       </Label>
-      <Label layoutX="34.0" layoutY="122.0" text="Advanced Spanish">
-         <font>
-            <Font name="Baskerville" size="36.0" />
-         </font>
-      </Label>
+      <ImageView fx:id="image4" fitHeight="1.0" fitWidth="247.0" layoutX="31.0" layoutY="184.0">
+         <image>
+            <Image url="@../../images/line.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="logocorner" fitHeight="113.0" fitWidth="132.0" layoutX="380.0" layoutY="66.0">
+         <image>
+            <Image url="@../../images/logocorner.png" />
+         </image>
+      </ImageView>
     </children>
-    <stylesheets>
-        <URL value="@styles.css" />
-    </stylesheets>
 </AnchorPane>

@@ -129,7 +129,13 @@ public class Course {
             }
         }
 
-        this.courseProgress = (completedItems / (double) totalItems) * 100;
+        if(completedItems == 1){
+            this.courseProgress = 50.0;
+        }
+
+        if(completedItems == 2){
+            this.courseProgress = 100.0;
+        }
 
         if (this.courseProgress == 100.0) {
             setCompleted(true);
@@ -162,5 +168,15 @@ public Lesson getCurrentLesson() {
     }
     return null;  // Return null if all lessons are completed
 }
+
+    // In the Course class, add a method to get the current lesson
+    public FlashcardQuestion getCurrentFlashcard() {
+        for (FlashcardQuestion flashcard : flashcards) {
+            if (!flashcard.isCompleted()) {  // Find the first incomplete lesson
+                return flashcard;
+            }
+        }
+        return null;  // Return null if all lessons are completed
+    }
 
 }

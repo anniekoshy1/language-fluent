@@ -25,6 +25,7 @@ public class CourseHomeController implements Initializable {
     @FXML private Label courseTitle;
     @FXML private VBox flashcardsVBox;
     @FXML private VBox lessonsVBox;
+    @FXML private Label courseProgress;
 
     
     private LanguageLearningFacade facade;
@@ -36,7 +37,11 @@ public class CourseHomeController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         facade = LanguageLearningFacade.getInstance();
         user = facade.getCurrentUser();
+        
         currentCourse = facade.getCurrentCourseDetails();
+        refreshCourseData();
+
+        courseProgress.setText(String.format("Course Progress: %.2f%%", currentCourse.getCourseProgress()));
 
         if (currentCourse != null) {
             // Set course title and description
@@ -92,7 +97,21 @@ public class CourseHomeController implements Initializable {
         }
     }
 
+    private void refreshCourseData() {
+    currentCourse = facade.getCurrentCourseDetails(); // Reload the current course details
+    if (currentCourse != null) {
+        // Update course title and description
+        courseTitle.setText(currentCourse.getName());
+        courseDescription.setText(currentCourse.getDescription());
 
+        // Update the displayed lessons and flashcards
+        displayLessons(currentCourse.getAllLessons());
+        displayFlashcards(currentCourse.getFlashcards());
+    } else {
+        courseTitle.setText("Course not found.");
+        courseDescription.setText("Please select a valid course.");
+    }
+}
 
     @FXML
     private void handleLessonClick(Lesson lesson){

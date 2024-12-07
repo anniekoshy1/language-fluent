@@ -66,6 +66,19 @@ public void onBackToCourseHomeClicked(MouseEvent event) {
         System.out.println("Error switching to CourseHome.fxml");
     }
 }
+@FXML
+    private void onHomeButtonClicked(MouseEvent event) throws IOException{
+        App.setRoot("MainHome");
+    }
+
+    @FXML
+    private void onProfileButtonClicked(MouseEvent event) throws IOException{
+        App.setRoot("profile");
+    }
+    @FXML
+    private void onLogoutButtonClicked(MouseEvent event) throws IOException{
+        App.setRoot("beginning");
+    }
 
 
 }

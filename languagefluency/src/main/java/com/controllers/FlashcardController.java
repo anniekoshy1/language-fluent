@@ -1,5 +1,7 @@
 package com.controllers;
 
+import java.io.IOException;
+
 import com.languagefluent.App;
 import com.model.Assessment;
 import com.model.FlashcardChild;
@@ -7,6 +9,7 @@ import com.model.WordsList;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 
 public class FlashcardController {
 
@@ -69,6 +72,19 @@ public class FlashcardController {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    @FXML
+    private void onHomeButtonClicked(MouseEvent event) throws IOException{
+        App.setRoot("MainHome");
+    }
+
+    @FXML
+    private void onProfileButtonClicked(MouseEvent event) throws IOException{
+        App.setRoot("profile");
+    }
+    @FXML
+    private void onLogoutButtonClicked(MouseEvent event) throws IOException{
+        App.setRoot("beginning");
     }
     
 }

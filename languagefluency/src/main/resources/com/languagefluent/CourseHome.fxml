@@ -35,7 +35,7 @@
                   <Image url="@../../images/logocorner.png" />
                </image>
          </ImageView>
-         <ImageView fx:id="starting" fitHeight="167.0" fitWidth="368.0" layoutX="77.0" layoutY="637.0">
+         <ImageView fx:id="starting" fitHeight="159.0" fitWidth="323.0" layoutX="106.0" layoutY="650.0">
                <image>
                   <Image url="@../../images/starting.png" />
                </image>
@@ -45,14 +45,14 @@
          <Label fx:id="courseTitle" layoutX="20.0" layoutY="136.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Course Title" />
 
          <!-- Course Description -->
-         <Label fx:id="courseDescription" layoutX="70.0" layoutY="186.0" prefHeight="65.0" prefWidth="353.0" style="-fx-font-size: 16px;" text="Course Description goes here..." wrapText="true" />
+         <Label fx:id="courseDescription" layoutX="93.0" layoutY="219.0" prefHeight="65.0" prefWidth="353.0" style="-fx-font-size: 16px;" text="Course Description goes here..." wrapText="true" />
 
             <!-- Lessons List -->
-            <VBox fx:id="lessonsVBox" layoutX="23.0" layoutY="263.0" prefHeight="112.0" prefWidth="323.0" spacing="10" style="-fx-padding: 10; -fx-background-color: c5e8f3;" />
+            <VBox fx:id="lessonsVBox" layoutX="23.0" layoutY="289.0" prefHeight="112.0" prefWidth="323.0" spacing="10" style="-fx-padding: 10; -fx-background-color: c5e8f3;" />
 
             <!--Flashcards List-->
-            <VBox fx:id="flashcardsVBox" layoutX="20.0" layoutY="450.0" prefHeight="112.0" prefWidth="323.0" spacing="10" style="-fx-padding: 10; -fx-background-color: c5e8f3;" />
-            <Button fx:id="assessmentButton" layoutX="208.0" layoutY="396.0" onMouseClicked="#onAssessmentButtonClicked" style="-fx-background-color: fccb71;" text="Take Assessment" />
+            <VBox fx:id="flashcardsVBox" layoutX="23.0" layoutY="479.0" prefHeight="112.0" prefWidth="323.0" spacing="10" style="-fx-padding: 10; -fx-background-color: c5e8f3;" />
+            <Button fx:id="assessmentButton" layoutX="211.0" layoutY="426.0" onMouseClicked="#onAssessmentButtonClicked" style="-fx-background-color: fccb71;" text="Take Assessment" />
          <AnchorPane fx:id="bottomNavBar" layoutY="844.0" prefHeight="70.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;">
             <children>
                 <!-- Home Button -->
@@ -80,7 +80,7 @@
                 </ImageView>
             </children>
         </AnchorPane>
-      <Pane layoutX="346.0" layoutY="263.0" prefHeight="112.0" prefWidth="153.0" style="-fx-background-color: c5e8f3;">
+      <Pane layoutX="346.0" layoutY="289.0" prefHeight="112.0" prefWidth="153.0" style="-fx-background-color: c5e8f3;">
          <children>
                <ImageView fx:id="basic" fitHeight="53.0" fitWidth="60.0" layoutX="77.0" layoutY="54.0">
                      <image>
@@ -89,7 +89,7 @@
                </ImageView>
          </children>
       </Pane>
-      <Pane layoutX="343.0" layoutY="450.0" prefHeight="112.0" prefWidth="153.0" style="-fx-background-color: c5e8f3;">
+      <Pane layoutX="346.0" layoutY="479.0" prefHeight="112.0" prefWidth="153.0" style="-fx-background-color: c5e8f3;">
          <children>
             <ImageView fx:id="basic1" fitHeight="53.0" fitWidth="60.0" layoutX="77.0" layoutY="54.0">
                <image>
@@ -98,6 +98,7 @@
             </ImageView>
          </children>
       </Pane>
-      <Button fx:id="assessmentButton2" layoutX="213.0" layoutY="583.0" onMouseClicked="#onAssessment2ButtonClicked" style="-fx-background-color: fccb71;" text="Take Assesment" />
+               <Label fx:id="courseProgress" alignment="CENTER" contentDisplay="CENTER" layoutX="183.0" layoutY="190.0" prefHeight="29.0" prefWidth="161.0" style="-fx-font-size: 14px;" text="Course Title " />
+      <Button fx:id="assessmentButton2" layoutX="215.0" layoutY="611.0" onMouseClicked="#onAssessment2ButtonClicked" style="-fx-background-color: fccb71;" text="Take Assesment" />
       </children>
 </AnchorPane>

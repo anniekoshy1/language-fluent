@@ -30,42 +30,36 @@
                 <Image url="@../../images/bar.png" />
             </image>
         </ImageView>
-      <ProgressBar layoutX="121.0" layoutY="199.0" prefHeight="46.0" prefWidth="290.0" progress="0.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: BBBBBB;" />
-      <Button fx:id="playButton" layoutX="129.0" layoutY="207.0" onAction="#onPlayButtonClicked" prefHeight="29.0" prefWidth="47.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: CCDBEE;" styleClass="dark-button" text="Play">
+      <ProgressBar layoutX="123.0" layoutY="227.0" prefHeight="46.0" prefWidth="290.0" progress="0.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: BBBBBB;" />
+      <Button fx:id="playButton" layoutX="131.0" layoutY="235.0" onAction="#onPlayButtonClicked" prefHeight="29.0" prefWidth="47.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-background-color: CCDBEE;" styleClass="dark-button" text="Play">
          <font>
             <Font name="Arial" size="13.0" />
          </font></Button>
-       <!-- Navigation Bar -->
-        <AnchorPane fx:id="bottomNavBar" layoutY="844.0" prefHeight="70.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;">
+    <AnchorPane fx:id="bottomNavBar" layoutY="844.0" prefHeight="70.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;">
             <children>
                 <!-- Home Button -->
-                <Button fx:id="homeButton" layoutX="414.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Review" />
-                <!-- Review Button -->
-                <Button fx:id="reviewButton" layoutX="290.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Logout" />
-                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="429.0" layoutY="7.0">
-                      <image>
-                          <Image url="@../../images/review.png" />
-                      </image>
-                  </ImageView>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="305.0" layoutY="7.0">
-                      <image>
-                          <Image url="@../../images/logout.png" />
-                      </image>
-                  </ImageView>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="177.0" layoutY="7.0">
-                      <image>
-                          <Image url="@../../images/profile.png" />
-                      </image>
-                  </ImageView>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="43.0" layoutY="7.0">
-                      <image>
-                          <Image url="@../../images/home.png" />
-                      </image>
-                  </ImageView>
+                <Button fx:id="homeButton" layoutX="43.0" layoutY="35.0" onMouseClicked="#onHomeButtonClicked" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Home" />
+                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="58.0" layoutY="7.0">
+                    <image>
+                        <Image url="@../../images/home.png" />
+                    </image>
+                </ImageView>
+
                 <!-- Profile Button -->
-                <Button fx:id="profileButton" layoutX="28.0" layoutY="36.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Home" />
+                <Button fx:id="profileButton" layoutX="234.0" layoutY="35.0" onMouseClicked="#onProfileButtonClicked" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Profile" />
+                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="249.0" layoutY="7.0">
+                    <image>
+                        <Image url="@../../images/profile.png" />
+                    </image>
+                </ImageView>
+
                 <!-- Logout Button -->
-                <Button fx:id="logoutButton" layoutX="162.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Profile" />
+                <Button fx:id="logoutButton" layoutX="431.0" layoutY="35.0" onMouseClicked="#onLogoutButtonClicked" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Logout" />
+                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="446.0" layoutY="7.0">
+                    <image>
+                        <Image url="@../../images/logout.png" />
+                    </image>
+                </ImageView>
             </children>
         </AnchorPane>
       <Label layoutX="31.0" layoutY="129.0" text="Storytelling">
@@ -73,13 +67,13 @@
             <Font name="Baskerville" size="36.0" />
          </font>
       </Label>
-      <Label fx:id="storyLabel" layoutX="37.0" layoutY="280.0" prefHeight="202.0" prefWidth="460.0" text="" wrapText="true">
+      <Label fx:id="storyLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="34.0" layoutY="335.0" prefHeight="202.0" prefWidth="460.0" text="" wrapText="true">
          <font>
             <Font name="Baskerville" size="18.0" />
          </font>
       </Label>
       <Button fx:id="backToCourseHomeButton" 
-        layoutX="196.0" layoutY="662.0" 
+        layoutX="218.0" layoutY="628.0" 
         prefHeight="30.0" prefWidth="100.0" 
         text="Submit" 
         onMouseClicked="#onBackToCourseHomeClicked" 

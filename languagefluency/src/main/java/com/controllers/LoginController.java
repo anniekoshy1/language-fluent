@@ -34,7 +34,7 @@ public class LoginController implements Initializable {
             return;
         }
 
-        
+
 
         App.setRoot("MainHome");
     }

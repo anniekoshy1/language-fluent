@@ -9,7 +9,6 @@
 <?import javafx.scene.text.Font?>
 <?import java.net.*?>
 
-
 <AnchorPane id="AnchorPane" fx:id="library_pane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <ImageView fx:id="image4" fitHeight="1.0" fitWidth="172.0" layoutX="21.0" layoutY="158.0">
