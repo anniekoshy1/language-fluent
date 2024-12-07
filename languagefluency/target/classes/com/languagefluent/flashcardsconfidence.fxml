@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -7,11 +9,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
-<?import javafx.geometry.Insets?>
-<?import java.net.*?>
 
-
-<AnchorPane fx:controller="com.controllers.FlashcardController" fx:id="confidencePane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="confidencePane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.FlashcardController">
     <children>
         <ImageView fx:id="image4" fitHeight="1.0" fitWidth="247.0" layoutX="32.0" layoutY="174.0">
             <image>
@@ -36,7 +35,7 @@
         <Pane layoutX="95.0" layoutY="266.0" prefHeight="416.0" prefWidth="337.0" style="-fx-background-color: #F9EFDB; -fx-border-radius: 10px; -fx-border-color: black; -fx-border-width: 2px">
             <children>
                 <!-- Full Question Label -->
-                <Label fx:id="fullQuestionLabel" layoutX="20.0" layoutY="20.0" prefWidth="297.0" wrapText="true" text="Full Flashcard Question">
+                <Label fx:id="fullQuestionLabel" layoutX="20.0" layoutY="20.0" prefWidth="297.0" text="Full Flashcard Question" wrapText="true">
                     <font>
                         <Font name="Baskerville" size="18.0" />
                     </font>
@@ -106,6 +105,12 @@
             <Font name="Baskerville" size="36.0" />
          </font>
       </Label>
+
+                    <Button fx:id="backToCourseHomeButton" layoutX="215.0" layoutY="805.0" onMouseClicked="#onBackToCourseHomeClicked" prefHeight="30.0" prefWidth="100.0" style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: #CCDBEE;" text="Submit">
+    <font>
+        <Font name="Arial" size="14.0" />
+    </font>
+</Button>
 
     </children>
     <stylesheets>

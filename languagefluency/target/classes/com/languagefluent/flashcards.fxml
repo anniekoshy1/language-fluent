@@ -78,12 +78,18 @@
             <Font name="Baskerville" size="36.0" />
          </font>
       </Label>
-                      <!-- Question Label inside the Pane -->
-                <Label fx:id="course-progress" layoutX="20.0" layoutY="20.0" prefWidth="297.0" wrapText="true" text="Flashcard Question" >
-                    <font>
-                        <Font name="Baskerville" size="18.0" />
-                    </font>
-                </Label>
+
+                    <Button fx:id="backToCourseHomeButton" 
+        layoutX="218.0" layoutY="805.0" 
+        prefHeight="30.0" prefWidth="100.0" 
+        text="Submit" 
+        onMouseClicked="#onBackToCourseHomeClicked" 
+        style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: #CCDBEE;">
+    <font>
+        <Font name="Arial" size="14.0" />
+    </font>
+</Button>
+
     </children>
     <stylesheets>
         <URL value="@styles.css" />

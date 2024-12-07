@@ -8,6 +8,7 @@ import com.model.FlashcardChild;
 import com.model.WordsList;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 
@@ -17,6 +18,9 @@ public class FlashcardController {
     private Label questionLabel; // Label for flashcards.fxml
     @FXML
     private Label fullQuestionLabel; // Label for flashcardsconfidence.fxml
+
+        @FXML
+    private Button backToCourseHomeButton;
 
     private WordsList wordsList;
     private Assessment assessment;
@@ -73,6 +77,18 @@ public class FlashcardController {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    public void onBackToCourseHomeClicked(MouseEvent event) {
+        try {
+            // Navigate back to CourseHome
+            App.setRoot("CourseHome");
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Error switching to CourseHome.fxml");
+        }
+    }
+    
     @FXML
     private void onHomeButtonClicked(MouseEvent event) throws IOException{
         App.setRoot("MainHome");
