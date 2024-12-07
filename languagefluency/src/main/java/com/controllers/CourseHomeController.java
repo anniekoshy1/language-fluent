@@ -120,6 +120,19 @@ public class CourseHomeController implements Initializable {
         App.setRoot("MainHome");
     }
 
+    @FXML
+    private void onProfileButtonClicked(MouseEvent event) throws IOException{
+        App.setRoot("profile");
+    }
+    @FXML
+    private void onLogoutButtonClicked(MouseEvent event) throws IOException{
+        App.setRoot("beginning");
+    }
+    @FXML
+    private void onReviewButtonClicked(MouseEvent event) throws IOException{
+        App.setRoot("review");
+    }
+
 
 
 }

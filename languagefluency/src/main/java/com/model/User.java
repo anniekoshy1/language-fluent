@@ -96,13 +96,10 @@ public class User {
         return currentCourseID;
     }
 
-    public String getCurrentCourseName(){
-        return currentCourseName;
-    }
-
     public void setCurrentCourse(UUID courseId) {
         this.currentCourseID = courseId;
     }
+
 
     public Course getCurrentCourseDetails(){
         if (currentCourseID != null){

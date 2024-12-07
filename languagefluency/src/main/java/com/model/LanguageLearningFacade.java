@@ -311,7 +311,7 @@ public class LanguageLearningFacade {
 
     // Close the Scanner after use
     scanner.close();
-}c
+}
 }
 
 
