@@ -1,22 +1,31 @@
 package com.controllers;
 
+import java.io.IOException;
+
+import com.languagefluent.App;
 import com.model.Assessment;
+import com.model.Course;
+import com.model.LanguageLearningFacade;
+import com.model.Lesson;
 import com.model.Questions;
+import com.model.User;
 import com.model.WordsList;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.VBox;
+import javafx.scene.input.MouseEvent;
+
 
 public class AssessmentController {
 
+        private LanguageLearningFacade facade;
+    private User user;
+    private Course currentCourse;
+    private Lesson currentLesson;
     @FXML
     private Label question;  // Label to display the question text
-
-    @FXML
-    private VBox optionsBox;  // You can use this if you have multiple options for a question
 
     @FXML
     private TextField answerField;  // Field where user types their answer
@@ -26,6 +35,9 @@ public class AssessmentController {
 
     @FXML
     private Button nextButton;  // Button to move to the next question
+
+    @FXML
+    private Button exitButton;  // Button to exit the assessment
 
     @FXML
     private Label scoreLabel;  // Label to display the score
@@ -42,68 +54,66 @@ public class AssessmentController {
 
     @FXML
     public void initialize() {
-        // Initialize the assessment and word list
         wordsList = WordsList.getInstance();
+                facade = LanguageLearningFacade.getInstance();
+        user = facade.getCurrentUser();
+        currentCourse = facade.getCurrentCourseDetails();
         assessment = new Assessment();
 
         // Generate the first question
         currentQuestion = assessment.generateRandomQuestion(wordsList);
-        question.setText(currentQuestion.toString());  // Set the question text in the label
+        question.setText(currentQuestion.toString());
 
         // Initialize score
         score = 0;
         resultLabel.setText("");  // Clear result label initially
     }
 
-    // Called when the user clicks the "Submit" button
     @FXML
     public void submitAnswer() {
-        String userAnswer = answerField.getText().trim().toLowerCase();  // Get the answer from the text field
-        currentQuestion.setUserAnswer(userAnswer);  // Set the user's answer
+        String userAnswer = answerField.getText().trim().toLowerCase();
+        currentQuestion.setUserAnswer(userAnswer);
 
         if (currentQuestion.isCorrect()) {
-            score++;  // Increase score if the answer is correct
+            score++;
         }
 
-        // Update the score label
         scoreLabel.setText("Score: " + score);
 
-        // Optionally, disable the submit button after submission until next question
         submitButton.setDisable(true);
-        nextButton.setDisable(false);  // Enable the next button to move to the next question
+        nextButton.setDisable(false);
 
         currentQuestionIndex++;
 
         if (currentQuestionIndex >= totalQuestions) {
-            // Calculate and display the final result after all questions
             calculateAndDisplayScore();
         }
     }
 
-    // Called when the user clicks the "Next" button
     @FXML
     public void nextQuestion() {
         if (currentQuestionIndex < totalQuestions) {
-            // Generate the next question
             currentQuestion = assessment.generateRandomQuestion(wordsList);
-            question.setText(currentQuestion.toString());  // Update the question text
+            question.setText(currentQuestion.toString());
 
-            // Clear the answer field for the next question
             answerField.clear();
-
-            // Enable the submit button again for the new question
             submitButton.setDisable(false);
-            nextButton.setDisable(true);  // Disable the next button until the user submits an answer
+            nextButton.setDisable(true);
         }
     }
 
-    // Calculate and display the score percentage
     private void calculateAndDisplayScore() {
         double percentage = ((double) score / totalQuestions) * 100;
         resultLabel.setText("Your score: " + score + "/" + totalQuestions + " (" + String.format("%.2f", percentage) + "%)");
 
-        // Disable the submit button to prevent further answers
         submitButton.setDisable(true);
-        nextButton.setDisable(true);  // Disable the next button as the quiz is over
+        nextButton.setDisable(true);
     }
+
+@FXML
+private void onExitButtonClicked(MouseEvent event) throws IOException {
+
+    App.setRoot("CourseHome"); // Navigates to the course home view
+}
+
 }

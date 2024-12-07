@@ -26,6 +26,10 @@ public void setUserAnswer(String userAnswer) {
     this.userAnswer = userAnswer;
 }
 
+public String getFullQuestion() {
+    return spanishWord.getWordText() + " - " + spanishWord.getTranslation();
+}
+
 /**
  * Gets a string representation of the question for display.
  * 
@@ -33,7 +37,7 @@ public void setUserAnswer(String userAnswer) {
  */
 @Override
 public String toString() {
-    return "Whats the English translation of " + spanishWord.getWordText();
+    return spanishWord.getWordText();
 }
 
 }

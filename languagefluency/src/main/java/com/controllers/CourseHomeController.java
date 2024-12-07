@@ -108,7 +108,7 @@ public class CourseHomeController implements Initializable {
     private void handleFlashcardClick(FlashcardQuestion flashcard) {
         try {
             System.out.println("Clicked on flashcard: " + flashcard.getFlashcardName());
-            App.setRoot("FlashcardReview");
+            App.setRoot("flashcards");
         } catch (IOException e) {
             e.printStackTrace();
         }

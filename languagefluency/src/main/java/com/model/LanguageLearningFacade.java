@@ -298,6 +298,29 @@ public class LanguageLearningFacade {
 
     }
 
+    public void sigh() {
+        if (course == null) {
+            System.out.println("No course selected. Use selectCourse() first.");
+            return;
+        }
+
+        lesson = course.getCurrentLesson();
+        if (currentLesson == null) {
+            System.out.println("All lessons in the course are already completed.");
+            return;
+        }
+
+        // Mark the current lesson as completed
+        lesson.markAsCompleted();
+        System.out.println("Marked lesson as completed: " + lesson.getLessonName());
+
+        // Recalculate course progress
+        course.calculateProgress();
+
+        // Save changes to the JSON file
+        courseList.saveCourses();
+    }
+
     public static void main(String[] args) {
         
     Scanner scanner = new Scanner(System.in);

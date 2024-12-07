@@ -2,6 +2,8 @@ package com.languagefluent;
 
 import java.io.IOException;
 
+import com.model.FlashcardChild;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -15,9 +17,19 @@ public class App extends Application {
 
     private static Scene scene;
 
+    private static FlashcardChild selectedFlashcard;
+
+    public static void setSelectedFlashcard(FlashcardChild flashcard) {
+        selectedFlashcard = flashcard;
+    }
+
+    public static FlashcardChild getSelectedFlashcard() {
+        return selectedFlashcard;
+    }
+
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("beginning"), 640, 480);
+        scene = new Scene(loadFXML("assessment1"), 640, 480);
         stage.setScene(scene);
         stage.show();
     }

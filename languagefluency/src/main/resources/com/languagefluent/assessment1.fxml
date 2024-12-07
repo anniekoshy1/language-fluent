@@ -28,5 +28,7 @@
 
         <!-- Final Result Label (for score percentage) -->
         <Label fx:id="resultLabel" layoutX="150.0" layoutY="450.0" text="" textAlignment="CENTER" style="-fx-font-size: 16px; -fx-text-fill: #333333;" />
+
+        <Button fx:id="exitButton" layoutX="150.0" layoutY="500.0" text="Exit" onMouseClicked="#onExitButtonClicked" />
     </children>
 </AnchorPane>
