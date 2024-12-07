@@ -293,52 +293,27 @@ public class LanguageLearningFacade {
             // After answering all questions, evaluate the performance
             assessments.evaluatePerformance();
             
-
-            lesson = course.getCurrentLesson();
-    
-            // Update the course progress after completing the lesson
-            course.calculateProgress();
-            
     
             System.out.println("You do not have access to this course.");
 
     }
 
     public static void main(String[] args) {
+        
+    Scanner scanner = new Scanner(System.in);
+
+    // Get the singleton instance of LanguageLearningFacade
     LanguageLearningFacade facade = LanguageLearningFacade.getInstance();
-    DataLoader.loadCourses();
-    DataLoader.getUsers();
 
-    // Example test: Get the current user and their course's lessons
-    System.out.println("Testing lessons for the current course:");
-    if (facade.login("jjj", "jjj")) { // Replace with valid test credentials
-        User currentUser = facade.getCurrentUser();
-        System.out.println("Logged in as: " + currentUser.getUsername());
+    // Call the startLessonAssessment method
+    System.out.println("Starting Lesson Assessment...");
+    facade.startLessonAssessment(scanner);
 
-        // Get the current course
-        UUID currentCourseId = currentUser.getCurrentCourse();
-        if (currentCourseId != null) {
-            Course currentCourse = CourseList.getInstance().getCourse(currentCourseId.toString());
-            System.out.println("Current course: " + currentCourse.getName());
-
-            // Retrieve and print lessons
-            ArrayList<Lesson> lessons = currentCourse.getAllLessons();
-            if (lessons != null && !lessons.isEmpty()) {
-                System.out.println("Lessons in this course:");
-                for (Lesson lesson : lessons) {
-                    System.out.println("- " + lesson.getLessonName() + " (Progress: " + lesson.getLessonProgress() + "%)");
-                }
-            } else {
-                System.out.println("No lessons found for this course.");
-            }
-        } else {
-            System.out.println("No current course is set for the user.");
-        }
-    } else {
-        System.out.println("Login failed. Check your credentials.");
-    }
+    // Close the Scanner after use
+    scanner.close();
+}c
 }
 
-}
+
 
 

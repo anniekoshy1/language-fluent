@@ -1,14 +1,19 @@
 package com.controllers;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import com.languagefluent.App;
 import com.model.LanguageLearningFacade;
 import com.model.User;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
+
 
 public class ProfileController implements Initializable {
     
@@ -17,6 +22,9 @@ public class ProfileController implements Initializable {
     @FXML private Label dynamicEmail;
     @FXML private Label dynamicLanguage;
     @FXML private Label dynamicCourse;
+
+    @FXML
+    private Button profileButton;
 
     private LanguageLearningFacade facade;
     private User user;
@@ -40,5 +48,10 @@ public class ProfileController implements Initializable {
             dynamicCourse.setText("No Course available");
         }
     }
+
+@FXML
+private void onProfileButtonClicked(MouseEvent event) throws IOException {
+    App.setRoot("profile");
+}
 
 }

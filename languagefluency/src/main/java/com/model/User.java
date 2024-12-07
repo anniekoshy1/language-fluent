@@ -15,6 +15,7 @@ public class User {
     private HashMap<UUID, Double> progress;
     private final ArrayList<UUID> completedCourses;
     private UUID currentCourseID;
+    private String currentCourseName;
     private final ArrayList<Language> languages;
     private UUID currentLanguageID;
     private String currentLanguageName;
@@ -93,6 +94,10 @@ public class User {
 
     public UUID getCurrentCourse() {
         return currentCourseID;
+    }
+
+    public String getCurrentCourseName(){
+        return currentCourseName;
     }
 
     public void setCurrentCourse(UUID courseId) {
