@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.chart.CategoryAxis?>
-<?import javafx.scene.chart.LineChart?>
-<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
-<AnchorPane fx:controller="com.controllers.CourseHomeController" id="AnchorPane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.CourseHomeController">
       <children>
          <!-- Status Bar -->
          <ImageView fx:id="image2" fitHeight="53.0" fitWidth="522.0" layoutX="0.0" layoutY="0.0">
@@ -26,7 +23,7 @@
          </ImageView>
 
          <!-- Book Icon -->
-         <ImageView fx:id="courseicon" fitHeight="83.0" fitWidth="86.0" layoutX="17.0" layoutY="53.0">
+         <ImageView fx:id="courseicon" fitHeight="83.0" fitWidth="86.0" layoutX="14.0" layoutY="53.0">
                <image>
                   <Image url="@../../images/courseicon.png" />
                </image>
@@ -38,53 +35,69 @@
                   <Image url="@../../images/logocorner.png" />
                </image>
          </ImageView>
+         <ImageView fx:id="starting" fitHeight="167.0" fitWidth="368.0" layoutX="77.0" layoutY="637.0">
+               <image>
+                  <Image url="@../../images/starting.png" />
+               </image>
+         </ImageView>
 
          <!-- Course Title -->
-         <Label fx:id="courseTitle" layoutX="20.0" layoutY="150.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Course Title" />
+         <Label fx:id="courseTitle" layoutX="20.0" layoutY="136.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Course Title" />
 
          <!-- Course Description -->
-         <Label fx:id="courseDescription" layoutX="20.0" layoutY="200.0" wrapText="true" prefWidth="480.0" style="-fx-font-size: 16px;" text="Course Description goes here..." />
+         <Label fx:id="courseDescription" layoutX="70.0" layoutY="186.0" prefHeight="65.0" prefWidth="353.0" style="-fx-font-size: 16px;" text="Course Description goes here..." wrapText="true" />
 
             <!-- Lessons List -->
-            <VBox fx:id="lessonsVBox" layoutX="20.0" layoutY="250.0" prefWidth="480.0" spacing="10" style="-fx-padding: 10;" />
+            <VBox fx:id="lessonsVBox" layoutX="23.0" layoutY="263.0" prefHeight="112.0" prefWidth="323.0" spacing="10" style="-fx-padding: 10; -fx-background-color: c5e8f3;" />
 
             <!--Flashcards List-->
-            <VBox fx:id="flashcardsVBox" layoutX="20.0" layoutY="450.0" prefWidth="480.0" spacing="10" style="-fx-padding: 10;" />
-
+            <VBox fx:id="flashcardsVBox" layoutX="20.0" layoutY="450.0" prefHeight="112.0" prefWidth="323.0" spacing="10" style="-fx-padding: 10; -fx-background-color: c5e8f3;" />
+            <Button fx:id="assessmentButton" layoutX="208.0" layoutY="396.0" onMouseClicked="#onAssessmentButtonClicked" style="-fx-background-color: fccb71;" text="Take Assessment" />
          <AnchorPane fx:id="bottomNavBar" layoutY="844.0" prefHeight="70.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;">
             <children>
                 <!-- Home Button -->
-                <Button fx:id="homeButton" layoutX="28.0" layoutY="36.0" onMouseClicked="#onHomeButtonClicked" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Home" />
-                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="43.0" layoutY="7.0">
+                <Button fx:id="homeButton" layoutX="43.0" layoutY="35.0" onMouseClicked="#onHomeButtonClicked" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Home" />
+                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="58.0" layoutY="7.0">
                     <image>
                         <Image url="@../../images/home.png" />
                     </image>
                 </ImageView>
 
                 <!-- Profile Button -->
-                <Button fx:id="profileButton" layoutX="162.0" layoutY="35.0" onMouseClicked="#onProfileButtonClicked" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Profile" />
-                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="177.0" layoutY="7.0">
+                <Button fx:id="profileButton" layoutX="234.0" layoutY="35.0" onMouseClicked="#onProfileButtonClicked" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Profile" />
+                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="249.0" layoutY="7.0">
                     <image>
                         <Image url="@../../images/profile.png" />
                     </image>
                 </ImageView>
 
                 <!-- Logout Button -->
-                <Button fx:id="logoutButton" layoutX="290.0" layoutY="35.0" onMouseClicked="#onLogoutButtonClicked" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Logout" />
-                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="305.0" layoutY="7.0">
+                <Button fx:id="logoutButton" layoutX="431.0" layoutY="35.0" onMouseClicked="#onLogoutButtonClicked" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Logout" />
+                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="446.0" layoutY="7.0">
                     <image>
                         <Image url="@../../images/logout.png" />
                     </image>
                 </ImageView>
-
-                <!-- Review Button -->
-                <Button fx:id="reviewButton" layoutX="414.0" layoutY="35.0" onMouseClicked="#onReviewButtonClicked" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Review" />
-                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="429.0" layoutY="7.0">
-                    <image>
-                        <Image url="@../../images/review.png" />
-                    </image>
-                </ImageView>
             </children>
         </AnchorPane>
+      <Pane layoutX="346.0" layoutY="263.0" prefHeight="112.0" prefWidth="153.0" style="-fx-background-color: c5e8f3;">
+         <children>
+               <ImageView fx:id="basic" fitHeight="53.0" fitWidth="60.0" layoutX="77.0" layoutY="54.0">
+                     <image>
+                        <Image url="@../../images/basic.png" />
+                     </image>
+               </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="343.0" layoutY="450.0" prefHeight="112.0" prefWidth="153.0" style="-fx-background-color: c5e8f3;">
+         <children>
+            <ImageView fx:id="basic1" fitHeight="53.0" fitWidth="60.0" layoutX="77.0" layoutY="54.0">
+               <image>
+                  <Image url="@../../images/basic.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Button fx:id="assessmentButton2" layoutX="213.0" layoutY="583.0" onMouseClicked="#onAssessment2ButtonClicked" style="-fx-background-color: fccb71;" text="Take Assesment" />
       </children>
 </AnchorPane>

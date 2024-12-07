@@ -53,34 +53,24 @@
       </ImageView>
       <AnchorPane fx:id="bottomNavBar" layoutX="5.0" layoutY="853.0" prefHeight="70.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;">
          <children>
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="43.0" layoutY="7.0">
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="49.0" layoutY="7.0">
                <image>
                   <Image url="@../../images/home.png" />
                </image>
             </ImageView>
-            <Text layoutX="41.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home" style="-fx-font-size: 14px;" />
+            <Text layoutX="49.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 14px;" text="Home" />
             <!-- Profile Button -->
-            <Button fx:id="profileButton" layoutX="162.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Profile" onMouseClicked="#onProfileButtonClicked" />
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="177.0" layoutY="7.0">
+            <Button fx:id="profileButton" layoutX="234.0" layoutY="34.0" onMouseClicked="#onProfileButtonClicked" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Profile" />
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="249.0" layoutY="7.0">
                <image>
                   <Image url="@../../images/profile.png" />
                </image>
             </ImageView>
 
-            <!-- Review Button -->
-            <Button fx:id="logoutButton" layoutX="290.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" 
-                    style="-fx-background-color: transparent;" text="Logout" 
-                    onMouseClicked="#onLogoutButtonClicked" />
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="305.0" layoutY="7.0">
+            <Button fx:id="logoutButton" layoutX="434.0" layoutY="34.0" onMouseClicked="#onLogoutButtonClicked" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Logout" />
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="449.0" layoutY="7.0">
                <image>
                   <Image url="@../../images/logout.png" />
-               </image>
-            </ImageView>
-
-            <Button fx:id="reviewButton" layoutX="414.0" layoutY="35.0" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Review" onMouseClicked="#onReviewButtonClicked" />
-            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="429.0" layoutY="7.0">
-               <image>
-                  <Image url="@../../images/review.png" />
                </image>
             </ImageView>
          </children>

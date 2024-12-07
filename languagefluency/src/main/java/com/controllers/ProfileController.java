@@ -50,8 +50,13 @@ public class ProfileController implements Initializable {
     }
 
 @FXML
-private void onProfileButtonClicked(MouseEvent event) throws IOException {
-    App.setRoot("profile");
-}
+    private void onHomeButtonClicked(MouseEvent event) throws IOException{
+        App.setRoot("MainHome");
+    }
+
+    @FXML
+    private void onLogoutButtonClicked(MouseEvent event) throws IOException{
+        App.setRoot("beginning");
+    }
 
 }

@@ -18,7 +18,7 @@
         ],
         "flashcards": [
             {
-                "flashcardName": "Flashcard 1",
+                "flashcardName": "Flashcards",
                 "flashcardId": "f524c736-31e0-4960-a810-0595f93b60f7",
                 "completed": false,
                 "flashcardProgress": 0.0
@@ -27,7 +27,7 @@
     },
     {
         "courseID": "1c9d7241-30d0-4f50-91c1-f4c6e3c98eb2",
-        "name": "Advanced Spanish Learning",
+        "name": "Grammar Basics",
         "description": "A comprehensive course designed for advanced learners to enhance their Spanish skills.",
         "userAccess": true,
         "courseProgress": 0.0,

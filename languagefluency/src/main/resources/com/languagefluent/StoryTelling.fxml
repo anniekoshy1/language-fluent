@@ -79,7 +79,7 @@
          </font>
       </Label>
       <Button fx:id="backToCourseHomeButton" 
-        layoutX="10.0" layoutY="870.0" 
+        layoutX="196.0" layoutY="662.0" 
         prefHeight="30.0" prefWidth="100.0" 
         text="Submit" 
         onMouseClicked="#onBackToCourseHomeClicked" 

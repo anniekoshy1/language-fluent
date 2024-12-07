@@ -133,6 +133,16 @@ public class CourseHomeController implements Initializable {
         App.setRoot("review");
     }
 
+    @FXML
+    private void onAssessmentButtonClicked(MouseEvent event) throws IOException {
+        App.setRoot("assessment1");
+    }
+    @FXML
+    private void onAssessment2ButtonClicked(MouseEvent event) throws IOException {
+        App.setRoot("assessment2");
+    }
+
+
 
 
 }

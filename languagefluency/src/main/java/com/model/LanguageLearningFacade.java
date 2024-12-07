@@ -307,7 +307,7 @@ public class LanguageLearningFacade {
 
     // Call the startLessonAssessment method
     System.out.println("Starting Lesson Assessment...");
-    facade.startLessonAssessment(scanner);
+    facade.getaQuestion();
 
     // Close the Scanner after use
     scanner.close();
