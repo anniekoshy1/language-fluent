@@ -5,6 +5,7 @@ import java.io.IOException;
 import com.languagefluent.App;
 import com.model.Assessment;
 import com.model.Course;
+import com.model.CourseList;
 import com.model.LanguageLearningFacade;
 import com.model.Lesson;
 import com.model.Questions;
@@ -24,6 +25,7 @@ public class AssessmentController {
     private User user;
     private Course currentCourse;
     private Lesson currentLesson;
+    private CourseList courseList;
     @FXML
     private Label question;  // Label to display the question text
 
@@ -112,6 +114,11 @@ public class AssessmentController {
 
 @FXML
 private void onExitButtonClicked(MouseEvent event) throws IOException {
+    
+    currentLesson = currentCourse.getCurrentLesson();
+    currentLesson.markAsCompleted();
+    currentCourse.calculateProgress();
+    courseList.saveCourses();
 
     App.setRoot("CourseHome"); // Navigates to the course home view
 }

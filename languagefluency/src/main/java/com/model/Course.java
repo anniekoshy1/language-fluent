@@ -154,10 +154,10 @@ public class Course {
     }
 
     // In the Course class, add a method to get the current lesson
-public Object getCurrentLesson() {
+public Lesson getCurrentLesson() {
     for (Lesson lesson : lessons) {
         if (!lesson.isCompleted()) {  // Find the first incomplete lesson
-            return currentLesson;
+            return lesson;
         }
     }
     return null;  // Return null if all lessons are completed
