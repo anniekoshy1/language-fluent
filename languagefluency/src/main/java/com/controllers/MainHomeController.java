@@ -90,6 +90,7 @@ public class MainHomeController implements Initializable {
             e.printStackTrace();
         }
     }
+    
     @FXML
     private void onProfileButtonClicked(MouseEvent event) throws IOException{
         App.setRoot("profile");

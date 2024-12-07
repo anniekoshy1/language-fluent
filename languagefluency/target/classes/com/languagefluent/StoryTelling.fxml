@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:controller="com.controllers.StoryTellingController" id="AnchorPane" fx:id="library_pane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" fx:id="library_pane" prefHeight="920.0" prefWidth="527.0" style="-fx-background-color: #F7F7F7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.controllers.StoryTellingController">
     <children>
          <ImageView fx:id="image4" fitHeight="1.0" fitWidth="247.0" layoutX="21.0" layoutY="174.0">
             <image>
@@ -73,22 +73,21 @@
             <Font name="Baskerville" size="36.0" />
          </font>
       </Label>
-      <Label layoutX="66.0" layoutY="276.0" prefHeight="22.0" prefWidth="389.0" text="Story Text">
+      <Label fx:id="storyLabel" layoutX="37.0" layoutY="280.0" prefHeight="202.0" prefWidth="460.0" text="" wrapText="true">
          <font>
             <Font name="Baskerville" size="18.0" />
          </font>
       </Label>
-<Button fx:id="backToCourseHomeButton" 
+      <Button fx:id="backToCourseHomeButton" 
         layoutX="10.0" layoutY="870.0" 
         prefHeight="30.0" prefWidth="100.0" 
-        text="Back" 
+        text="Submit" 
         onMouseClicked="#onBackToCourseHomeClicked" 
         style="-fx-background-radius: 5; -fx-border-radius: 5; -fx-background-color: #CCDBEE;">
     <font>
         <Font name="Arial" size="14.0" />
     </font>
 </Button>
-
 
     </children>
 </AnchorPane>

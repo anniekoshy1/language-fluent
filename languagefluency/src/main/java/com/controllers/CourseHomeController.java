@@ -63,11 +63,11 @@ public class CourseHomeController implements Initializable {
             Label lessonName = new Label(lesson.getLessonName());
             lessonName.setStyle("-fx-font-size: 14px; -fx-font-weight: bold;");
 
+            lessonBox.setOnMouseClicked(event -> handleLessonClick(lesson));
             Label lessonProgress = new Label("Progress: " + lesson.getLessonProgress() + "%");
 
-            lessonBox.getChildren().addAll(lessonName, lessonProgress);
 
-            // Add lessonBox to the lessonsVBox
+            lessonBox.getChildren().addAll(lessonName, lessonProgress);
             lessonsVBox.getChildren().add(lessonBox);
         }
     }
@@ -79,6 +79,8 @@ public class CourseHomeController implements Initializable {
             VBox flashcardBox = new VBox();
             flashcardBox.setSpacing(10);
             flashcardBox.setStyle("-fx-padding: 10; -fx-border-color: lightgray;");
+
+            flashcardBox.setOnMouseClicked(event -> handleFlashcardClick(flashcard));
 
             Label flashcardName = new Label(flashcard.getFlashcardName());
             flashcardName.setStyle("-fx-font-size: 14px; -fx-font-weight: bold;");
@@ -93,9 +95,25 @@ public class CourseHomeController implements Initializable {
 
 
     @FXML
-    public void lessonsVBox(MouseEvent event) throws IOException{
-        App.setRoot("StoryTelling");
+    private void handleLessonClick(Lesson lesson){
+        try {
+            System.out.println("Clicked on lesson: " + lesson.getLessonName());
+            App.setRoot("StoryTelling");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+
+    @FXML
+    private void handleFlashcardClick(FlashcardQuestion flashcard) {
+        try {
+            System.out.println("Clicked on flashcard: " + flashcard.getFlashcardName());
+            App.setRoot("FlashcardReview");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     @FXML
     private void onHomeButtonClicked(MouseEvent event) throws IOException{

@@ -321,11 +321,11 @@ private void startCourse() {
 
 
     public void test(){
-        facade.getaQuestion();
+        facade.startLessonAssessment(scanner);
     }
 
     public static void main(String[] args) {
         ProjectUI languageInterface = new ProjectUI();
-        languageInterface.start();
+        languageInterface.test();
     }
 }

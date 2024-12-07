@@ -12,6 +12,7 @@ public class LanguageLearningFacade {
     private final LanguageList languageList;
     private User user;
     private Course course;
+    private Lesson lesson;
     private ArrayList<Language> currentLanguage;
     private final WordsList wordsList;
     private Assessment assessments;
@@ -292,11 +293,8 @@ public class LanguageLearningFacade {
             // After answering all questions, evaluate the performance
             assessments.evaluatePerformance();
             
-            // Mark the current lesson as completed
-            if (course.getAllLessons() != null && !course.getAllLessons().isEmpty()) {
-                Lesson currentLesson = (Lesson) course.getCurrentLesson();
-                currentLesson.markAsCompleted(); // Mark the current lesson as completed
-            }
+
+            lesson = course.getCurrentLesson();
     
             // Update the course progress after completing the lesson
             course.calculateProgress();
